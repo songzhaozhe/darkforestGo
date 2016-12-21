@@ -1,6 +1,6 @@
-require 'torch'
 require 'cutorch'
 require 'nn'
+
 require 'cunn'
 require 'cudnn'
 require 'logroll'
@@ -11,7 +11,6 @@ local pl = require 'pl.import_into'()
 
 local tnt = require 'torchnet'
 
-local Master = require 'Master'
 
 local opt = pl.lapp[[
     --alpha          (default 0.1)
@@ -34,6 +33,7 @@ local opt = pl.lapp[[
     --name                (default '')
     --mode                (default 'train')
     --optimiser           (default 'sharedRmsProp')
+    --maxepoch            (default 50)
 ]]
 
 opt.use_bn = opt.use_bn == 'true'
@@ -64,7 +64,22 @@ log.info("haahh")
 -- print(b)
 
 
-local master = Master(opt,net,crit)
+local callbacks = {
+    forward_model_init = function(partition)
+        local tnt = require 'torchnet'
+        return tnt.IndexedDataset{
+            fields = { opt.datasource .. "_" .. partition },
+            path = './dataset'
+        }
+    end,
+    forward_model_generator = function(dataset, partition)
+        local fm_go = require 'train.rl_framework.examples.go.fm_go'
+        return fm_go.FMGo(dataset, partition, opt)
+    end
+}
+local Master = require 'Master'
+
+local master = Master(opt,net,crit,callbacks)
 
 if opt.mode == 'train' then
     master:train()

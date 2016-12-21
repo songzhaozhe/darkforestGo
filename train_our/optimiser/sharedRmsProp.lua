@@ -1,4 +1,4 @@
-function sharedRmsProp(opfunc, x, config, state)
+function optim.sharedRmsProp(opfunc, x, config, state)
   -- Get state
   local config = config or {}
   local state = state or config
