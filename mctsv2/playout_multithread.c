@@ -317,16 +317,19 @@ void ts_v2_add_move_history(void *ctx, Coord m, Stone player, BOOL actual_play) 
 
   if (actual_play) {
     GroupId4 ids;
+    printf("in ts_v2_add_move_history\n");
     if (! TryPlay2(&s->board, m, &ids)) {
       char buf[100];
+      printf("in if\n");
       ShowBoard(&s->board, SHOW_LAST_MOVE);
       fprintf(stderr,"Move: %s", get_move_str(m, player, buf));
       error("add_move_history: the move is not valid!");
     }
+    printf("@@@@@@@@\n");
     // Play it.
     Play(&s->board, &ids);
   }
-
+  printf("after ShowBoard\n");
   // No need to block all threads since the printing function is only used in the main thread.
   if (s->num_prev_moves < MAX_MOVE) {
     s->prev_moves[s->num_prev_moves ++] = compose_move2(m, player);
@@ -472,6 +475,7 @@ int ts_v2_undo_pass(void *ctx, const Board *before_board) {
 }
 
 void ts_v2_prune_opponent(void *ctx, Coord m) {
+  printf("inside C program\n");
   if (ctx == NULL) error("ctx cannot be NULL!");
 
   SearchHandle *s = (SearchHandle *)ctx;
@@ -479,7 +483,7 @@ void ts_v2_prune_opponent(void *ctx, Coord m) {
   for (int i = 0; i < s->num_trees; ++i) {
     tree_search_prune_opponent(s->trees[i], m);
   }
-
+  printf("inside ts_v2_prune_opponent, before ts_v2_add_move_history\n");
   ts_v2_add_move_history(s, m, s->board._next_player, TRUE);
   return;
 }

@@ -106,6 +106,7 @@ RLEngine.train = argcheck{
             self.hooks("onStartEpoch", state)
 
             for sample in state.iterator() do
+              print(sample)
                state.sample = sample
                self.hooks("onSample", state)
 

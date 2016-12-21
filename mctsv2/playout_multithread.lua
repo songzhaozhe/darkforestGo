@@ -172,7 +172,9 @@ end
 function playout.play_rollout(tr, filename, b)
     -- Play n rollout from the board with the player
     local all_moves = ffi.new("AllMoves")
+    print("###")
     local best_m = C.ts_v2_pick_best(tr, all_moves, b)
+    print("@@@@")
     local res = { }
     for i = 0, all_moves.num_moves - 1 do
         table.insert(res, all_moves.moves[i])
@@ -223,11 +225,13 @@ end
 
 function playout.prune(tr, m, filename)
     if filename then
+        print("filename")
         C.ts_v2_thread_off(tr)
         C.ts_v2_tree_to_json(tr, filename)
         C.ts_v2_prune_opponent(tr, m.m)
         C.ts_v2_thread_on(tr)
     else
+        print("nofilename#######33")
         C.ts_v2_prune_opponent(tr, m.m)
     end
 end

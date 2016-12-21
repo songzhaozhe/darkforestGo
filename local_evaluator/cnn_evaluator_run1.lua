@@ -68,6 +68,7 @@ local probs_cuda, sortProb_cuda, sortInd_cuda
 local all_features
 while true do
     -- Get data
+    print("running cnn_local_exchanger")
     block_ids:zero() 
     if all_features then
         all_features:zero()

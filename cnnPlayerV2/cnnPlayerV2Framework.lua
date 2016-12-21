@@ -573,6 +573,10 @@ function cnnplayer:g()
     return self:genmove(player)
 end
 
+function cnnplayer:c()
+    self:clear_board()
+end
+
 function cnnplayer:p(coord)
     local player = self.b._next_player == common.black and 'b' or 'w'
     return self:play(player, coord, true)
@@ -631,7 +635,9 @@ function cnnplayer:genmove(player)
 
     -- Call move predictor to get the move.
     io.stderr:write("Start genmove. signature: " .. utils.get_signature())
+    print("###")
     local xf, yf, win_rate = self.cbs.move_predictor(self.b, player)
+    print(xf,yf,win_rate)
     if win_rate and win_rate < self.opt.win_rate_thres then
         io.stderr:write(string.format("No hope, win_rate %f", win_rate))
         return true, "resign"

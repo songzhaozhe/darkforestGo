@@ -276,6 +276,7 @@ end
 
 function callbacks.move_receiver(x, y, player)
     local prefix = prepare_prefix()
+    print ("$$$$$")
     playoutv2.prune_xy(tr, x, y, player, prefix)
 end
 

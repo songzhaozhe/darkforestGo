@@ -79,8 +79,10 @@ function board.copyfrom2(bb, b)
 end
 
 function board.clear(b)
+    --print("start clear board")
     dprintf("Start board.clear()")
     C.ClearBoard(b)
+    --print("finish!!!!!!!!!!!!")
 end
 
 function board.show(b, choice)

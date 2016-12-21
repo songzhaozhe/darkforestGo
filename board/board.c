@@ -31,6 +31,7 @@ void SetAsBorder(Board* board, int side, int i1, int w, int j1, int h) {
 void ClearBoard(Board *board) {
   memset((void *)board, 0, sizeof(Board));
   // Setup the offboard mark.
+  //printf("clearing board in c program\n");
   SetAsBorder(board, BOARD_EXPAND_SIZE, 0, BOARD_MARGIN, 0, BOARD_EXPAND_SIZE);
   SetAsBorder(board, BOARD_EXPAND_SIZE, BOARD_SIZE + BOARD_MARGIN, BOARD_MARGIN, 0, BOARD_EXPAND_SIZE);
   SetAsBorder(board, BOARD_EXPAND_SIZE, 0, BOARD_EXPAND_SIZE, 0, BOARD_MARGIN);
