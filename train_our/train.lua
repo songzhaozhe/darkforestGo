@@ -11,6 +11,8 @@ local pl = require 'pl.import_into'()
 
 local tnt = require 'torchnet'
 
+local Master = require 'Master'
+
 local opt = pl.lapp[[
     --alpha          (default 0.1)
     --nthread        (default 8)
@@ -30,6 +32,8 @@ local opt = pl.lapp[[
     --use_bn              (default 'false')     
     --maxepoch            (default 1000)
     --name                (default '')
+    --mode                (default 'train')
+    --optimiser           (default 'sharedRmsProp')
 ]]
 
 opt.use_bn = opt.use_bn == 'true'
@@ -45,9 +49,7 @@ local model = regular_net(opt)
 local net, crit = model:create_net_and_crit(opt)
 net:cuda()
 crit:cuda()
-local flog = logroll.file_logger(paths.concat('exp_'..opt.net..'_log.txt'))
-local plog = logroll.print_logger()
-log = logroll.combine(flog, plog)
+
 log.info("haahh")
 --local a = torch.ones(4,25,19,19)
 -- print(#a)
@@ -60,35 +62,16 @@ log.info("haahh")
 -- local grad = crit:backward(net.output,y)
 -- print(grad)
 -- print(b)
-local epoch = 0
-local acc_errs = 0
-local t = 0
--- while epoch < opt.maxepoch do
---     net:training()
---     acc_errs = 0
---     t = 0
 
---     for sample in state.iterator() do
---         print(sample)
---         state.sample = sample
---         self.hooks("onSample", state)
 
---        -- This includes forward/backward and parameter update.
---        -- Different RL will use different approaches.
---         local errs = state.agent:optimize(sample)
---         accumulate_errs(state, errs)
+local master = Master(opt,net,crit)
 
---         state.t = state.t + 1
---         self.hooks("onUpdate", state)
---     end
+if opt.mode == 'train' then
+    master:train()
+elseif opt.mode == 'test' then
+    master:test()
+end
 
---     -- Update the sampling model.
---     -- state.agent:update_sampling_model(update_sampling_before)
---     state.agent:update_sampling_model()
-
---     state.epoch = state.epoch + 1
---     self.hooks("onEndEpoch", state)
--- end
 
 
 
