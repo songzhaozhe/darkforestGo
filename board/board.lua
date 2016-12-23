@@ -235,7 +235,7 @@ end
 
 function board.get_ladder_escape(b,player)
     local ladder_escape_map = torch.FloatTensor(19,19)
-    C.GetLadderEscape(b,player,ladder_capture_map:data())
+    C.GetLadderEscape(b,player,ladder_escape_map:data())
     return ladder_escape_map;
 end
 

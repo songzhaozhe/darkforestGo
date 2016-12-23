@@ -113,7 +113,6 @@ function Master:train()
 	    net:training()
 	    acc_errs = 0
 	    t = 0
-
 	    for sample in self.train_dataset_iterator() do
     	    -- for i = 1, 100 do
     	    -- 	sample = {

@@ -246,12 +246,12 @@ Dataset.batch_action = argcheck{
 Dataset.batch_forward = argcheck{
     {name="self", type="rl.Dataset"},
     {name="selected", type="table"},
-    {name="action", type="torch.*Tensor"},
-    call = function(self, selected, action)
+    --{name="action", type="torch.*Tensor"},
+    call = function(self, selected)
         -- Then we run forward and get the data.
         local res = { }
         for i = 1, self.batchsize do
-            local this_res = selected[i]:forward(action[i][1])
+            local this_res = selected[i]:forward()
             table.insert(res, this_res)
             -- If we arrived the terminal state, reset the forward model.
             if this_res.nonterminal == 0 then
@@ -270,8 +270,8 @@ Dataset.get = argcheck{
     call = function(self, idx)
         -- Simply draw an example from the forward model.
         local selected, selected_indices = self:sample_batch()
-        local action = self:batch_action(selected)
-        local res = self:batch_forward(selected, action)
+        --local action = self:batch_action(selected)
+        local res = self:batch_forward(selected)
 
         -- require 'fb.debugger'.enter()
         res.fm_indices = torch.FloatTensor(selected_indices)

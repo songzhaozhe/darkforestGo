@@ -221,7 +221,7 @@ local feature_mapping = {
 --    end,
     ladder_capture = function(b,player) return board.get_ladder_capture(b,player) end,
     ladder_escape = function(b,player) return board.get_ladder_escape(b,player) end,
-    sensibleness = function(b,player) return board.get_sensibleness_map(b,playern) end,
+    sensibleness = function(b,player) return board.get_sensibleness_map(b,player) end,
     zeros = function(b,player) return torch.zeros(19,19):float() end,
     capture_size = function(b,player) return board.get_capture_size(b,player) end,
     selfAtari_size = function(b,player) return board.get_selfAtari_size(b,player) end,
@@ -301,12 +301,18 @@ local features_list = {
         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
         "border", 'position_mask', 'closest_color', 'attention'
     },
+    -- ours = {
+    --     "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
+    --     "border", 'position_mask', 'closest_color',
+    --     "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our self-atari_size", "zeros", "ones", "our liberties_after_move",
+    --     "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent self-atari_size", "opponent liberties_after_move"
+    -- }
     ours = {
         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
         "border", 'position_mask', 'closest_color',
-        "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our self-atari_size", "zeros", "ones", "our liberties_after_move",
-        "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent self-atari_size", "opponent liberties_after_move"
-    }
+        "our sensibleness", "our capture_size", "our self-atari_size", "zeros", "ones", "our liberties_after_move",
+        "opponent sensibleness", "opponent capture_size", "opponent self-atari_size", "opponent liberties_after_move"
+    }    
 }
 
 function goutils.addGrade(feature, grade)
