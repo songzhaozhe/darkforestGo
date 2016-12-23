@@ -304,7 +304,7 @@ local features_list = {
     ours = {
         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
         "border", 'position_mask', 'closest_color',
-        "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our self-atari_size", "zeros", "ones", "our liberties_after_move"
+        "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our self-atari_size", "zeros", "ones", "our liberties_after_move",
         "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent self-atari_size", "opponent liberties_after_move"
     }
 }
@@ -349,8 +349,8 @@ function goutils.extract_feature(b, player, opt, rank, dataset_info)
             ["opponent stones"] = features[9],
             ["empty stones"] = features[10],
         }
-    else if opt.feature_type == 'ours' then
-        features,named_features = goutils.get_features(b,player,features[opt.feature_type],dataset_info)
+    elseif opt.feature_type == 'ours' then
+        features,named_features = goutils.get_features(b,player,features_list[opt.feature_type],dataset_info)
     else
         if opt.feature_type == 'extended_with_attention' and opt.attention then
             dataset_info = opt.attention

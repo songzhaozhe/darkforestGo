@@ -8,4 +8,4 @@
 #
 
 #!/bin/bash -e
-th train.lua --nGPU 1 --use_bn f 4 --net regular_net --batchsize 4 --datasource kgs --num_forward_models 2048 --nthread 4 --alpha 0.05 --epoch_size 128000 --data_augmentation
+th train.lua --feature_type ours --nGPU 1 --use_bn f 4 --net regular_net --batchsize 4 --datasource kgs --num_forward_models 2048 --nthread 4 --alpha 0.05 --epoch_size 128000 --data_augmentation

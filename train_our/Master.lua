@@ -122,7 +122,7 @@ function Master:train()
 
     	    -- 	}
 
-          --print(sample.s)
+          print(#sample.s)
     			net:forward(sample.s)
     			local errs = crit:forward(net.output,sample.a)
     			local grad = crit:backward(net.output,sample.a)

@@ -54,7 +54,7 @@ end
 paths.mkdir(paths.concat('experiments', opt.foldername))
 
 
-local flog = logroll.file_logger(paths.concat('exp_'..opt.net..'_log.txt'))
+local flog = logroll.file_logger(paths.concat('experiments', opt.foldername,'_log.txt'))
 local plog = logroll.print_logger()
 log = logroll.combine(flog, plog)
 
