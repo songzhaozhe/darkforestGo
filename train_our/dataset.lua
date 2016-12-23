@@ -6,13 +6,16 @@
 -- LICENSE file in the root directory of this source tree. An additional grant
 -- of patent rights can be found in the PATENTS file in the same directory.
 --
-
+--print(package.path)
+package.path = package.path .. ";../?.lua"
+--print(package.path)
 local tnt = require 'torchnet.env'
 local argcheck = require 'argcheck'
 local doc = require 'argcheck.doc'
+require 'cutorch'
 
 local pl = require 'pl.import_into'()
-local rl = require 'train.rl_framework.infra.env'
+local rl = require 'train_our.env'
 local nnutils = require 'utils.nnutils'
 
 doc[[
@@ -37,7 +40,8 @@ For opt we have:
 
 require 'nn'
 
-local Dataset = torch.class('rl.Dataset', 'tnt.Dataset', rl)
+
+local Dataset = torch.class('rl.Dataset', 'tnt.Dataset',rl)
 
 -- For all the auxillary function, the first dimension is always the batch size.
 local function sampling_max(action_values, valid_actions, T, eps)
@@ -153,10 +157,10 @@ Dataset.__init = argcheck{
        self.sampling = rl.func_lookup(self.opt.sampling, Dataset.samplings)
        self.max_sample_len = self.opt.max_sample_len or 1
 
-       if self.opt.sampling ~= "uniform" then
-           assert(self.bundle, string.format("When sampling is not uniform, self.bundle cannot be nil. self.opt.actor = %s", self.opt.actor))
-           assert(self.actor, string.format("When sampling is not uniform, self.actor cannot be nil! self.opt.actor = %s", self.opt.actor))
-        end
+       -- if self.opt.sampling ~= "uniform" then
+       --     assert(self.bundle, string.format("When sampling is not uniform, self.bundle cannot be nil. self.opt.actor = %s", self.opt.actor))
+       --     assert(self.actor, string.format("When sampling is not uniform, self.actor cannot be nil! self.opt.actor = %s", self.opt.actor))
+       --  end
 
        self.batchsize = batchsize
        self.thread_idx = thread_idx
@@ -198,60 +202,59 @@ Dataset.sample_batch = argcheck{
     end
 }
 
-Dataset.batch_action = argcheck{
-    {name='self', type='rl.Dataset'},
-    {name='selected', type='table'},
-    call = function(self, selected)
-        local action
-        if self.opt.sampling == 'uniform' then
-            action = torch.FloatTensor(self.batchsize, 1)
-            for i = 1, self.batchsize do
-                local all_actions = selected[i]:get_actions()
-                action[i][1] = sampling_uniform(all_actions)
-            end
-        elseif self.opt.sampling == 'replay' then
-            -- No action is needed.
-            action = torch.FloatTensor(self.batchsize, 1):zero()
-        else
-            -- require 'fb.debugger'.enter()
-            -- Prepare for the batch for forwarding.
-            local s_reps = { }
-            local valid_actions = { }
-            for i = 1, self.batchsize do
-                table.insert(s_reps, selected[i]:get_curr_state_rep())
-                valid_actions[i] = selected[i]:get_actions()
-            end
-            s_reps = self.makebatch(s_reps)
-            s_reps = self.tocuda(s_reps)
+-- Dataset.batch_action = argcheck{
+--     {name='self', type='rl.Dataset'},
+--     {name='selected', type='table'},
+--     call = function(self, selected)
+--         local action
+--         if self.opt.sampling == 'uniform' then
+--             action = torch.FloatTensor(self.batchsize, 1)
+--             for i = 1, self.batchsize do
+--                 local all_actions = selected[i]:get_actions()
+--                 action[i][1] = sampling_uniform(all_actions)
+--             end
+--         elseif self.opt.sampling == 'replay' then
+--             -- No action is needed.
+--             action = torch.FloatTensor(self.batchsize, 1):zero()
+--         else
+--             -- require 'fb.debugger'.enter()
+--             -- Prepare for the batch for forwarding.
+--             local s_reps = { }
+--             local valid_actions = { }
+--             for i = 1, self.batchsize do
+--                 table.insert(s_reps, selected[i]:get_curr_state_rep())
+--                 valid_actions[i] = selected[i]:get_actions()
+--             end
+--             s_reps = self.makebatch(s_reps)
+--             s_reps = self.tocuda(s_reps)
 
-            if self.forward_model_batch_postprocess then
-                s_reps = self.forward_model_batch_postprocess(s_reps)
-            end
+--             if self.forward_model_batch_postprocess then
+--                 s_reps = self.forward_model_batch_postprocess(s_reps)
+--             end
 
-            local action_values = self.actor(self.bundle, s_reps):float()
-            local valid_action_mask = action_values:clone():zero()
+--             local action_values = self.actor(self.bundle, s_reps):float()
+--             local valid_action_mask = action_values:clone():zero()
 
-            for i = 1, self.batchsize do
-                for j = 1, #valid_actions[i] do
-                    local valid_idx = valid_actions[i][j]
-                    valid_action_mask[i][valid_idx] = 1
-                end
-            end
-            action = self.sampling(action_values, valid_action_mask, self.opt.T, self.opt.eps)
-        end
-        return action
-    end
-}
+--             for i = 1, self.batchsize do
+--                 for j = 1, #valid_actions[i] do
+--                     local valid_idx = valid_actions[i][j]
+--                     valid_action_mask[i][valid_idx] = 1
+--                 end
+--             end
+--             action = self.sampling(action_values, valid_action_mask, self.opt.T, self.opt.eps)
+--         end
+--         return action
+--     end
+-- }
 
 Dataset.batch_forward = argcheck{
     {name="self", type="rl.Dataset"},
     {name="selected", type="table"},
-    {name="action", type="torch.*Tensor"},
-    call = function(self, selected, action)
+    call = function(self, selected)
         -- Then we run forward and get the data.
         local res = { }
         for i = 1, self.batchsize do
-            local this_res = selected[i]:forward(action[i][1])
+            local this_res = selected[i]:forward()
             table.insert(res, this_res)
             -- If we arrived the terminal state, reset the forward model.
             if this_res.nonterminal == 0 then
@@ -270,8 +273,8 @@ Dataset.get = argcheck{
     call = function(self, idx)
         -- Simply draw an example from the forward model.
         local selected, selected_indices = self:sample_batch()
-        local action = self:batch_action(selected)
-        local res = self:batch_forward(selected, action)
+        --local action = self:batch_action(selected)
+        local res = self:batch_forward(selected)
 
         -- require 'fb.debugger'.enter()
         res.fm_indices = torch.FloatTensor(selected_indices)

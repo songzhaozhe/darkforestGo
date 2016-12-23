@@ -25,6 +25,7 @@ local goutils = require 'utils.goutils'
 local pl = require 'pl.import_into'()
 local argcheck = require 'argcheck'
 local tnt = require 'torchnet'
+require 'cutorch'
 
 local fm_go = { }
 
@@ -67,8 +68,8 @@ function FMGo:get_sa(b, game)
     local sample
     local nstep = self.opt.nstep
     -- DCNN model.
-    local moves = torch.LongTensor(nstep)
-    local xys = torch.LongTensor(nstep, 2)
+    local moves = torch.LongTensor(nstep):cuda()
+    local xys = torch.LongTensor(nstep, 2):cuda()
     for i = 1, nstep do
         local x, y, player = sgfloader.parse_move(game:play_current(i - 1))
         local x_rot, y_rot = goutils.rotateMove(x, y, style)
@@ -105,7 +106,7 @@ function FMGo:get_sa(b, game)
     end
 
     return {
-        s = feature,
+        s = feature:cuda(),
         a = moves,
         xy = xys,
         ply = self.game.ply,
@@ -195,8 +196,7 @@ FMGo.reset = argcheck{
 -- Here we only return s and a.
 FMGo.forward = argcheck{
     {name="self", type="fm_go.FMGo"},
-    {name="action_index", type="number"},
-    call = function(self, action_index)
+    call = function(self)
         -- action_index will be omitted.
         local nstep = self.opt.nstep
         -- Next game if reload is needed.

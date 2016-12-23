@@ -1,16 +1,19 @@
+package.path = package.path .. ";../?.lua"
 local classic = require 'classic'
 local optim = require 'optim'
 require 'optimiser/sharedRmsProp'
 local Plot = require 'itorch.Plot'
 local tnt = require 'torchnet'
+local rl = require 'train_our.env'
 
 local Master = classic.class('Master')
 
 local load_closure = function(thread_idx, partition, epoch_size, fm_init, fm_generator, fm_postprocess, opt)
     local tnt = require 'torchnet'
     local rl = require 'train_our.env'
-    require 'train_our.dataset'
+    --require 'train_our.dataset'
     -- It is by default a batchdataset.
+    print(rl.Dataset)
     return rl.Dataset{
         forward_model_init = fm_init,
         forward_model_generator = fm_generator,
@@ -29,11 +32,13 @@ local function build_dataset(thread_init, fm_init, fm_gen, fm_postprocess,  part
         dataset = tnt.ParallelDatasetIterator{
             nthread = opt.nthread,
             init = function()
+                package.path = package.path .. ";../?.lua"
                 require 'cutorch'
                 require 'torchnet'
                 require 'cudnn'
                 require 'train_our.env'
                 require 'train_our.dataset'
+                    --print(rl.Dataset)
                 if opt.gpu and opt.nGPU == 1 then
                     cutorch.setDevice(opt.gpu)
                 end
@@ -71,8 +76,8 @@ function Master:_init(opt,net,crit,callbacks)
     local fm_init = callbacks.forward_model_init
     local fm_gen = callbacks.forward_model_generator
     local fm_postprocess = callbacks.forward_model_batch_postprocess
-   	self.train_dataset = build_dataset(thread_init, fm_init, fm_gen, fm_postprocess,  "train", opt.epoch_size, opt)
-    self.test_dataset = build_dataset(thread_init, fm_init, fm_gen, fm_postprocess, "test", opt.epoch_size_test, opt)
+   	self.train_dataset_iterator = build_dataset(thread_init, fm_init, fm_gen, fm_postprocess,  "train", opt.epoch_size, opt)
+    self.test_dataset_iterator = build_dataset(thread_init, fm_init, fm_gen, fm_postprocess, "test", opt.epoch_size_test, opt)
 end
 
 function Master:applyGradients()
@@ -101,21 +106,22 @@ function Master:train()
 	    acc_errs = 0
 	    t = 0
 
-	    for sample in self.iterator() do
-	    -- for i = 1, 100 do
-	    -- 	sample = {
-	    -- 		s = torch.ones(4,25,19,19):cuda(),
-	    -- 		a = torch.ones(4,3):cuda()
+	    for sample in self.train_dataset_iterator() do
+    	    -- for i = 1, 100 do
+    	    -- 	sample = {
+    	    -- 		s = torch.ones(4,25,19,19):cuda(),
+    	    -- 		a = torch.ones(4,3):cuda()
 
-	    -- 	}
+    	    -- 	}
 
-			-- This includes forward/backward and parameter update.
-			-- Different RL will use different approaches.
-			net:forward(sample.s)
-			local errs = crit:forward(net.output,sample.a)
-			local grad = crit:backward(net.output,sample.a)
+    			-- This includes forward/backward and parameter update.
+    			-- Different RL will use different approaches.
+          print(sample.s)
+    			net:forward(sample.s)
+    			local errs = crit:forward(net.output,sample.a)
+    			local grad = crit:backward(net.output,sample.a)
 
-			net:backward(sample.s,grad)
+    			net:backward(sample.s,grad)
 
 	        acc_errs = acc_errs + errs
 
