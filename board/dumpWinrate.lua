@@ -3,10 +3,10 @@
 -- All rights reserved.
 --
 -- This source code is licensed under the BSD-style license found in the
--- LICENSE file in the root directory of this source tree. An additional grant 
+-- LICENSE file in the root directory of this source tree. An additional grant
 -- of patent rights can be found in the PATENTS file in the same directory.
--- 
-
+--
+local board = require 'board.board'
 local pl = require 'pl.import_into'()
 local goutils = require 'utils.goutils'
 local sgf =  require 'utils.sgf'
@@ -16,6 +16,7 @@ local opt = pl.lapp[[
    -s,--sgf               (default "")         Sgf file to load
    -s,--start_n           (default -1)         Start from
    -e,--end_n             (default -1)         End to
+   -r,--rollout           (default 1000)       Rollout number
 ]]
 
 assert(opt.sgf)
@@ -31,7 +32,7 @@ board.clear(b)
 goutils.apply_handicaps(b, game, true)
 
 local n = game:get_total_moves()
-game:play(function (move, counter) 
+game:play(function (move, counter)
     local x, y, player = sgf.parse_move(move, false, true)
     if x and y and player then
         board.play(b, x, y, player)
@@ -40,11 +41,11 @@ game:play(function (move, counter)
     end
 end, opt.start_n)
 
-local tr = playoutv2.new(opt.rollout) 
- 
+--local tr = playoutv2.new(opt.rollout)
+
 
 -- Then we start the dumping.
-game:play(function (move, counter) 
+game:play(function (move, counter)
     local x, y, player = sgf.parse_move(move, false, true)
     if x and y and player then
         board.play(b, x, y, player)
@@ -52,5 +53,3 @@ game:play(function (move, counter)
         return true
     end
 end, opt.end_n, true)
-
-
