@@ -68,7 +68,6 @@ local probs_cuda, sortProb_cuda, sortInd_cuda
 local all_features
 while true do
     -- Get data
-    print("running cnn_local_exchanger")
     block_ids:zero() 
     if all_features then
         all_features:zero()
@@ -105,7 +104,9 @@ while true do
         print(string.format("Valid sample = %d / %d", num_valid, max_batch)) 
         util_pkg.dprint("Start evaluation...")
         local start = common.wallclock()
+        --print(all_features)
         local output = model:forward(all_features:sub(1, num_valid))
+        --print("finish")
         local territory
         util_pkg.dprint("End evaluation...")
         -- If the output is multitask, only take the first one.

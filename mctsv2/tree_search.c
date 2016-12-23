@@ -82,9 +82,7 @@ static int block_all_threads(TreeHandle *s, BOOL print_and_reset_all_stats) {
     // If blocking_number > 0, then all the threads are already blocked. So don't wait.
     // Whenever we update the board, trigger the semaphone.
     // Wait until all threads are blocked.
-    printf("waiting_sem\n");
     sem_wait(&s->sem_all_threads_blocked);
-    printf("out of sem\n");
     // Block all the receivers as well
     block_all_receivers(s);
     res = THREAD_NEW_BLOCKED;
@@ -229,9 +227,7 @@ static BOOL send_search_complete(TreeHandle *s, int complete_reason) {
 // It blocks the current threads until the condition is met from search threads.
 static void wait_search_complete(TreeHandle *s) {
   // Wait until the condition is met.
-  printf("before sem_search_complete\n");  
   sem_wait(&s->sem_search_complete);
-  printf("after sem_search_complete\n");
   if (s->params.verbose >= V_INFO) {
     const char *reason = NULL;
     switch (s->flag_search_complete) {
@@ -841,17 +837,17 @@ static void *threaded_expansion(void *ctx) {
   PRINT_DEBUG("Start expansion\n");
 
   for (;;) {
-    printf("starting the loop in expansion\n");
+    //printf("starting the loop in expansion\n");
     if (threaded_block_if_needed(ctx)) break;
     threaded_if_search_complete(ctx);
-    printf("@#@#@@#@##@\n");
+    //printf("@#@#@@#@##@\n");
     TreeBlock *b = threaded_expand_root_if_needed(ctx);
     info->counter ++;
-    printf("@#@#@@#@##@\n");
+    //printf("@#@#@@#@##@\n");
     BlockOffset child_offset;
 
     CopyBoard(&board, &s->board);
-    printf("@#@#@@#@##@\n");    
+    //printf("@#@#@@#@##@\n");    
     // Random traverse down the tree and expand a node
     BOOL leaf_expanded = FALSE;
     // Whether the board is pointing towards the child node.
@@ -860,7 +856,7 @@ static void *threaded_expansion(void *ctx) {
     // fprintf(stderr,"---Start playout %d/%d ---\n", i, info->s->num_rollout_per_thread);
     int depth = 0;
     while (1) {
-      printf("in while\n");
+      //printf("in while\n");
       // Pick a random child.
       if (b == TP_NULL) error("We should never visit TP_NULL.");
       // tree_simple_show_block(p, b);
@@ -1679,13 +1675,13 @@ static void prune_actual_pickmove(TreeHandle *s, Coord m, TreeBlock *child_left)
 
 void tree_search_prune_opponent(void *ctx, Coord m) {
   if (ctx == NULL) error("ctx cannot be NULL!");
-printf("inside tree_search_prune_opponent\n");
+//printf("inside tree_search_prune_opponent\n");
   TreeHandle *s = (TreeHandle *)ctx;
   TreePool *p = &s->p;
   char buf[30];
 
   block_all_threads(s, TRUE);
-printf("after block_all_threads\n");
+//printf("after block_all_threads\n");
   // If the child to be expand is TP_NULL, we first need to expand it and then pick the move we want.
   // This happens if the opponent picks the unexpected move which we didn't expand.
   PRINT_DEBUG("play_multithread:prune_tree starts\n");
@@ -1823,9 +1819,9 @@ Move tree_search_pick_best(void *ctx, AllMoves *all_moves, const Board *verify_b
   // Set the search_time starting point. The time control will be based on this number.
   // Use atomic store since pondering may be opened.
   long curr_time = time(NULL);
-  printf("in tree_search_pick_best\n");
+ // printf("in tree_search_pick_best\n");
   __atomic_store_n(&s->ts_search_genmove_called, curr_time, __ATOMIC_RELAXED);
-  printf("after store\n");
+ // printf("after store\n");
   PRINT_INFO("ts_genmove_called: %ld\n", curr_time);
 
   // If no pondering, we only resume the threads here.
@@ -1834,14 +1830,14 @@ Move tree_search_pick_best(void *ctx, AllMoves *all_moves, const Board *verify_b
     PRINT_INFO("Start search within tree_search_pick_best...\n");
     resume_all_threads(s);
   }
-printf("waiting_search complete\n");
+//printf("waiting_search complete\n");
   // Wait until the condition is met.
   wait_search_complete(s);
 
   // Then we block all threads and read the results.
-printf("before block_all_threads\n");  
+//printf("before block_all_threads\n");  
   block_all_threads(s, TRUE);
-printf("after block_all_threads\n");
+//printf("after block_all_threads\n");
   if (p->root == NULL) error("Root should not be null!\n");
 
   // Check if the board is right.

@@ -57,14 +57,21 @@ local function build_dataset(thread_init, fm_init, fm_gen, fm_postprocess,  part
 end
 
 function Master:_init(opt,net,crit,callbacks)
-	-- body
-	self.opt = opt
-	self.net = net
-	self.crit = crit
+  	-- body
+  	self.opt = opt
+  	self.net = net
+  	self.crit = crit
   	self.theta, self.dTheta = self.net:getParameters()	
   	self.dTheta:zero()
   	self.maxepoch = opt.maxepoch
   	self.optimiser = optim[opt.optimiser]
+    self.plotStep = {}
+    self.plotEpoch ={}
+    self.accs = {}
+    self.losses={}
+    self.learningRateStart = opt.alpha
+    self.totalSteps = opt.epoch_size*self.maxepoch
+    self.acc_Steps = 0
   	local sharedG = self.theta:clone():zero()
   	self.optimParams = {
   		learningRate = opt.learningRate,
@@ -88,7 +95,7 @@ function Master:applyGradients()
     return loss, self.dTheta
   end
 
-  --self.optimParams.learningRate = self.learningRateStart * (self.totalSteps - self.step) / self.totalSteps
+  self.optimParams.learningRate = self.learningRateStart * (self.maxepoch - self.epoch) / self.maxepoch
   self.optimiser(feval, self.theta, self.optimParams)
 
   self.dTheta:zero()
@@ -96,12 +103,13 @@ end
 
 function Master:train()
 
-	local epoch = 0
+	self.epoch = 0
 	local acc_errs = 0
 	local t = 0
 	local net = self.net
 	local crit = self.crit
-	while epoch < self.maxepoch do
+
+	while self.epoch < self.maxepoch do
 	    net:training()
 	    acc_errs = 0
 	    t = 0
@@ -114,9 +122,7 @@ function Master:train()
 
     	    -- 	}
 
-    			-- This includes forward/backward and parameter update.
-    			-- Different RL will use different approaches.
-          print(sample.s)
+          --print(sample.s)
     			net:forward(sample.s)
     			local errs = crit:forward(net.output,sample.a)
     			local grad = crit:backward(net.output,sample.a)
@@ -124,27 +130,84 @@ function Master:train()
     			net:backward(sample.s,grad)
 
 	        acc_errs = acc_errs + errs
-
+          self.acc_Steps = self.acc_Steps+1
 	        t = t + 1
 
 	        self:applyGradients()
+          self.plotStep[#self.plotStep+1] = self.acc_Steps
+          self.losses[#self.losses+1] = errs
 
-	        print(errs)
+          if t % 10 == 0 then
+            self:plotErr()
+          end
 	    end
 
 	    -- Update the sampling model.
 	    -- state.agent:update_sampling_model(update_sampling_before)
-	    state.agent:update_sampling_model()
 
-	    state.epoch = state.epoch + 1
+      self:saveNet()
+      log.info("Epoch"..self.epoch.."finished")
+	    self.epoch = self.epoch + 1
+      self.plotEpoch[#self.plotEpoch+1]=self.epoch
+      self.accs[#self.accs+1] = self:test()
+      self:plotAcc() 
+      self:test()      
+
 
 	end
 
 end
 
-function Master:test(opt)
-	local a
+function Master:test()
+  log.info("testing started!")
+	local net = self.net
+  local crit = self.crit
+  net:evaluate()
+  local acc_errs = 0
+  local acc_Steps = 0
+  for sample in self.test_dataset_iterator() do
+     
+    net:forward(sample.s)
+    local errs = crit:forward(net.output,sample.a)
+    acc_errs = acc_errs + errs
+    acc_Steps = acc_Steps+1
+    --log.info("%.4f",errs)
+  end
+
+  local ret = acc_errs/acc_Steps
+  log.info("Test error is %.4f", ret)
+  return ret
 end
 
+
+
+
+
+function Master:plotErr()
+  local idx = torch.Tensor(self.plotStep)
+  local scores = torch.Tensor(self.losses) 
+  plot = Plot():line(idx, scores, 'blue', 'loss'):draw()
+  plot:title('Learning Progress'):redraw()
+  plot:xaxis('Global Step'):yaxis('Loss'):redraw()
+  plot:legend(true)
+  plot:redraw()
+  plot:save(paths.concat('experiments', self.opt.net, 'loss.html'))
+end
+
+function Master:plotAcc()
+  local idx = torch.Tensor(self.plotEpoch)
+  local scores = torch.Tensor(self.accs) 
+  plot = Plot():line(idx, scores, 'blue', 'loss'):draw()
+  plot:title('Learning Progress'):redraw()
+  plot:xaxis('Global Step'):yaxis('Loss'):redraw()
+  plot:legend(true)
+  plot:redraw()
+  plot:save(paths.concat('experiments', self.opt.net, 'Accuracy.html'))
+end
+
+function Master:saveNet( name )
+  --log.info('Saving  weights')
+  torch.save(paths.concat('experiments', self.opt.net, 'df2.bin'), self.net)
+end
 
 return Master

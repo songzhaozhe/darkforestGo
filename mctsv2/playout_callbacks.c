@@ -291,7 +291,7 @@ BOOL dcnn_leaf_expansion(ThreadInfo *info, const Board *board, TreeBlock *b) {
   if (board == NULL) error("Board cannot be null!");
 
   PRINT_DEBUG("About to send to board server.\n");
-  printf("inside dcnn_leaf_expansion\n");
+  //printf("inside dcnn_leaf_expansion\n");
   if (s->params.use_async) {
     // Fill the block with fast rollout moves.
     fill_block_with_fast_rollout(s, board, b);
@@ -306,9 +306,9 @@ BOOL dcnn_leaf_expansion(ThreadInfo *info, const Board *board, TreeBlock *b) {
       if (send_to_cnn(info, b, board)) {
         // Wait until cnn moves is returned.
         PRINT_DEBUG("Wait until CNN moves are returned..\n");
-        printf("########waiting CNNN\n");
+        //printf("########waiting CNNN\n");
         cnn_data_wait_until_evaluated_bit(&b->cnn_data, BIT_CNN_RECEIVED);
-        printf("########CNNN returned\n");   
+        //printf("########CNNN returned\n");   
         PRINT_DEBUG("CNN moves are returned..\n");
         return TRUE;
       }

@@ -37,13 +37,22 @@ local opt = pl.lapp[[
     --optimiser           (default 'sharedRmsProp')
     --maxepoch            (default 50)
     --feature_type        (default 'extended')
+    --foldername         (default '')
 ]]
 --add models
 --local network_maker = require('train.rl_framework.examples.go.models.' .. opt.model_name)
 --local network, crit_not_used, outputdim, monitor_list = network_maker({1, 25, 19, 19}, opt)
 --local model = network:cuda()
-
+opt.userank = true
 opt.use_bn = opt.use_bn == 'true'
+if (opt.foldername == '') then
+    opt.foldername = opt.net
+end
+if not paths.dirp('experiments') then
+    paths.mkdir('experiments')
+end
+paths.mkdir(paths.concat('experiments', opt.foldername))
+
 
 local flog = logroll.file_logger(paths.concat('exp_'..opt.net..'_log.txt'))
 local plog = logroll.print_logger()
