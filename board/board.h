@@ -3,9 +3,9 @@
 // All rights reserved.
 //
 // This source code is licensed under the BSD-style license found in the
-// LICENSE file in the root directory of this source tree. An additional grant 
+// LICENSE file in the root directory of this source tree. An additional grant
 // of patent rights can be found in the PATENTS file in the same directory.
-// 
+//
 
 #ifndef _BOARD_H_
 #define _BOARD_H_
@@ -276,6 +276,7 @@ BOOL GroupInRegion(const Board *board, short group_idx, const Region *r);
 // Pretty slow. Need some improvements.
 // Find all valid moves excluding self-atari.
 void FindAllCandidateMoves(const Board* board, Stone player, int self_atari_thres, AllMoves *all_moves);
+void FindAllSensibleMoves(const Board* board, Stone player,  AllMoves *all_moves);
 void FindAllCandidateMovesInRegion(const Board* board, const Region *r, Stone player, int self_atari_thres, AllMoves *all_moves);
 
 // Find all valid moves including self-atari.
@@ -371,6 +372,15 @@ BOOL GetStones(const Board* board, Stone player, float *data);
 BOOL GetSimpleKo(const Board* board, Stone player, float *data);
 BOOL GetHistory(const Board* board, Stone player, float *data);
 BOOL GetDistanceMap(const Board* board, Stone player, float *data);
+
+
+
+BOOL GetAMLibertyMap(const Board *board, Stone player, float *data);
+BOOL GetLadderEscape(const Board *board, Stone player, float *data);
+BOOL GetLadderCapture(const Board *board, Stone player, float *data);
+BOOL GetCaptureSize(const Board *board, Stone player, float *data);
+BOOL GetSelfAtariSize(const Board *board, Stone player, float *data);
+BOOL GetSensibleMap(const Board *board, Stone player, float *data);
 
 // Some utility functions.
 char *get_move_str(Coord m, Stone player, char *buf);

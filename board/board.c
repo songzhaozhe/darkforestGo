@@ -200,7 +200,7 @@ BOOL IsSelfAtari(const Board *board, const GroupId4 *ids, Coord c, Stone player,
   }
 }
 
-BOOL GetCaptureSize(const Board *board, Stone *player, float *data){
+BOOL GetCaptureSize(const Board *board, Stone player, float *data){
     memset(data,0,BOARD_SIZE * BOARD_SIZE * sizeof(float));
     AllMoves mvs;
     GroupId4 ids;
@@ -216,7 +216,7 @@ BOOL GetCaptureSize(const Board *board, Stone *player, float *data){
             if (ids.colors[j]!=player){
                 if (ids.group_liberties[j]==1) {
                     if (captured[0]!=ids.ids[j] && captured[1]!=ids.ids[j] && captured[2]!=ids.ids[j]){
-                        captureSize += board._group[ids.ids[j]].stones;
+                        captureSize += board->_groups[ids.ids[j]].stones;
                         captured[j] = ids.ids[j];
                     }
                 }
@@ -227,7 +227,7 @@ BOOL GetCaptureSize(const Board *board, Stone *player, float *data){
     return TRUE;
 }
 
-BOOL GetSelfAtariSize(const Board *board, Stone *player, float *data){
+BOOL GetSelfAtariSize(const Board *board, Stone player, float *data){
     memset(data, 0, BOARD_SIZE * BOARD_SIZE * sizeof(float));
     AllMoves mvs;
     GroupId4 ids;
@@ -241,9 +241,9 @@ BOOL GetSelfAtariSize(const Board *board, Stone *player, float *data){
 }
 
 
-BOOL GetSensibleMap(const Board *board, Stone *player, float *data){
+BOOL GetSensibleMap(const Board *board, Stone player, float *data){
     memset(data,0,BOARD_SIZE * BOARD_SIZE*sizeof(float));
-    ALllMoves mvs;
+    AllMoves mvs;
     FindAllSensibleMoves(board, player, &mvs);
     for (int i=0; i<mvs.num_moves; ++i){
         data[mvs.moves[i]] = 1;
@@ -442,7 +442,7 @@ int CheckLadder(const Board *board, const GroupId4 *ids, Stone player) {
   return 0;
 }
 
-BOOL GetLadderEscape(const Board *board, Stone *player, float *data){
+BOOL GetLadderEscape(const Board *board, Stone player, float *data){
     memset(data,0,BOARD_SIZE*BOARD_SIZE*sizeof(float));
     AllMoves mvs;
     GroupId4 ids;
@@ -456,7 +456,7 @@ BOOL GetLadderEscape(const Board *board, Stone *player, float *data){
 }
 
 
-BOOL GetLadderCapture(const Board *board, Stone *player, float *data){
+BOOL GetLadderCapture(const Board *board, Stone player, float *data){
     memset(data,0,BOARD_SIZE*BOARD_SIZE*sizeof(float));
     AllMoves mvs;
     GroupId4 ids;
@@ -474,7 +474,7 @@ BOOL GetLadderCapture(const Board *board, Stone *player, float *data){
             CopyBoard(&b_next, board);
             int num_call = 0;
             int depth = 1;
-            if (CheckLadderUseSearch(b_next,OPPONENT(player),&num_call,depth)!=0)
+            if (CheckLadderUseSearch(&b_next,OPPONENT(player),&num_call,depth)!=0)
                 data[mvs.moves[i]] = 1;
         }
     }
@@ -806,8 +806,8 @@ void FindAllCandidateMoves(const Board* board, Stone player, int self_atari_thre
 }
 
 
-void FindAllSensibleMoves(const Board* board, Stone player, AllMoves *all_moves) {
 // Allow all the self-atari moves
+void FindAllSensibleMoves(const Board* board, Stone player, AllMoves *all_moves) {
   GroupId4 ids;
   Coord c;
   all_moves->board = board;
@@ -1534,11 +1534,11 @@ BOOL GetAMLibertyMap(const Board *board, Stone player, float *data){
   GroupId4 ids;
   FindAllValidMoves(board,player,&mvs);
   for (int i=0; i<mvs.num_moves; ++i){
-      StoneLibertyAnalysis(board,player,c,ids);
+      StoneLibertyAnalysis(board,player,mvs.moves[i],&ids);
       Board b2;
       CopyBoard(&b2,board);
-      Play(&b2,ids);
-      short id = b2._info[mvs.moves[i]].id;
+      Play(&b2,&ids);
+      short id = b2._infos[mvs.moves[i]].id;
       data[mvs.moves[i]] = b2._groups[id].liberties;
   }
   return TRUE;
