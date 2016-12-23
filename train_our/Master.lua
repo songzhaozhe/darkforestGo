@@ -6,9 +6,10 @@ local tnt = require 'torchnet'
 
 local Master = classic.class('Master')
 
-local load_closure = function(thread_idx, partition, epoch_size, fm_init, fm_generator, fm_postprocess, bundle, opt)
+local load_closure = function(thread_idx, partition, epoch_size, fm_init, fm_generator, fm_postprocess, opt)
     local tnt = require 'torchnet'
-    local rl = require 'train.rl_framework.infra.env'
+    local rl = require 'train_our.env'
+    require 'train_our.dataset'
     -- It is by default a batchdataset.
     return rl.Dataset{
         forward_model_init = fm_init,
@@ -17,13 +18,12 @@ local load_closure = function(thread_idx, partition, epoch_size, fm_init, fm_gen
         batchsize = opt.batchsize,
         thread_idx = thread_idx,
         partition = partition,
-        bundle = bundle,
         epoch_size = epoch_size,
         opt = opt
     }
 end
 
-local function build_dataset(thread_init, fm_init, fm_gen, fm_postprocess, bundle, partition, epoch_size, opt)
+local function build_dataset(thread_init, fm_init, fm_gen, fm_postprocess,  partition, epoch_size, opt)
     local dataset
     if opt.nthread > 0 then
         dataset = tnt.ParallelDatasetIterator{
@@ -32,18 +32,20 @@ local function build_dataset(thread_init, fm_init, fm_gen, fm_postprocess, bundl
                 require 'cutorch'
                 require 'torchnet'
                 require 'cudnn'
+                require 'train_our.env'
+                require 'train_our.dataset'
                 if opt.gpu and opt.nGPU == 1 then
                     cutorch.setDevice(opt.gpu)
                 end
                 if thread_init ~= nil then thread_init() end
             end,
             closure = function(thread_idx)
-                return load_closure(thread_idx, partition, epoch_size, fm_init, fm_gen, fm_postprocess, bundle, opt)
+                return load_closure(thread_idx, partition, epoch_size, fm_init, fm_gen, fm_postprocess, opt)
             end
         }
     else
         dataset = tnt.DatasetIterator{
-            dataset = load_closure(1, partition, epoch_size, fm_init, fm_gen, fm_postprocess, bundle, opt)
+            dataset = load_closure(1, partition, epoch_size, fm_init, fm_gen, fm_postprocess, opt)
         }
     end
     return dataset
@@ -69,8 +71,8 @@ function Master:_init(opt,net,crit,callbacks)
     local fm_init = callbacks.forward_model_init
     local fm_gen = callbacks.forward_model_generator
     local fm_postprocess = callbacks.forward_model_batch_postprocess
-   	self.train_dataset = build_dataset(thread_init, fm_init, fm_gen, fm_postprocess, bundle, "train", opt.epoch_size, opt)
-    self.test_dataset = build_dataset(thread_init, fm_init, fm_gen, fm_postprocess, bundle, "test", opt.epoch_size_test, opt)
+   	self.train_dataset = build_dataset(thread_init, fm_init, fm_gen, fm_postprocess,  "train", opt.epoch_size, opt)
+    self.test_dataset = build_dataset(thread_init, fm_init, fm_gen, fm_postprocess, "test", opt.epoch_size_test, opt)
 end
 
 function Master:applyGradients()

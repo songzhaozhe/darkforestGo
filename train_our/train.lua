@@ -35,6 +35,10 @@ local opt = pl.lapp[[
     --optimiser           (default 'sharedRmsProp')
     --maxepoch            (default 50)
 ]]
+--add models
+--local network_maker = require('train.rl_framework.examples.go.models.' .. opt.model_name)
+--local network, crit_not_used, outputdim, monitor_list = network_maker({1, 25, 19, 19}, opt)
+--local model = network:cuda()
 
 opt.use_bn = opt.use_bn == 'true'
 
