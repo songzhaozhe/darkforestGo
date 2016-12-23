@@ -1,3 +1,5 @@
+package.path = package.path .. ";../?.lua"
+
 require 'cutorch'
 require 'nn'
 
@@ -34,6 +36,7 @@ local opt = pl.lapp[[
     --mode                (default 'train')
     --optimiser           (default 'sharedRmsProp')
     --maxepoch            (default 50)
+    --feature_type        (default 'extended')
 ]]
 --add models
 --local network_maker = require('train.rl_framework.examples.go.models.' .. opt.model_name)
@@ -73,7 +76,7 @@ local callbacks = {
         local tnt = require 'torchnet'
         return tnt.IndexedDataset{
             fields = { opt.datasource .. "_" .. partition },
-            path = './dataset'
+            path = '../dataset'
         }
     end,
     forward_model_generator = function(dataset, partition)
