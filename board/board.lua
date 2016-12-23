@@ -3,9 +3,9 @@
 -- All rights reserved.
 --
 -- This source code is licensed under the BSD-style license found in the
--- LICENSE file in the root directory of this source tree. An additional grant 
+-- LICENSE file in the root directory of this source tree. An additional grant
 -- of patent rights can be found in the PATENTS file in the same directory.
--- 
+--
 
 local ffi = require 'ffi'
 local pl = require 'pl.import_into'()
@@ -79,10 +79,8 @@ function board.copyfrom2(bb, b)
 end
 
 function board.clear(b)
-    --print("start clear board")
     dprintf("Start board.clear()")
     C.ClearBoard(b)
-    --print("finish!!!!!!!!!!!!")
 end
 
 function board.show(b, choice)
@@ -110,7 +108,7 @@ function board.show_fancy(b, choice)
     end
     print " "
 end
- 
+
 
 function board.dump(b)
     dprintf("Start board.dump()")
@@ -119,7 +117,7 @@ function board.dump(b)
 end
 
 -- This one returns Coords.
-function board.get_all_stones(b) 
+function board.get_all_stones(b)
     local black_moves = ffi.new("AllMoves")
     local white_moves = ffi.new("AllMoves")
     C.GetAllStones(b, black_moves, white_moves)
@@ -133,7 +131,7 @@ function board.get_all_stones(b)
     return res
 end
 
-function board.get_black_white_stones(b) 
+function board.get_black_white_stones(b)
     local black_moves = ffi.new("AllMoves")
     local white_moves = ffi.new("AllMoves")
     C.GetAllStones(b, black_moves, white_moves)
@@ -164,7 +162,7 @@ function board.is_move_giving_simple_ko(b, x, y, player)
     if C.TryPlay(b, x - 1, y - 1, player, ids) == common.TRUE then
         return C.IsMoveGivingSimpleKo(b, ids, player) == common.TRUE
     end
-end 
+end
 
 function board.tryplay(b, x, y, player)
     dprintf("Start board.tryplay()")
@@ -211,6 +209,49 @@ function board.is_game_end(b)
 end
 
 -- Feature extractors ---
+
+function board.get_capture_size(b,player)
+    local capture_size = torch.FloatTensor(19,19)
+    C.GetCaptureSize(b,player,capture_size:data());
+    return capture_size;
+end
+
+function board.get_selfAtari_size(b,player)
+    local selfAtari_size = torch.FloatTensor(19,19)
+    C.GetSelfAtariSize(b,player,selfAtari_size:data());
+    return selfAtari_size;
+end
+
+function board.get_sensibleness_map(b,player)
+    local sensibleness = torch.FloatTensor(19,19)
+    --for i=1, 19 do
+    --    for j = 1, 19 do
+    --        sensibleness[i][j] = C.TryPlay(b,i,j,player,ids) and not C.IsTrueEyeXY(b,i,j,player);
+    --    end
+    --end
+    C.GetSensibleMap(b,player,sensibleness:data())
+    return sensibleness;
+end
+
+function board.get_ladder_escape(b,player)
+    local ladder_escape_map = torch.FloatTensor(19,19)
+    C.GetLadderEscape(b,player,ladder_capture_map:data())
+    return ladder_escape_map;
+end
+
+function board.get_ladder_capture(b,player)
+    local ladder_capture_map = torch.FloatTensor(19,19)
+    C.GetLadderCapture(b,player,ladder_capture_map:data())
+    return ladder_capture_map;
+end
+
+function board.get_after_move_liberties_map(b,player)
+    dprintf("Start board.get_after_move_liberties_map()")
+    local liberties_after_move = torch.FloatTensor(19,19)
+    C.GetAMLibertyMap(b,player,liberties_after_move:data())
+    return liberties_after_move
+end
+
 function board.get_liberties_map(b, player)
     dprintf("Start board.get_liberties_map()")
     local liberties = torch.FloatTensor(19, 19)
@@ -255,7 +296,7 @@ function board.expand_region(r, margin)
     r.bottom = math.min(r.bottom + margin, common.board_size)
 end
 
-function board.get_attacker(b, r) 
+function board.get_attacker(b, r)
     -- From the bounding box, we could get the likely attacker.
     return C.GuessLDAttacker(b, r)
 end
@@ -289,8 +330,8 @@ function board.show_compact_map(m)
     for i = 1, 19 do
         s = s .. "   "
         for j = 1, 19 do
-            local v = m[j][20 - i] 
-            if v == common.black then 
+            local v = m[j][20 - i]
+            if v == common.black then
                 s = s .. 'x '
             else
                 s = s .. 'o '

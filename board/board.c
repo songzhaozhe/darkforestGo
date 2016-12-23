@@ -3,9 +3,9 @@
 // All rights reserved.
 //
 // This source code is licensed under the BSD-style license found in the
-// LICENSE file in the root directory of this source tree. An additional grant 
+// LICENSE file in the root directory of this source tree. An additional grant
 // of patent rights can be found in the PATENTS file in the same directory.
-// 
+//
 
 #include "board.h"
 #include <malloc.h>
@@ -31,7 +31,6 @@ void SetAsBorder(Board* board, int side, int i1, int w, int j1, int h) {
 void ClearBoard(Board *board) {
   memset((void *)board, 0, sizeof(Board));
   // Setup the offboard mark.
-  //printf("clearing board in c program\n");
   SetAsBorder(board, BOARD_EXPAND_SIZE, 0, BOARD_MARGIN, 0, BOARD_EXPAND_SIZE);
   SetAsBorder(board, BOARD_EXPAND_SIZE, BOARD_SIZE + BOARD_MARGIN, BOARD_MARGIN, 0, BOARD_EXPAND_SIZE);
   SetAsBorder(board, BOARD_EXPAND_SIZE, 0, BOARD_EXPAND_SIZE, 0, BOARD_MARGIN);
@@ -199,6 +198,57 @@ BOOL IsSelfAtari(const Board *board, const GroupId4 *ids, Coord c, Stone player,
   } else {
     return FALSE;
   }
+}
+
+BOOL GetCaptureSize(const Board *board, Stone *player, float *data){
+    memset(data,0,BOARD_SIZE * BOARD_SIZE * sizeof(float));
+    AllMoves mvs;
+    GroupId4 ids;
+    int captureSize;
+    int captured[4];
+    FindAllValidMoves(board,player,&mvs);
+    for (int i=0; i<mvs.num_moves; ++i){
+        captureSize = 0;
+        captured[0] = captured[1] = captured[2] = captured[3] = 0;
+        StoneLibertyAnalysis(board,player,mvs.moves[i],&ids);
+        for (int j=0; j<4; ++j){
+            if (ids.ids[j]==0) continue;
+            if (ids.colors[j]!=player){
+                if (ids.group_liberties[j]==1) {
+                    if (captured[0]!=ids.ids[j] && captured[1]!=ids.ids[j] && captured[2]!=ids.ids[j]){
+                        captureSize += board._group[ids.ids[j]].stones;
+                        captured[j] = ids.ids[j];
+                    }
+                }
+            }
+        }
+        data[mvs.moves[i]] = captureSize;
+    }
+    return TRUE;
+}
+
+BOOL GetSelfAtariSize(const Board *board, Stone *player, float *data){
+    memset(data, 0, BOARD_SIZE * BOARD_SIZE * sizeof(float));
+    AllMoves mvs;
+    GroupId4 ids;
+    int atariSize;
+    FindAllValidMoves(board,player,&mvs);
+    for (int i=0; i<mvs.num_moves; ++i){
+        if (IsSelfAtari(board,NULL,mvs.moves[i],player,&atariSize))
+            data[mvs.moves[i]] = atariSize;
+    }
+    return TRUE;
+}
+
+
+BOOL GetSensibleMap(const Board *board, Stone *player, float *data){
+    memset(data,0,BOARD_SIZE * BOARD_SIZE*sizeof(float));
+    ALllMoves mvs;
+    FindAllSensibleMoves(board, player, &mvs);
+    for (int i=0; i<mvs.num_moves; ++i){
+        data[mvs.moves[i]] = 1;
+    }
+    return TRUE;
 }
 
 #define MAX_LADDER_SEARCH 1024
@@ -390,6 +440,45 @@ int CheckLadder(const Board *board, const GroupId4 *ids, Stone player) {
     return CheckLadderUseSearch(&b_next, player, &num_call, depth);
   }
   return 0;
+}
+
+BOOL GetLadderEscape(const Board *board, Stone *player, float *data){
+    memset(data,0,BOARD_SIZE*BOARD_SIZE*sizeof(float));
+    AllMoves mvs;
+    GroupId4 ids;
+    FindAllValidMoves(board,player,&mvs);
+    for (int i=0; i<mvs.num_moves; ++i){
+        StoneLibertyAnalysis(board,player,mvs.moves[i],&ids);
+        if (CheckLadder(board,&ids,player)==0)
+            data[mvs.moves[i]] = 1;
+    }
+    return TRUE;
+}
+
+
+BOOL GetLadderCapture(const Board *board, Stone *player, float *data){
+    memset(data,0,BOARD_SIZE*BOARD_SIZE*sizeof(float));
+    AllMoves mvs;
+    GroupId4 ids;
+    FindAllValidMoves(board,player,&mvs);
+    for (int i=0; i<mvs.num_moves; ++i){
+        StoneLibertyAnalysis(board,player,mvs.moves[i],&ids);
+        int atari_num = 0;
+        for (int j=0; j<4; ++j){
+            if (ids.colors[j]==OPPONENT(player) && ids.group_liberties[j]==1){
+                ++atari_num;
+            }
+        }
+        Board b_next;
+        if (atari_num == 1){
+            CopyBoard(&b_next, board);
+            int num_call = 0;
+            int depth = 1;
+            if (CheckLadderUseSearch(b_next,OPPONENT(player),&num_call,depth)!=0)
+                data[mvs.moves[i]] = 1;
+        }
+    }
+    return TRUE;
 }
 
 void RemoveStoneAndAddLiberty(Board *board, Coord c) {
@@ -711,6 +800,33 @@ void FindAllCandidateMoves(const Board* board, Stone player, int self_atari_thre
         if (self_atari_count >= self_atari_thres) continue;
       }
 
+      all_moves->moves[all_moves->num_moves++] = c;
+    }
+  }
+}
+
+
+void FindAllSensibleMoves(const Board* board, Stone player, AllMoves *all_moves) {
+// Allow all the self-atari moves
+  GroupId4 ids;
+  Coord c;
+  all_moves->board = board;
+  all_moves->num_moves = 0;
+  int self_atari_count = 0;
+  for (int x = 0; x < BOARD_SIZE; ++x) {
+    for (int y = 0; y < BOARD_SIZE; ++y) {
+      c = OFFSETXY(x, y);
+      if (!EMPTY(board->_infos[c].color)) continue;
+      StoneLibertyAnalysis(board, player, c, &ids);
+
+      // It is illegal to play at ko locations.
+      if (IsSimpleKoViolation(board, c, player)) continue;
+
+      // It is illegal to play a suicide move.
+      if (IsSuicideMove(&ids)) continue;
+
+      // Never fill a true eye.
+      if (IsTrueEye(board, c, player)) continue;
       all_moves->moves[all_moves->num_moves++] = c;
     }
   }
@@ -1410,6 +1526,22 @@ void DistanceTransform(float* arr) {
       arr[EXPORT_OFFSET_XY(i, j)] = min(arr[EXPORT_OFFSET_XY(i, j)], arr[EXPORT_OFFSET_XY(i, j + 1)] + 1);
     }
   }
+}
+
+BOOL GetAMLibertyMap(const Board *board, Stone player, float *data){
+  memset(data, 0, BOARD_SIZE * BOARD_SIZE * sizeof(float));
+  AllMoves mvs;
+  GroupId4 ids;
+  FindAllValidMoves(board,player,&mvs);
+  for (int i=0; i<mvs.num_moves; ++i){
+      StoneLibertyAnalysis(board,player,c,ids);
+      Board b2;
+      CopyBoard(&b2,board);
+      Play(&b2,ids);
+      short id = b2._info[mvs.moves[i]].id;
+      data[mvs.moves[i]] = b2._groups[id].liberties;
+  }
+  return TRUE;
 }
 
 // If we set player = 0 (S_EMPTY), then the liberties of both side will be returned.

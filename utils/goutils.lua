@@ -77,6 +77,17 @@ function goutils.get_old_features(b, player)
     return features
 end
 
+
+
+local function feature_liberties_after_move(b,player)
+    local liberties_after_move = board.get_after_move_liberties_map(b,player)
+    local features = torch.FloatTensor(3,19,19)
+    features[1]:copy(liberties_after_move:eq(1))
+    features[2]:copy(liberties_after_move:eq(2))
+    features[3]:copy(liberties_after_move:ge(3))
+    return features
+end
+
 local function feature_liberties(b, player)
     local liberties = board.get_liberties_map(b, player)
     local features = torch.FloatTensor(3, 19, 19)
@@ -203,7 +214,18 @@ local feature_mapping = {
                 error("dataset_info is invalid!")
             end
         end, 1
-    }
+    },
+    ones =function(b,player) return torch.ones(19,19):float() end,
+--    turns = function(b,player) --is this one really necessary?
+--        blahblah
+--    end,
+    ladder_capture = function(b,player) return board.get_ladder_capture(b,player) end,
+    ladder_escape = function(b,player) return board.get_ladder_escape(b,player) end,
+    sensibleness = function(b,player) return board.get_sensibleness_map(b,playern) end,
+    zeros = function(b,player) return torch.zeros(19,19):float() end,
+    capture_size = function(b,player) return board.get_capture_size(b,player) end,
+    selfAtari_size = function(b,player) return board.get_selfAtari_size(b,player) end,
+    liberties_after_move = {function(b,player) return get_liberties_after_move(b,player) end,3}
 }
 
 local player_mapping = {
@@ -279,6 +301,12 @@ local features_list = {
         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
         "border", 'position_mask', 'closest_color', 'attention'
     },
+    ours = {
+        "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
+        "border", 'position_mask', 'closest_color',
+        "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our self-atari_size", "zeros", "ones", "our liberties_after_move"
+        "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent self-atari_size", "opponent liberties_after_move"
+    }
 }
 
 function goutils.addGrade(feature, grade)
@@ -321,6 +349,8 @@ function goutils.extract_feature(b, player, opt, rank, dataset_info)
             ["opponent stones"] = features[9],
             ["empty stones"] = features[10],
         }
+    else if opt.feature_type == 'ours' then
+        features,named_features = goutils.get_features(b,player,features[opt.feature_type],dataset_info)
     else
         if opt.feature_type == 'extended_with_attention' and opt.attention then
             dataset_info = opt.attention
