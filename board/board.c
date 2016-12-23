@@ -456,6 +456,40 @@ BOOL GetLadderEscape(const Board *board, Stone player, float *data){
     return TRUE;
 }
 
+BOOL GetLadderCaptureNew(const Board *board, Stone player, float *data){
+    memset(data,0,BOARD_SIZE * BOARD_SIZE * sizeof(float));
+    AllMoves mvs;
+    GroupId4 ids;
+    Board b_next;
+    for (int i=0; i<mvs.num_moves; ++i){
+        StoneLibertyAnalysis(board,player,mvs.moves[i],&ids);
+        int victim_pos = -1;
+        BOOL cand = TRUE;
+        for (int j=0; j<4; ++j){
+            if (ids.colors[j]==OPPONENT(player) && ids.group_liberties[j]==1){
+                if (victim_pos<0) victim_pos = j;
+                else {
+                    cand = FALSE;
+                    break;
+                }
+            }
+        }
+        if (cand){
+            CopyBoard(&b_next,board);
+            Play(&b_next,&ids);
+            FOR4(ids.ids[victim_pos],_,cc){
+                GroupId4 ids2;
+                StoneLibertyAnalysis(&b_next,player,cc,&ids2);
+                if (EMPTY(ids2.player)&&TryPlay2(board,cc,&ids2)){
+                    if (CheckLadder(&b_next,&ids2,player)!=0){
+                        data[EXPORT_OFFSET(mvs.moves[i])] = 1;
+                        break;
+                    }
+                }
+            }ENDFOR4
+        }
+    }
+}
 
 BOOL GetLadderCapture(const Board *board, Stone player, float *data){
     memset(data,0,BOARD_SIZE*BOARD_SIZE*sizeof(float));

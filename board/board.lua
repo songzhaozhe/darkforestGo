@@ -245,7 +245,7 @@ end
 
 function board.get_ladder_capture(b,player)
     local ladder_capture_map = torch.FloatTensor(19,19)
-    C.GetLadderCapture(b,player,ladder_capture_map:data())
+    C.GetLadderCaptureNew(b,player,ladder_capture_map:data())
     return ladder_capture_map;
 end
 

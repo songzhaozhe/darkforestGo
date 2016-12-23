@@ -305,18 +305,18 @@ local features_list = {
         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
         "border", 'position_mask', 'closest_color', 'attention'
     },
-     --ours = {
-    --     "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
-    --     "border", 'position_mask', 'closest_color',
-    --     "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move",
-    --     "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent selfAtari_size", "opponent liberties_after_move"
-    -- }
     ours = {
-        "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
-        "border", 'position_mask', 'closest_color',
-        "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move",
-        "opponent sensibleness", "opponent capture_size", "opponent selfAtari_size", "opponent liberties_after_move"
+         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
+         "border", 'position_mask', 'closest_color',
+         "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move",
+         "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent selfAtari_size", "opponent liberties_after_move"
     }
+    --ours = {
+    --    "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
+    --    "border", 'position_mask', 'closest_color',
+    --     "our ladder_escape", "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move",
+    --     "opponent ladder_escape","opponent sensibleness", "opponent capture_size", "opponent selfAtari_size", "opponent liberties_after_move"
+    --}
 
 
 }

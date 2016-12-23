@@ -378,6 +378,7 @@ BOOL GetDistanceMap(const Board* board, Stone player, float *data);
 BOOL GetAMLibertyMap(const Board *board, Stone player, float *data);
 BOOL GetLadderEscape(const Board *board, Stone player, float *data);
 BOOL GetLadderCapture(const Board *board, Stone player, float *data);
+BOOL GetLadderCaptureNew(const Board *board, Stone player, float *data);
 BOOL GetCaptureSize(const Board *board, Stone player, float *data);
 BOOL GetSelfAtariSize(const Board *board, Stone player, float *data);
 BOOL GetSensibleMap(const Board *board, Stone player, float *data);
