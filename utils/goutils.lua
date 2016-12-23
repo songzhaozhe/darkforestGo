@@ -13,10 +13,14 @@ local common = require("common.common")
 local sgfloader = require('utils.sgf')
 local board = require('board.board')
 require 'image'
+require 'logroll'
 -- Feature extractor, usage:
 -- goutils.get_features(b, t)
 --    wher t is the table that contains features.
 --
+local flog = logroll.file_logger(paths.concat('experiments', '_2log.txt'))
+local plog = logroll.print_logger()
+log = logroll.combine(flog, plog)
 
 function goutils.get_old_features(b, player)
     -- we should flip the board and color so we are always black (THIS IS NOT TRUE for player code)
@@ -222,10 +226,10 @@ local feature_mapping = {
     ladder_capture = function(b,player) return board.get_ladder_capture(b,player) end,
     ladder_escape = function(b,player) return board.get_ladder_escape(b,player) end,
     sensibleness = function(b,player) return board.get_sensibleness_map(b,player) end,
-    zeros = function(b,player) return torch.zeros(19,19):float() end,
+    zeros = function(b,player)  return torch.zeros(19,19):float() end,
     capture_size = function(b,player) return board.get_capture_size(b,player) end,
-    selfAtari_size = function(b,player) return board.get_selfAtari_size(b,player) end,
-    liberties_after_move = {function(b,player) return get_liberties_after_move(b,player) end,3}
+    selfAtari_size = function(b,player)return board.get_selfAtari_size(b,player) end,
+    liberties_after_move = {function(b,player) return feature_liberties_after_move(b,player) end,3}
 }
 
 local player_mapping = {
@@ -301,18 +305,20 @@ local features_list = {
         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
         "border", 'position_mask', 'closest_color', 'attention'
     },
-    -- ours = {
+     --ours = {
     --     "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
     --     "border", 'position_mask', 'closest_color',
-    --     "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our self-atari_size", "zeros", "ones", "our liberties_after_move",
-    --     "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent self-atari_size", "opponent liberties_after_move"
+    --     "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move",
+    --     "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent selfAtari_size", "opponent liberties_after_move"
     -- }
     ours = {
         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
         "border", 'position_mask', 'closest_color',
-        "our sensibleness", "our capture_size", "our self-atari_size", "zeros", "ones", "our liberties_after_move",
-        "opponent sensibleness", "opponent capture_size", "opponent self-atari_size", "opponent liberties_after_move"
-    }    
+        "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move",
+        "opponent sensibleness", "opponent capture_size", "opponent selfAtari_size", "opponent liberties_after_move"
+    }
+
+
 }
 
 function goutils.addGrade(feature, grade)
@@ -346,6 +352,7 @@ end
 --    type = [old, complete, extended, extended_with_attention]
 -- If opt.attention exists and opt.feture_type == 'extended_with_attention", then get_feature will use the attention region
 function goutils.extract_feature(b, player, opt, rank, dataset_info)
+    log.info('extract_feature')
     local features, named_features
     if opt.feature_type == 'old' then
         -- Legancy features..

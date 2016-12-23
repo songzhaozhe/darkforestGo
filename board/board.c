@@ -222,7 +222,7 @@ BOOL GetCaptureSize(const Board *board, Stone player, float *data){
                 }
             }
         }
-        data[mvs.moves[i]] = captureSize;
+        data[EXPORT_OFFSET(mvs.moves[i])] = captureSize;
     }
     return TRUE;
 }
@@ -234,8 +234,9 @@ BOOL GetSelfAtariSize(const Board *board, Stone player, float *data){
     int atariSize;
     FindAllValidMoves(board,player,&mvs);
     for (int i=0; i<mvs.num_moves; ++i){
-        if (IsSelfAtari(board,NULL,mvs.moves[i],player,&atariSize))
-            data[mvs.moves[i]] = atariSize;
+        StoneLibertyAnalysis(board,player,mvs.moves[i],&ids);
+        if (IsSelfAtari(board,&ids,mvs.moves[i],player,&atariSize))
+            data[EXPORT_OFFSET(mvs.moves[i])] = atariSize;
     }
     return TRUE;
 }
@@ -246,7 +247,7 @@ BOOL GetSensibleMap(const Board *board, Stone player, float *data){
     AllMoves mvs;
     FindAllSensibleMoves(board, player, &mvs);
     for (int i=0; i<mvs.num_moves; ++i){
-        data[mvs.moves[i]] = 1;
+        data[EXPORT_OFFSET(mvs.moves[i])] = 1;
     }
     return TRUE;
 }
@@ -450,7 +451,7 @@ BOOL GetLadderEscape(const Board *board, Stone player, float *data){
     for (int i=0; i<mvs.num_moves; ++i){
         StoneLibertyAnalysis(board,player,mvs.moves[i],&ids);
         if (CheckLadder(board,&ids,player)==0)
-            data[mvs.moves[i]] = 1;
+            data[EXPORT_OFFSET(mvs.moves[i])] = 1;
     }
     return TRUE;
 }
@@ -475,7 +476,7 @@ BOOL GetLadderCapture(const Board *board, Stone player, float *data){
             int num_call = 0;
             int depth = 1;
             if (CheckLadderUseSearch(&b_next,OPPONENT(player),&num_call,depth)!=0)
-                data[mvs.moves[i]] = 1;
+                data[EXPORT_OFFSET(mvs.moves[i])] = 1;
         }
     }
     return TRUE;
@@ -1539,7 +1540,7 @@ BOOL GetAMLibertyMap(const Board *board, Stone player, float *data){
       CopyBoard(&b2,board);
       Play(&b2,&ids);
       short id = b2._infos[mvs.moves[i]].id;
-      data[mvs.moves[i]] = b2._groups[id].liberties;
+      data[EXPORT_OFFSET(mvs.moves[i])] = b2._groups[id].liberties;
   }
   return TRUE;
 }
