@@ -48,6 +48,13 @@ opt.use_bn = opt.use_bn == 'true'
 if (opt.foldername == '') then
     opt.foldername = opt.net
 end
+if (opt.feature_type == 'extended') then
+    opt.input_feature_num = 25
+elseif (opt.feature_type == 'ours') then
+    opt.input_feature_num = 35
+end
+
+
 if not paths.dirp('experiments') then
     paths.mkdir('experiments')
 end

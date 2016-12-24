@@ -305,12 +305,17 @@ local features_list = {
         "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
         "border", 'position_mask', 'closest_color', 'attention'
     },
+    -- ours = {
+    --      "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
+    --      "border", 'position_mask', 'closest_color',
+    --      "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move",
+    --      "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent selfAtari_size", "opponent liberties_after_move"
+    -- }
     ours = {
          "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
          "border", 'position_mask', 'closest_color',
-         "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move",
-         "opponent ladder_capture", "opponent ladder_escape", "opponent sensibleness", "opponent capture_size", "opponent selfAtari_size", "opponent liberties_after_move"
-    }
+         "our ladder_capture", "our ladder_escape", "our sensibleness", "our capture_size", "our selfAtari_size", "zeros", "ones", "our liberties_after_move"
+    }    
     --ours = {
     --    "our liberties", "opponent liberties", "our simpleko", "our stones", "opponent stones", "empty stones", "our history", "opponent history",
     --    "border", 'position_mask', 'closest_color',
@@ -352,7 +357,6 @@ end
 --    type = [old, complete, extended, extended_with_attention]
 -- If opt.attention exists and opt.feture_type == 'extended_with_attention", then get_feature will use the attention region
 function goutils.extract_feature(b, player, opt, rank, dataset_info)
-    log.info('extract_feature')
     local features, named_features
     if opt.feature_type == 'old' then
         -- Legancy features..

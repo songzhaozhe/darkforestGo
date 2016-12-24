@@ -10,7 +10,7 @@ end
 
 function Body:create_net_and_crit(opt)
   -- Number of input frames for recurrent networks is always 1
-	local input_feature_num = 25;
+	local input_feature_num = opt.input_feature_num;
 	local net = nn.Sequential()  
 	net:add(nn.SpatialConvolution(input_feature_num,92,5,5,1,1,2,2))
 	net:add(nn.ReLU(true))

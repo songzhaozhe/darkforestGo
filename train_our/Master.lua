@@ -5,6 +5,7 @@ require 'optimiser/sharedRmsProp'
 local Plot = require 'itorch.Plot'
 local tnt = require 'torchnet'
 local rl = require 'train_our.env'
+require 'cutorch'
 
 local Master = classic.class('Master')
 
@@ -13,7 +14,6 @@ local load_closure = function(thread_idx, partition, epoch_size, fm_init, fm_gen
     local rl = require 'train_our.env'
     --require 'train_our.dataset'
     -- It is by default a batchdataset.
-    print(rl.Dataset)
     return rl.Dataset{
         forward_model_init = fm_init,
         forward_model_generator = fm_generator,
@@ -69,6 +69,7 @@ function Master:_init(opt,net,crit,callbacks)
     self.plotEpoch ={}
     self.accs = {}
     self.losses={}
+    self.test_losses = {}
     self.learningRateStart = opt.alpha
     self.totalSteps = opt.epoch_size*self.maxepoch
     self.acc_Steps = 0
@@ -120,8 +121,6 @@ function Master:train()
     	    -- 		a = torch.ones(4,3):cuda()
 
     	    -- 	}
-
-          print(#sample.s)
     			net:forward(sample.s)
     			local errs = crit:forward(net.output,sample.a)
     			local grad = crit:backward(net.output,sample.a)
@@ -148,9 +147,8 @@ function Master:train()
       log.info("Epoch"..self.epoch.."finished")
 	    self.epoch = self.epoch + 1
       self.plotEpoch[#self.plotEpoch+1]=self.epoch
-      self.accs[#self.accs+1] = self:test()
-      self:plotAcc() 
-      self:test()      
+      self.test_losses, self.accs[#self.accs+1] = self:test()
+      self:plotAcc()      
 
 
 	end
@@ -164,18 +162,26 @@ function Master:test()
   net:evaluate()
   local acc_errs = 0
   local acc_Steps = 0
+  local correct = 0
   for sample in self.test_dataset_iterator() do
      
     net:forward(sample.s)
     local errs = crit:forward(net.output,sample.a)
     acc_errs = acc_errs + errs
     acc_Steps = acc_Steps+1
+    _,idx = torch.max(net.output[1],2)
+    idx = idx:typeAs(sample.a)--from CudaLongTensor to CudaTensor, in order to use eq()
+    --idx = torch.Tensor(idx):cuda()
+    correct = correct + idx:eq(sample.a:narrow(2,1,1)):sum()
+    --log.info(correct/acc_Steps /self.opt.batchsize)
     --log.info("%.4f",errs)
   end
 
   local ret = acc_errs/acc_Steps
+  local accuracy = correct / acc_Steps /self.opt.batchsize
   log.info("Test error is %.4f", ret)
-  return ret
+  log.info("Accuracy is %.4f", accuracy) 
+  return ret,accuracy
 end
 
 
@@ -195,13 +201,21 @@ end
 
 function Master:plotAcc()
   local idx = torch.Tensor(self.plotEpoch)
-  local scores = torch.Tensor(self.accs) 
+  local scores = torch.Tensor(self.test_losses) 
+  local scores2 = torch.Tensor(self.accs)
   plot = Plot():line(idx, scores, 'blue', 'loss'):draw()
+  plot:title('Learning Progress'):redraw()
+  plot:xaxis('Global Step'):yaxis('Test_Loss'):redraw()
+  plot:legend(true)
+  plot:redraw()
+  plot:save(paths.concat('experiments', self.opt.net, 'Test_loss.html'))
+
+  plot = Plot():line(idx, scores2, 'blue', 'loss'):draw()
   plot:title('Learning Progress'):redraw()
   plot:xaxis('Global Step'):yaxis('Loss'):redraw()
   plot:legend(true)
   plot:redraw()
-  plot:save(paths.concat('experiments', self.opt.net, 'Accuracy.html'))
+  plot:save(paths.concat('experiments', self.opt.net, 'Accuracy.html'))  
 end
 
 function Master:saveNet( name )
