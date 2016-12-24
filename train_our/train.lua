@@ -37,7 +37,8 @@ local opt = pl.lapp[[
     --optimiser           (default 'sharedRmsProp')
     --maxepoch            (default 50)
     --feature_type        (default 'extended')
-    --foldername         (default '')
+    --foldername          (default '')
+    --gpuDevice           (default 0)
 ]]
 --add models
 --local network_maker = require('train.rl_framework.examples.go.models.' .. opt.model_name)
@@ -53,7 +54,7 @@ if (opt.feature_type == 'extended') then
 elseif (opt.feature_type == 'ours') then
     opt.input_feature_num = 35
 end
-
+cutorch.setDevice(opt.gpuDevice)
 
 if not paths.dirp('experiments') then
     paths.mkdir('experiments')
