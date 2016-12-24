@@ -42,6 +42,8 @@ local function build_dataset(thread_init, fm_init, fm_gen, fm_postprocess,  part
                 if opt.gpu and opt.nGPU == 1 then
                     cutorch.setDevice(opt.gpu)
                 end
+
+		cutorch.setDevice(opt.gpuDevice)
                 if thread_init ~= nil then thread_init() end
             end,
             closure = function(thread_idx)
@@ -80,6 +82,8 @@ function Master:_init(opt,net,crit,callbacks)
       	rmsEpsilon = opt.rmsEpsilon,	
       	g = sharedG
   	}
+print(cutorch.getDevice())
+    cutorch.setDevice(opt.gpuDevice)
     local thread_init = callbacks.thread_init
     local fm_init = callbacks.forward_model_init
     local fm_gen = callbacks.forward_model_generator
@@ -124,7 +128,7 @@ function Master:train()
     			net:forward(sample.s)
     			local errs = crit:forward(net.output,sample.a)
     			local grad = crit:backward(net.output,sample.a)
-
+print(sample.a:getDevice())
     			net:backward(sample.s,grad)
 
 	        acc_errs = acc_errs + errs

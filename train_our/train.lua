@@ -55,7 +55,8 @@ elseif (opt.feature_type == 'ours') then
     opt.input_feature_num = 35
 end
 cutorch.setDevice(opt.gpuDevice)
-
+print(opt.gpuDevice)
+print(cutorch.getDevice())
 if not paths.dirp('experiments') then
     paths.mkdir('experiments')
 end
@@ -73,6 +74,7 @@ local model = regular_net(opt)
 local net, crit = model:create_net_and_crit(opt)
 net:cuda()
 crit:cuda()
+
 
 log.info("haahh")
 --local a = torch.ones(4,25,19,19)
