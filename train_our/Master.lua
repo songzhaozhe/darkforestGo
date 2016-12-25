@@ -128,7 +128,7 @@ function Master:train()
     			net:forward(sample.s)
     			local errs = crit:forward(net.output,sample.a)
     			local grad = crit:backward(net.output,sample.a)
-print(sample.a:getDevice())
+
     			net:backward(sample.s,grad)
 
 	        acc_errs = acc_errs + errs

@@ -1,0 +1,16 @@
+117.136.8.230 - - [25/Dec/2016 00:57:11] "GET / HTTP/1.1" 200 -
+117.136.8.230 - - [25/Dec/2016 00:57:11] code 404, message File not found
+117.136.8.230 - - [25/Dec/2016 00:57:11] "GET /favicon.ico HTTP/1.1" 404 -
+117.136.8.230 - - [25/Dec/2016 00:57:12] code 404, message File not found
+117.136.8.230 - - [25/Dec/2016 00:57:12] "GET /favicon.ico HTTP/1.1" 404 -
+117.136.8.230 - - [25/Dec/2016 00:57:20] "GET /regular_net/ HTTP/1.1" 200 -
+117.136.8.230 - - [25/Dec/2016 01:01:07] "GET /regular_net/loss.html HTTP/1.1" 200 -
+117.136.8.230 - - [25/Dec/2016 01:02:31] "GET /regular_net/loss.html HTTP/1.1" 200 -
+117.136.8.230 - - [25/Dec/2016 01:26:10] "GET / HTTP/1.1" 200 -
+117.136.8.230 - - [25/Dec/2016 01:26:10] code 404, message File not found
+117.136.8.230 - - [25/Dec/2016 01:26:10] "GET /favicon.ico HTTP/1.1" 404 -
+119.147.146.60 - - [25/Dec/2016 01:26:10] "GET / HTTP/1.1" 200 -
+117.136.8.230 - - [25/Dec/2016 01:26:15] "GET /regular_net/ HTTP/1.1" 200 -
+117.136.8.230 - - [25/Dec/2016 01:26:15] code 404, message File not found
+117.136.8.230 - - [25/Dec/2016 01:26:15] "GET /favicon.ico HTTP/1.1" 404 -
+117.136.8.230 - - [25/Dec/2016 01:26:18] "GET /regular_net/loss.html HTTP/1.1" 200 -

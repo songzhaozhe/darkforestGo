@@ -1,1 +1,5 @@
-[INFO - 2016_12_25_00:32:18] - "haahh"
+[INFO - 2016_12_25_00:56:59] - "haahh"
+[INFO - 2016_12_25_01:43:57] - "Epoch0finished"
+[INFO - 2016_12_25_01:43:57] - "testing started!"
+[INFO - 2016_12_25_02:00:45] - Test error is 26.5532
+[INFO - 2016_12_25_02:00:45] - Accuracy is 0.2575
