@@ -55,8 +55,7 @@ elseif (opt.feature_type == 'ours') then
     opt.input_feature_num = 35
 end
 cutorch.setDevice(opt.gpuDevice)
-print(opt.gpuDevice)
-print(cutorch.getDevice())
+
 if not paths.dirp('experiments') then
     paths.mkdir('experiments')
 end

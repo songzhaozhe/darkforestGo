@@ -151,7 +151,7 @@ print(sample.a:getDevice())
       log.info("Epoch"..self.epoch.."finished")
 	    self.epoch = self.epoch + 1
       self.plotEpoch[#self.plotEpoch+1]=self.epoch
-      self.test_losses, self.accs[#self.accs+1] = self:test()
+      self.test_losses[#self.test_losses+1], self.accs[#self.accs+1] = self:test()
       self:plotAcc()      
 
 
@@ -208,15 +208,15 @@ function Master:plotAcc()
   local scores = torch.Tensor(self.test_losses) 
   local scores2 = torch.Tensor(self.accs)
   plot = Plot():line(idx, scores, 'blue', 'loss'):draw()
-  plot:title('Learning Progress'):redraw()
-  plot:xaxis('Global Step'):yaxis('Test_Loss'):redraw()
+  plot:title('Test Loss'):redraw()
+  plot:xaxis('Epoch'):yaxis('Test Loss'):redraw()
   plot:legend(true)
   plot:redraw()
   plot:save(paths.concat('experiments', self.opt.net, 'Test_loss.html'))
 
   plot = Plot():line(idx, scores2, 'blue', 'loss'):draw()
   plot:title('Learning Progress'):redraw()
-  plot:xaxis('Global Step'):yaxis('Loss'):redraw()
+  plot:xaxis('Epoch'):yaxis('Top-1 Accuracy'):redraw()
   plot:legend(true)
   plot:redraw()
   plot:save(paths.concat('experiments', self.opt.net, 'Accuracy.html'))  
