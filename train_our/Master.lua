@@ -72,12 +72,12 @@ function Master:_init(opt,net,crit,callbacks)
     self.accs = {}
     self.losses={}
     self.test_losses = {}
-    self.learningRateStart = opt.alpha
+    self.learningRate = opt.alpha
     self.totalSteps = opt.epoch_size*self.maxepoch
     self.acc_Steps = 0
   	local sharedG = self.theta:clone():zero()
   	self.optimParams = {
-  		learningRate = opt.learningRate,
+  		learningRate = opt.alpha,
   		momentum = opt.momentum,
       	rmsEpsilon = opt.rmsEpsilon,	
       	g = sharedG
@@ -100,7 +100,7 @@ function Master:applyGradients()
     return loss, self.dTheta
   end
 
-  self.optimParams.learningRate = self.learningRateStart * (self.maxepoch - self.epoch) / self.maxepoch
+--  self.optimParams.learningRate = self.learningRateStart * (self.maxepoch - self.epoch) / self.maxepoch
   self.optimiser(feval, self.theta, self.optimParams)
 
   self.dTheta:zero()
@@ -153,7 +153,7 @@ function Master:train()
       self.plotEpoch[#self.plotEpoch+1]=self.epoch
       self.test_losses[#self.test_losses+1], self.accs[#self.accs+1] = self:test()
       self:plotAcc()      
-
+	self.optimParams.learningRate = self.optimParams.learningRate/4
 
 	end
 

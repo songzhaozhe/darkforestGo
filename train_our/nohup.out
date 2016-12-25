@@ -1,51 +1,46 @@
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5	
-3	
-3	
-[INFO - 2016_12_25_00:56:59] - "haahh"
+[INFO - 2016_12_25_11:43:24] - "haahh"
 3	
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
-rl.Dataset.__init(): forward_model_init is set, run it
-rl.Dataset.__init(): forward_model_init is set, run it
-| IndexedDataset: loaded ../dataset with 144748 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 32
-| IndexedDataset: loaded ../dataset with 144748 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 32
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 rl.Dataset.__init(): forward_model_init is set, run it
+| IndexedDataset: loaded ../dataset with 144748 examples
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+rl.Dataset.__init(): forward_model_init is set, run it
 rl.Dataset.__init(): forward_model_init is set, run it
 | IndexedDataset: loaded ../dataset with 144748 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 32
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
 | IndexedDataset: loaded ../dataset with 144748 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 32
-Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+rl.Dataset.__init(): forward_model_init is set, run it
+| IndexedDataset: loaded ../dataset with 144748 examples
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 rl.Dataset.__init(): forward_model_init is set, run it
 | IndexedDataset: loaded ../dataset with 26814 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 32
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 rl.Dataset.__init(): forward_model_init is set, run it
 | IndexedDataset: loaded ../dataset with 26814 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 32
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
 rl.Dataset.__init(): forward_model_init is set, run it
 | IndexedDataset: loaded ../dataset with 26814 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 32
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
 rl.Dataset.__init(): forward_model_init is set, run it
 | IndexedDataset: loaded ../dataset with 26814 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 32
-[INFO - 2016_12_25_01:43:57] - "Epoch0finished"
-[INFO - 2016_12_25_01:43:57] - "testing started!"
-[INFO - 2016_12_25_02:00:45] - Test error is 26.5532
-[INFO - 2016_12_25_02:00:45] - Accuracy is 0.2575
-/home/huanghe/torch/install/bin/luajit: /home/huanghe/torch/install/share/lua/5.1/itorch/Plot.lua:67: x and y have to have same number of elements
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+[INFO - 2016_12_25_12:30:21] - "Epoch0finished"
+[INFO - 2016_12_25_12:30:21] - "testing started!"
+[INFO - 2016_12_25_12:47:04] - Test error is 6.6933
+[INFO - 2016_12_25_12:47:04] - Accuracy is 0.2637
+/home/huanghe/torch/install/bin/luajit: ./Master.lua:156: attempt to perform arithmetic on field 'learningRate' (a nil value)
 stack traceback:
-	[C]: in function 'assert'
-	/home/huanghe/torch/install/share/lua/5.1/itorch/Plot.lua:67: in function 'line'
-	./Master.lua:210: in function 'plotAcc'
-	./Master.lua:155: in function 'train'
-	train.lua:111: in main chunk
+	./Master.lua:156: in function 'train'
+	train.lua:110: in main chunk
 	[C]: in function 'dofile'
 	...nghe/torch/install/lib/luarocks/rocks/trepl/scm-1/bin/th:145: in main chunk
 	[C]: at 0x00406670
