@@ -117,7 +117,6 @@ function Master:train()
 	while self.epoch < self.maxepoch do
 	    net:training()
 	    acc_errs = 0
-	    t = 0
 	    for sample in self.train_dataset_iterator() do
     	    -- for i = 1, 100 do
     	    -- 	sample = {
@@ -126,6 +125,14 @@ function Master:train()
 
     	    -- 	}
     			net:forward(sample.s)
+          if (t % 1000 == 0) then
+            local _,idx = torch.max(net.output[1],2)
+            idx = idx:typeAs(sample.a)--from CudaLongTensor to CudaTensor, in order to use eq()
+            --idx = torch.Tensor(idx):cuda()
+            local correct = idx:eq(sample.a:narrow(2,1,1)):sum()
+            local accuracy = correct/self.opt.batchsize
+            log.info("Accuracy is %.4f", accuracy)             
+          end
     			local errs = crit:forward(net.output,sample.a)
     			local grad = crit:backward(net.output,sample.a)
 
@@ -136,10 +143,11 @@ function Master:train()
 	        t = t + 1
 
 	        self:applyGradients()
-          self.plotStep[#self.plotStep+1] = self.acc_Steps
-          self.losses[#self.losses+1] = errs
+
 
           if t % 10 == 0 then
+            self.plotStep[#self.plotStep+1] = self.acc_Steps
+            self.losses[#self.losses+1] = errs        
             self:plotErr()
           end
 	    end
@@ -151,9 +159,9 @@ function Master:train()
       log.info("Epoch"..self.epoch.."finished")
 	    self.epoch = self.epoch + 1
       self.plotEpoch[#self.plotEpoch+1]=self.epoch
-      self.test_losses[#self.test_losses+1], self.accs[#self.accs+1] = self:test()
-      self:plotAcc()      
-	self.optimParams.learningRate = self.optimParams.learningRate/5
+      --self.test_losses[#self.test_losses+1], self.accs[#self.accs+1] = self:test()
+      --self:plotAcc()      
+	    self.optimParams.learningRate = self.optimParams.learningRate/5
 
 	end
 
@@ -173,10 +181,11 @@ function Master:test()
     local errs = crit:forward(net.output,sample.a)
     acc_errs = acc_errs + errs
     acc_Steps = acc_Steps+1
-    _,idx = torch.max(net.output[1],2)
+    local _,idx = torch.max(net.output[1],2)
     idx = idx:typeAs(sample.a)--from CudaLongTensor to CudaTensor, in order to use eq()
     --idx = torch.Tensor(idx):cuda()
-    correct = correct + idx:eq(sample.a:narrow(2,1,1)):sum()
+    local correct = correct + idx:eq(sample.a:narrow(2,1,1)):sum()
+    --print(correct)
     --log.info(correct/acc_Steps /self.opt.batchsize)
     --log.info("%.4f",errs)
   end

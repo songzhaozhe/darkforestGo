@@ -39,12 +39,17 @@ local opt = pl.lapp[[
     --feature_type        (default 'extended')
     --foldername          (default '')
     --gpuDevice           (default 0)
+    --resume              (default 'false')
 ]]
 --add models
 --local network_maker = require('train.rl_framework.examples.go.models.' .. opt.model_name)
 --local network, crit_not_used, outputdim, monitor_list = network_maker({1, 25, 19, 19}, opt)
 --local model = network:cuda()
 opt.userank = true
+opt.resume = opt.resume ==  'true'
+if opt.mode == test then
+    opt.resume = true
+end
 opt.use_bn = opt.use_bn == 'true'
 if (opt.foldername == '') then
     opt.foldername = opt.net
@@ -73,6 +78,10 @@ local model = regular_net(opt)
 local net, crit = model:create_net_and_crit(opt)
 net:cuda()
 crit:cuda()
+
+if (opt.resume) then
+    net = torch.load(paths.concat('experiments', opt.net, 'df2.bin'))
+end
 
 
 log.info("haahh")

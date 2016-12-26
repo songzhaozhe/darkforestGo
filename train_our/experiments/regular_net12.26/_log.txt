@@ -1,0 +1,23 @@
+[INFO - 2016_12_25_20:00:12] - "haahh"
+[INFO - 2016_12_25_21:06:39] - "Epoch0finished"
+[INFO - 2016_12_25_21:06:39] - "testing started!"
+[INFO - 2016_12_25_21:24:17] - Test error is 6.5968
+[INFO - 2016_12_25_21:24:17] - Accuracy is 0.2754
+[INFO - 2016_12_25_22:15:26] - "Epoch1finished"
+[INFO - 2016_12_25_22:15:26] - "testing started!"
+[INFO - 2016_12_25_22:32:59] - Test error is 5.9781
+[INFO - 2016_12_25_22:32:59] - Accuracy is 0.3413
+[INFO - 2016_12_25_23:23:16] - "Epoch2finished"
+[INFO - 2016_12_25_23:23:16] - "testing started!"
+[INFO - 2016_12_25_23:40:43] - Test error is 5.8370
+[INFO - 2016_12_25_23:40:43] - Accuracy is 0.3524
+[INFO - 2016_12_26_00:29:22] - "Epoch3finished"
+[INFO - 2016_12_26_00:29:22] - "testing started!"
+[INFO - 2016_12_26_00:46:39] - Test error is 5.8032
+[INFO - 2016_12_26_00:46:39] - Accuracy is 0.3580
+[INFO - 2016_12_26_01:39:43] - "Epoch4finished"
+[INFO - 2016_12_26_01:39:43] - "testing started!"
+[INFO - 2016_12_26_01:57:06] - Test error is 5.8143
+[INFO - 2016_12_26_01:57:06] - Accuracy is 0.3563
+[INFO - 2016_12_26_02:55:27] - "Epoch5finished"
+[INFO - 2016_12_26_02:55:27] - "testing started!"
