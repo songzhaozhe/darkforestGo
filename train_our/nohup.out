@@ -1,45 +1,82 @@
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5	
-[INFO - 2016_12_25_11:43:24] - "haahh"
+[INFO - 2016_12_25_20:00:12] - "haahh"
 3	
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 rl.Dataset.__init(): forward_model_init is set, run it
-| IndexedDataset: loaded ../dataset with 144748 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 64
 rl.Dataset.__init(): forward_model_init is set, run it
 rl.Dataset.__init(): forward_model_init is set, run it
-| IndexedDataset: loaded ../dataset with 144748 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 64
-| IndexedDataset: loaded ../dataset with 144748 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 64
 rl.Dataset.__init(): forward_model_init is set, run it
+| IndexedDataset: loaded ../dataset with 144748 examples
+| IndexedDataset: loaded ../dataset with 144748 examples
+| IndexedDataset: loaded ../dataset with 144748 examples
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
 | IndexedDataset: loaded ../dataset with 144748 examples
 rl.Dataset.__init(): #forward model = 2048, batchsize = 64
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
+rl.Dataset.__init(): forward_model_init is set, run it
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 rl.Dataset.__init(): forward_model_init is set, run it
-| IndexedDataset: loaded ../dataset with 26814 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+rl.Dataset.__init(): forward_model_init is set, run it
 Found Environment variable CUDNN_PATH = /home/huanghe/lxt/cuda/lib64/libcudnn.so.5
 rl.Dataset.__init(): forward_model_init is set, run it
+| IndexedDataset: loaded ../dataset with 26814 examples| IndexedDataset: loaded ../dataset with 26814 examples
+
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+rl.Dataset.__init(): #forward model = 2048, batchsize = 64
+| IndexedDataset: loaded ../dataset with 26814 examples
 | IndexedDataset: loaded ../dataset with 26814 examples
 rl.Dataset.__init(): #forward model = 2048, batchsize = 64
-rl.Dataset.__init(): forward_model_init is set, run it
-| IndexedDataset: loaded ../dataset with 26814 examples
 rl.Dataset.__init(): #forward model = 2048, batchsize = 64
-rl.Dataset.__init(): forward_model_init is set, run it
-| IndexedDataset: loaded ../dataset with 26814 examples
-rl.Dataset.__init(): #forward model = 2048, batchsize = 64
-[INFO - 2016_12_25_12:30:21] - "Epoch0finished"
-[INFO - 2016_12_25_12:30:21] - "testing started!"
-[INFO - 2016_12_25_12:47:04] - Test error is 6.6933
-[INFO - 2016_12_25_12:47:04] - Accuracy is 0.2637
-/home/huanghe/torch/install/bin/luajit: ./Master.lua:156: attempt to perform arithmetic on field 'learningRate' (a nil value)
+[INFO - 2016_12_25_21:06:39] - "Epoch0finished"
+[INFO - 2016_12_25_21:06:39] - "testing started!"
+[INFO - 2016_12_25_21:24:17] - Test error is 6.5968
+[INFO - 2016_12_25_21:24:17] - Accuracy is 0.2754
+[INFO - 2016_12_25_22:15:26] - "Epoch1finished"
+[INFO - 2016_12_25_22:15:26] - "testing started!"
+[INFO - 2016_12_25_22:32:59] - Test error is 5.9781
+[INFO - 2016_12_25_22:32:59] - Accuracy is 0.3413
+[INFO - 2016_12_25_23:23:16] - "Epoch2finished"
+[INFO - 2016_12_25_23:23:16] - "testing started!"
+[INFO - 2016_12_25_23:40:43] - Test error is 5.8370
+[INFO - 2016_12_25_23:40:43] - Accuracy is 0.3524
+[INFO - 2016_12_26_00:29:22] - "Epoch3finished"
+[INFO - 2016_12_26_00:29:22] - "testing started!"
+[INFO - 2016_12_26_00:46:39] - Test error is 5.8032
+[INFO - 2016_12_26_00:46:39] - Accuracy is 0.3580
+[INFO - 2016_12_26_01:39:43] - "Epoch4finished"
+[INFO - 2016_12_26_01:39:43] - "testing started!"
+[INFO - 2016_12_26_01:57:06] - Test error is 5.8143
+[INFO - 2016_12_26_01:57:06] - Accuracy is 0.3563
+[INFO - 2016_12_26_02:55:27] - "Epoch5finished"
+[INFO - 2016_12_26_02:55:27] - "testing started!"
+THCudaCheck FAIL file=/home/huanghe/torch/extra/cutorch/lib/THC/generic/THCStorage.cu line=65 error=2 : out of memory
+/home/huanghe/torch/install/bin/luajit: .../huanghe/torch/install/share/lua/5.1/threads/threads.lua:183: [thread 1 callback] ...ghe/torch/install/share/lua/5.1/torchnet/utils/table.lua:126: cuda runtime error (2) : out of memory at /home/huanghe/torch/extra/cutorch/lib/THC/generic/THCStorage.cu:65
 stack traceback:
-	./Master.lua:156: in function 'train'
+	[C]: in function 'resize'
+	...ghe/torch/install/share/lua/5.1/torchnet/utils/table.lua:126: in function 'closure'
+	...ghe/torch/install/share/lua/5.1/torchnet/utils/table.lua:80: in function 'trans'
+	...anghe/torch/install/share/lua/5.1/torchnet/transform.lua:93: in function 'makebatch'
+	../train_our/dataset.lua:264: in function 'batch_forward'
+	../train_our/dataset.lua:277: in function 'get'
+	...are/lua/5.1/torchnet/dataset/paralleldatasetiterator.lua:110: in function <...are/lua/5.1/torchnet/dataset/paralleldatasetiterator.lua:109>
+	[C]: in function 'xpcall'
+	.../huanghe/torch/install/share/lua/5.1/threads/threads.lua:234: in function 'callback'
+	/home/huanghe/torch/install/share/lua/5.1/threads/queue.lua:65: in function </home/huanghe/torch/install/share/lua/5.1/threads/queue.lua:41>
+	[C]: in function 'pcall'
+	/home/huanghe/torch/install/share/lua/5.1/threads/queue.lua:40: in function 'dojob'
+	[string "  local Queue = require 'threads.queue'..."]:15: in main chunk
+stack traceback:
+	[C]: in function 'error'
+	.../huanghe/torch/install/share/lua/5.1/threads/threads.lua:183: in function 'dojob'
+	...are/lua/5.1/torchnet/dataset/paralleldatasetiterator.lua:181: in function '(for generator)'
+	./Master.lua:170: in function 'test'
+	./Master.lua:154: in function 'train'
 	train.lua:110: in main chunk
 	[C]: in function 'dofile'
 	...nghe/torch/install/lib/luarocks/rocks/trepl/scm-1/bin/th:145: in main chunk
