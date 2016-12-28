@@ -1,0 +1,2449 @@
+(;SZ[19]KM[6.5]PW[Unknown]PB[Unknown]DT[2016-01-01]RE[Unknown]RU[Chinese]AB[bn][bl][cn][dm][dl][ep][en][fr][fq][fc][gp][gj][hj][hf][im][ij][ii][if][jj][je][jd][jc][jb][kr][kk][ki][kh][kg][lq][lp][lo][ln][lm][ll][li][lf][le][ld][lc][mf][mb][ne][nd][nb][ok][ob][pq][pl][pj][pi][ph][pg][pf][ql][qh][qd][rl][ri][re][rc]AW[bo][bm][co][cm][cf][cc][dp][do][dn][dd][fp][gq][gg][gf][gd][hi][ih][ie][id][ic][ib][jl][jh][jg][jf][ja][kl][kf][ke][kb][lr][lk][lh][lg][mq][mp][mo][mn][mm][ml][mj][mi][mh][nc][oh][og][of][oe][od][pk][pc][qo][qk][qj][qf][qe][qc][rh][rf][rb];B[hq]C[move: H3(B), topn: 3, prob: 0.203748, counter: 0, type: heap, heap_size: 242, total_prob: 47015.717472
+--- HeapDump:
+heap_size: 241, last_move: B H3, last_move_2: W B5
+ Move W G2 at 1/241: logprob: 0.578207, prior: 4.379905, raw-prob: 20256.371456, total_prob: 47632.677446, prob: 0.425262
+ Move W P17 at 2/241: logprob: 4.678335, prior: 0.000000, raw-prob: 11575.783575, total_prob: 47632.677446, prob: 0.243022
+ Move W Q16 at 3/241: logprob: 3.833473, prior: 0.000000, raw-prob: 2136.545020, total_prob: 47632.677446, prob: 0.044855
+ Move W J8 at 4/241: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 47632.677446, prob: 0.011358
+ Move W F5 at 5/241: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 47632.677446, prob: 0.020433
+ Move W Q15 at 6/241: logprob: 3.729917, prior: 0.000000, raw-prob: 1736.860296, total_prob: 47632.677446, prob: 0.036464
+ Move W H4 at 7/241: logprob: 2.254236, prior: 1.249317, raw-prob: 1104.454469, total_prob: 47632.677446, prob: 0.023187
+ Move W E5 at 8/241: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 47632.677446, prob: 0.002971
+ Move W N2 at 9/241: logprob: 2.946489, prior: 0.000000, raw-prob: 362.483502, total_prob: 47632.677446, prob: 0.007610
+--- End HeapDump
+----- Prior moves: #moves = 14--------
+0: W H4, type RESP, w_offset: 403144, prior: 2.881819
+1: W H2, type RESP, w_offset: 403144, prior: 2.881819
+2: W J3, type RESP, w_offset: 403144, prior: 2.881819
+3: W J2, type RESP, w_offset: 403144, prior: 2.881819
+4: W J4, type RESP, w_offset: 403144, prior: 2.881819
+5: W G2, type RESP, w_offset: 403144, prior: 2.881819
+6: W H2, type NEIGHBOR, offset: 1, prior: -1.397131
+7: W J3, type NEIGHBOR, offset: 2, prior: -1.348200
+8: W H4, type NEIGHBOR, offset: 3, prior: -1.632502
+9: W G2, type NEIGHBOR, offset: 4, prior: -2.184929
+10: W J2, type NEIGHBOR, offset: 6, prior: -1.993446
+11: W J4, type NEIGHBOR, offset: 7, prior: -2.333786
+12: W G2, type SAVE_ATARI, offset: 0, prior: 3.683015
+13: W A6, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;W[hp]C[move: H4(W), topn: 7, prob: 0.023187, counter: 0, type: heap, heap_size: 241, total_prob: 25327.774948
+--- HeapDump:
+heap_size: 240, last_move: W H4, last_move_2: B H3
+ Move B G2 at 1/240: logprob: 1.939122, prior: 6.337681, raw-prob: 15457508.156540, total_prob: 15716756.504538, prob: 0.983505
+ Move B F5 at 2/240: logprob: 2.392221, prior: 3.683015, raw-prob: 189183.630012, total_prob: 15716756.504538, prob: 0.012037
+ Move B G5 at 3/240: logprob: 3.218253, prior: 2.021932, raw-prob: 35609.577328, total_prob: 15716756.504538, prob: 0.002266
+ Move B J8 at 4/240: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 15716756.504538, prob: 0.000034
+ Move B P17 at 5/240: logprob: 4.678335, prior: 0.000000, raw-prob: 11575.783575, total_prob: 15716756.504538, prob: 0.000737
+ Move B Q16 at 6/240: logprob: 3.833473, prior: 0.000000, raw-prob: 2136.545020, total_prob: 15716756.504538, prob: 0.000136
+ Move B J4 at 7/240: logprob: 4.449156, prior: 0.145573, raw-prob: 9793.342277, total_prob: 15716756.504538, prob: 0.000623
+ Move B E5 at 8/240: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 15716756.504538, prob: 0.000009
+ Move B N2 at 9/240: logprob: 2.946489, prior: 0.000000, raw-prob: 362.483502, total_prob: 15716756.504538, prob: 0.000023
+--- End HeapDump
+----- Prior moves: #moves = 16--------
+0: B H5, type RESP, w_offset: 731564, prior: 0.510562
+1: B J4, type RESP, w_offset: 731564, prior: 0.510562
+2: B J3, type RESP, w_offset: 731564, prior: 0.510562
+3: B J5, type RESP, w_offset: 731564, prior: 0.510562
+4: B G5, type RESP, w_offset: 731564, prior: 0.510562
+5: B J4, type NEIGHBOR, offset: 2, prior: -1.348200
+6: B H5, type NEIGHBOR, offset: 3, prior: -1.632502
+7: B G5, type NEIGHBOR, offset: 5, prior: -2.171645
+8: B J3, type NEIGHBOR, offset: 6, prior: -1.993446
+9: B J5, type NEIGHBOR, offset: 7, prior: -2.333786
+10: B F5, type SAVE_ATARI, offset: 0, prior: 3.683015
+11: B G2, type SAVE_ATARI, offset: 0, prior: 3.683015
+12: B G5, type SAVE_ATARI, offset: 0, prior: 3.683015
+13: B G2, type KILL_GROUP2, offset: 0, prior: 2.654665
+14: B J4, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+15: B H5, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;B[gr]C[move: G2(B), topn: 1, prob: 0.983505, counter: 0, type: heap, heap_size: 240, total_prob: 40806.099502
+--- HeapDump:
+heap_size: 240, last_move: B G2, last_move_2: W H4
+ Move W P17 at 1/240: logprob: 4.678335, prior: 0.000000, raw-prob: 11575.783575, total_prob: 38343.336895, prob: 0.301898
+ Move W F5 at 2/240: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 38343.336895, prob: 0.025383
+ Move W H5 at 3/240: logprob: 4.341761, prior: 0.000000, raw-prob: 5904.812311, total_prob: 38343.336895, prob: 0.153998
+ Move W J8 at 4/240: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 38343.336895, prob: 0.014110
+ Move W F16 at 5/240: logprob: 3.157635, prior: 0.000000, raw-prob: 552.950806, total_prob: 38343.336895, prob: 0.014421
+ Move W J4 at 6/240: logprob: 4.278970, prior: 0.000000, raw-prob: 5207.939081, total_prob: 38343.336895, prob: 0.135824
+ Move W Q16 at 7/240: logprob: 3.833473, prior: 0.000000, raw-prob: 2136.545020, total_prob: 38343.336895, prob: 0.055721
+ Move W E5 at 8/240: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 38343.336895, prob: 0.003690
+ Move W N2 at 9/240: logprob: 2.946489, prior: 0.000000, raw-prob: 362.483502, total_prob: 38343.336895, prob: 0.009454
+--- End HeapDump
+----- Prior moves: #moves = 9--------
+0: W G1, type RESP, w_offset: 132056, prior: 3.014556
+1: W H2, type RESP, w_offset: 132056, prior: 3.014556
+2: W H1, type RESP, w_offset: 132056, prior: 3.014556
+3: W F1, type RESP, w_offset: 132056, prior: 3.014556
+4: W G1, type NEIGHBOR, offset: 1, prior: -1.397131
+5: W H2, type NEIGHBOR, offset: 2, prior: -1.348200
+6: W G3, type NEIGHBOR, offset: 3, prior: -1.632502
+7: W F1, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W H1, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;W[ip]C[move: J4(W), topn: 6, prob: 0.135824, counter: 0, type: heap, heap_size: 239, total_prob: 38340.859138
+--- HeapDump:
+heap_size: 239, last_move: W J4, last_move_2: B G2
+ Move B J3 at 1/239: logprob: 3.100997, prior: 2.464961, raw-prob: 68317.136390, total_prob: 102861.828471, prob: 0.664164
+ Move B K3 at 2/239: logprob: 2.629774, prior: 1.868646, raw-prob: 8077.523312, total_prob: 102861.828471, prob: 0.078528
+ Move B P17 at 3/239: logprob: 4.678335, prior: 0.000000, raw-prob: 11575.783575, total_prob: 102861.828471, prob: 0.112537
+ Move B F5 at 4/239: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 102861.828471, prob: 0.009462
+ Move B F16 at 5/239: logprob: 3.157635, prior: 0.000000, raw-prob: 552.950806, total_prob: 102861.828471, prob: 0.005376
+ Move B Q15 at 6/239: logprob: 3.729917, prior: 0.000000, raw-prob: 1736.860296, total_prob: 102861.828471, prob: 0.016885
+ Move B Q16 at 7/239: logprob: 3.833473, prior: 0.000000, raw-prob: 2136.545020, total_prob: 102861.828471, prob: 0.020771
+ Move B K4 at 8/239: logprob: 0.657551, prior: 2.513892, raw-prob: 568.434122, total_prob: 102861.828471, prob: 0.005526
+ Move B N2 at 9/239: logprob: 2.946489, prior: 0.000000, raw-prob: 362.483502, total_prob: 102861.828471, prob: 0.003524
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B J5, type RESP, w_offset: 145058, prior: 3.862092
+1: B J3, type RESP, w_offset: 145058, prior: 3.862092
+2: B K4, type RESP, w_offset: 145058, prior: 3.862092
+3: B K3, type RESP, w_offset: 145058, prior: 3.862092
+4: B K5, type RESP, w_offset: 145058, prior: 3.862092
+5: B H5, type RESP, w_offset: 145058, prior: 3.862092
+6: B J3, type NEIGHBOR, offset: 1, prior: -1.397131
+7: B K4, type NEIGHBOR, offset: 2, prior: -1.348200
+8: B J5, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B H5, type NEIGHBOR, offset: 5, prior: -2.171645
+10: B K3, type NEIGHBOR, offset: 6, prior: -1.993446
+11: B K5, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[mr]C[move: N2(B), topn: 9, prob: 0.003524, counter: 1, type: heap, heap_size: 239, total_prob: 26276.041888
+--- HeapDump:
+heap_size: 238, last_move: B N2, last_move_2: W J4
+ Move W M1 at 1/238: logprob: 1.377579, prior: 6.002150, raw-prob: 2570106.686089, total_prob: 5190608.067772, prob: 0.495146
+ Move W O2 at 2/238: logprob: 3.239836, prior: 4.139076, raw-prob: 2565908.369589, total_prob: 5190608.067772, prob: 0.494337
+ Move W Q16 at 3/238: logprob: 3.833473, prior: 0.000000, raw-prob: 2136.545020, total_prob: 5190608.067772, prob: 0.000412
+ Move W P17 at 4/238: logprob: 4.678335, prior: 0.000000, raw-prob: 11575.783575, total_prob: 5190608.067772, prob: 0.002230
+ Move W N1 at 5/238: logprob: 0.942849, prior: 4.090144, raw-prob: 23528.925270, total_prob: 5190608.067772, prob: 0.004533
+ Move W Q15 at 6/238: logprob: 3.729917, prior: 0.000000, raw-prob: 1736.860296, total_prob: 5190608.067772, prob: 0.000335
+ Move W H15 at 7/238: logprob: 3.334069, prior: 0.000000, raw-prob: 786.929624, total_prob: 5190608.067772, prob: 0.000152
+ Move W K3 at 8/238: logprob: 2.629774, prior: 0.000000, raw-prob: 192.394643, total_prob: 5190608.067772, prob: 0.000037
+ Move W F5 at 9/238: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 5190608.067772, prob: 0.000188
+--- End HeapDump
+----- Prior moves: #moves = 13--------
+0: W N1, type RESP, w_offset: 1018303, prior: 4.504064
+1: W O2, type RESP, w_offset: 1018303, prior: 4.504064
+2: W O1, type RESP, w_offset: 1018303, prior: 4.504064
+3: W O3, type RESP, w_offset: 1018303, prior: 4.504064
+4: W M1, type RESP, w_offset: 1018303, prior: 4.504064
+5: W N1, type NEIGHBOR, offset: 1, prior: -1.397131
+6: W O2, type NEIGHBOR, offset: 2, prior: -1.348200
+7: W M1, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W O1, type NEIGHBOR, offset: 6, prior: -1.993446
+9: W O3, type NEIGHBOR, offset: 7, prior: -2.333786
+10: W M1, type SAVE_ATARI, offset: 0, prior: 3.683015
+11: W N1, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+12: W O2, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[nr]C[move: O2(W), topn: 2, prob: 0.494337, counter: 1, type: heap, heap_size: 238, total_prob: 26524.379979
+--- HeapDump:
+heap_size: 237, last_move: W O2, last_move_2: B N2
+ Move B M1 at 1/237: logprob: 3.587290, prior: 6.337681, raw-prob: 417560979.102873, total_prob: 422326117.339676, prob: 0.988717
+ Move B N1 at 2/237: logprob: 3.218139, prior: 4.467452, raw-prob: 4738270.648220, total_prob: 422326117.339676, prob: 0.011219
+ Move B Q16 at 3/237: logprob: 3.833473, prior: 0.000000, raw-prob: 2136.545020, total_prob: 422326117.339676, prob: 0.000005
+ Move B F5 at 4/237: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 422326117.339676, prob: 0.000002
+ Move B P17 at 5/237: logprob: 4.678335, prior: 0.000000, raw-prob: 11575.783575, total_prob: 422326117.339676, prob: 0.000027
+ Move B Q15 at 6/237: logprob: 3.729917, prior: 0.000000, raw-prob: 1736.860296, total_prob: 422326117.339676, prob: 0.000004
+ Move B H15 at 7/237: logprob: 3.334069, prior: 0.000000, raw-prob: 786.929624, total_prob: 422326117.339676, prob: 0.000002
+ Move B K3 at 8/237: logprob: 2.629774, prior: 0.000000, raw-prob: 192.394643, total_prob: 422326117.339676, prob: 0.000000
+ Move B P3 at 9/237: logprob: 2.531707, prior: 0.635579, raw-prob: 563.728361, total_prob: 422326117.339676, prob: 0.000001
+--- End HeapDump
+----- Prior moves: #moves = 15--------
+0: B O3, type RESP, w_offset: 790060, prior: 2.969365
+1: B O1, type RESP, w_offset: 790060, prior: 2.969365
+2: B P2, type RESP, w_offset: 790060, prior: 2.969365
+3: B P1, type RESP, w_offset: 790060, prior: 2.969365
+4: B P3, type RESP, w_offset: 790060, prior: 2.969365
+5: B N1, type RESP, w_offset: 790060, prior: 2.969365
+6: B O1, type NEIGHBOR, offset: 1, prior: -1.397131
+7: B P2, type NEIGHBOR, offset: 2, prior: -1.348200
+8: B O3, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B N1, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B P1, type NEIGHBOR, offset: 6, prior: -1.993446
+11: B P3, type NEIGHBOR, offset: 7, prior: -2.333786
+12: B M1, type SAVE_ATARI, offset: 0, prior: 3.683015
+13: B N1, type SAVE_ATARI, offset: 0, prior: 3.683015
+14: B M1, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;B[ls]C[move: M1(B), topn: 1, prob: 0.988717, counter: 0, type: heap, heap_size: 237, total_prob: 27890.977223
+--- HeapDump:
+heap_size: 237, last_move: B M1, last_move_2: W O2
+ Move W P17 at 1/237: logprob: 4.678335, prior: 0.000000, raw-prob: 11575.783575, total_prob: 25901.903196, prob: 0.446909
+ Move W F5 at 2/237: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 25901.903196, prob: 0.037575
+ Move W Q16 at 3/237: logprob: 3.833473, prior: 0.000000, raw-prob: 2136.545020, total_prob: 25901.903196, prob: 0.082486
+ Move W J8 at 4/237: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 25901.903196, prob: 0.020887
+ Move W F16 at 5/237: logprob: 3.157635, prior: 0.000000, raw-prob: 552.950806, total_prob: 25901.903196, prob: 0.021348
+ Move W Q15 at 6/237: logprob: 3.729917, prior: 0.000000, raw-prob: 1736.860296, total_prob: 25901.903196, prob: 0.067055
+ Move W H15 at 7/237: logprob: 3.334069, prior: 0.000000, raw-prob: 786.929624, total_prob: 25901.903196, prob: 0.030381
+ Move W E5 at 8/237: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 25901.903196, prob: 0.005463
+ Move W M10 at 9/237: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 25901.903196, prob: 0.002360
+--- End HeapDump
+----- Prior moves: #moves = 5--------
+0: W N1, type RESP, w_offset: 673895, prior: 1.998891
+1: W L1, type RESP, w_offset: 673895, prior: 1.998891
+2: W L1, type NEIGHBOR, offset: 0, prior: -1.410286
+3: W N1, type NEIGHBOR, offset: 2, prior: -1.348200
+4: W M2, type NEIGHBOR, offset: 3, prior: -1.632502
+----- End Prior moves --------
+]
+;W[oc]C[move: P17(W), topn: 1, prob: 0.446909, counter: 0, type: heap, heap_size: 236, total_prob: 25898.306952
+--- HeapDump:
+heap_size: 235, last_move: W P17, last_move_2: B M1
+ Move B Q16 at 1/235: logprob: 4.007714, prior: 1.786725, raw-prob: 107891.217233, total_prob: 120367.298165, prob: 0.896350
+ Move B F5 at 2/235: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 120367.298165, prob: 0.008086
+ Move B Q15 at 3/235: logprob: 3.729917, prior: 0.000000, raw-prob: 1736.860296, total_prob: 120367.298165, prob: 0.014430
+ Move B J8 at 4/235: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 120367.298165, prob: 0.004495
+ Move B F16 at 5/235: logprob: 3.157635, prior: 0.000000, raw-prob: 552.950806, total_prob: 120367.298165, prob: 0.004594
+ Move B C8 at 6/235: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 120367.298165, prob: 0.011071
+ Move B H15 at 7/235: logprob: 3.334069, prior: 0.000000, raw-prob: 786.929624, total_prob: 120367.298165, prob: 0.006538
+ Move B E5 at 8/235: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 120367.298165, prob: 0.001176
+ Move B M10 at 9/235: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 120367.298165, prob: 0.000508
+--- End HeapDump
+----- Prior moves: #moves = 4--------
+0: B Q16, type RESP, w_offset: 522599, prior: 3.780171
+1: B Q18, type RESP, w_offset: 522599, prior: 3.780171
+2: B Q16, type NEIGHBOR, offset: 6, prior: -1.993446
+3: B Q18, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[pe]C[move: Q15(B), topn: 3, prob: 0.014430, counter: 1, type: heap, heap_size: 235, total_prob: 15309.330305
+--- HeapDump:
+heap_size: 234, last_move: B Q15, last_move_2: W P17
+ Move W Q16 at 1/234: logprob: 6.108625, prior: 2.832586, raw-prob: 58376326.526021, total_prob: 58387825.573834, prob: 0.999803
+ Move W F5 at 2/234: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 58387825.573834, prob: 0.000017
+ Move W C8 at 3/234: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 58387825.573834, prob: 0.000023
+ Move W J8 at 4/234: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 58387825.573834, prob: 0.000009
+ Move W F16 at 5/234: logprob: 3.157635, prior: 0.000000, raw-prob: 552.950806, total_prob: 58387825.573834, prob: 0.000009
+ Move W G17 at 6/234: logprob: 3.594830, prior: 0.000000, raw-prob: 1325.651849, total_prob: 58387825.573834, prob: 0.000023
+ Move W H15 at 7/234: logprob: 3.334069, prior: 0.000000, raw-prob: 786.929624, total_prob: 58387825.573834, prob: 0.000013
+ Move W E5 at 8/234: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 58387825.573834, prob: 0.000002
+ Move W M10 at 9/234: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 58387825.573834, prob: 0.000001
+--- End HeapDump
+----- Prior moves: #moves = 2--------
+0: W Q16, type RESP, w_offset: 586560, prior: 4.465088
+1: W Q16, type NEIGHBOR, offset: 3, prior: -1.632502
+----- End Prior moves --------
+]
+;W[pd]C[move: Q16(W), topn: 0, prob: 0.000000, counter: 0, type: must_move, heap_size: 234, total_prob: 213746.858248
+--- HeapDump:
+heap_size: 233, last_move: W Q16, last_move_2: B Q15
+ Move B S16 at 1/233: logprob: 3.341262, prior: 3.683015, raw-prob: 1262436.510543, total_prob: 1273117.178756, prob: 0.991611
+ Move B F5 at 2/233: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 1273117.178756, prob: 0.000764
+ Move B C8 at 3/233: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 1273117.178756, prob: 0.001047
+ Move B J8 at 4/233: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 1273117.178756, prob: 0.000425
+ Move B F16 at 5/233: logprob: 3.157635, prior: 0.000000, raw-prob: 552.950806, total_prob: 1273117.178756, prob: 0.000434
+ Move B G17 at 6/233: logprob: 3.594830, prior: 0.000000, raw-prob: 1325.651849, total_prob: 1273117.178756, prob: 0.001041
+ Move B H15 at 7/233: logprob: 3.334069, prior: 0.000000, raw-prob: 786.929624, total_prob: 1273117.178756, prob: 0.000618
+ Move B E5 at 8/233: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 1273117.178756, prob: 0.000111
+ Move B M10 at 9/233: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 1273117.178756, prob: 0.000048
+--- End HeapDump
+----- Prior moves: #moves = 1--------
+0: B S16, type SAVE_ATARI, offset: 0, prior: 3.683015
+----- End Prior moves --------
+]
+;B[rd]C[move: S16(B), topn: 1, prob: 0.991611, counter: 0, type: heap, heap_size: 233, total_prob: 11478.999292
+--- HeapDump:
+heap_size: 232, last_move: B S16, last_move_2: W Q16
+ Move W T15 at 1/232: logprob: 1.717568, prior: 3.517972, raw-prob: 35280.294098, total_prob: 79118.542686, prob: 0.445917
+ Move W F5 at 2/232: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 79118.542686, prob: 0.012301
+ Move W T17 at 3/232: logprob: 2.019782, prior: 3.177631, raw-prob: 32690.047843, total_prob: 79118.542686, prob: 0.413178
+ Move W J8 at 4/232: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 79118.542686, prob: 0.006838
+ Move W F16 at 5/232: logprob: 3.157635, prior: 0.000000, raw-prob: 552.950806, total_prob: 79118.542686, prob: 0.006989
+ Move W D3 at 6/232: logprob: 3.517601, prior: 0.000000, raw-prob: 1135.924644, total_prob: 79118.542686, prob: 0.014357
+ Move W C8 at 7/232: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 79118.542686, prob: 0.016844
+ Move W E5 at 8/232: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 79118.542686, prob: 0.001788
+ Move W M10 at 9/232: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 79118.542686, prob: 0.000773
+--- End HeapDump
+----- Prior moves: #moves = 6--------
+0: W T16, type RESP, w_offset: 759754, prior: 5.511417
+1: W T15, type RESP, w_offset: 759754, prior: 5.511417
+2: W T17, type RESP, w_offset: 759754, prior: 5.511417
+3: W T16, type NEIGHBOR, offset: 2, prior: -1.348200
+4: W T15, type NEIGHBOR, offset: 6, prior: -1.993446
+5: W T17, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[sc]C[move: T17(W), topn: 0, prob: 0.000000, counter: 0, type: must_move, heap_size: 232, total_prob: 10610.956054
+--- HeapDump:
+heap_size: 231, last_move: W T17, last_move_2: B S16
+ Move B C8 at 1/231: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 10681.127141, prob: 0.124766
+ Move B F5 at 2/231: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 10681.127141, prob: 0.091120
+ Move B G17 at 3/231: logprob: 3.594830, prior: 0.000000, raw-prob: 1325.651849, total_prob: 10681.127141, prob: 0.124112
+ Move B J8 at 4/231: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 10681.127141, prob: 0.050651
+ Move B F16 at 5/231: logprob: 3.157635, prior: 0.000000, raw-prob: 552.950806, total_prob: 10681.127141, prob: 0.051769
+ Move B D3 at 6/231: logprob: 3.517601, prior: 0.000000, raw-prob: 1135.924644, total_prob: 10681.127141, prob: 0.106349
+ Move B H15 at 7/231: logprob: 3.334069, prior: 0.000000, raw-prob: 786.929624, total_prob: 10681.127141, prob: 0.073675
+ Move B E5 at 8/231: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 10681.127141, prob: 0.013247
+ Move B M10 at 9/231: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 10681.127141, prob: 0.005724
+--- End HeapDump
+----- Prior moves: #moves = 8--------
+0: B T18, type RESP, w_offset: 330005, prior: 2.417151
+1: B T16, type RESP, w_offset: 330005, prior: 2.417151
+2: B T16, type NEIGHBOR, offset: 1, prior: -1.397131
+3: B T18, type NEIGHBOR, offset: 3, prior: -1.632502
+4: B T16, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+5: B T16, type SELF_ATARI, offset: 4, prior: -5.801897
+6: B T18, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+7: B T18, type SELF_ATARI, offset: 0, prior: -1.741746
+----- End Prior moves --------
+]
+;B[fd]C[move: F16(B), topn: 5, prob: 0.051769, counter: 0, type: heap, heap_size: 231, total_prob: 10693.631396
+--- HeapDump:
+heap_size: 230, last_move: B F16, last_move_2: W T17
+ Move W F15 at 1/230: logprob: 3.520444, prior: 3.099494, raw-prob: 562347.801985, total_prob: 658438.399948, prob: 0.854063
+ Move W E15 at 2/230: logprob: 1.636964, prior: 2.311696, raw-prob: 2690.066944, total_prob: 658438.399948, prob: 0.004086
+ Move W G17 at 3/230: logprob: 3.333786, prior: 2.162839, raw-prob: 59471.314302, total_prob: 658438.399948, prob: 0.090322
+ Move W H15 at 4/230: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 658438.399948, prob: 0.002891
+ Move W F5 at 5/230: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 658438.399948, prob: 0.001478
+ Move W G15 at 6/230: logprob: 2.518331, prior: 2.503179, raw-prob: 22994.743155, total_prob: 658438.399948, prob: 0.034923
+ Move W D3 at 7/230: logprob: 3.517601, prior: 0.000000, raw-prob: 1135.924644, total_prob: 658438.399948, prob: 0.001725
+ Move W E5 at 8/230: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 658438.399948, prob: 0.000215
+ Move W E16 at 9/230: logprob: 0.350130, prior: 3.086339, raw-prob: 965.782056, total_prob: 658438.399948, prob: 0.001467
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: W F15, type RESP, w_offset: 485463, prior: 4.496625
+1: W E16, type RESP, w_offset: 485463, prior: 4.496625
+2: W G15, type RESP, w_offset: 485463, prior: 4.496625
+3: W G17, type RESP, w_offset: 485463, prior: 4.496625
+4: W E17, type RESP, w_offset: 485463, prior: 4.496625
+5: W E15, type RESP, w_offset: 485463, prior: 4.496625
+6: W E16, type NEIGHBOR, offset: 0, prior: -1.410286
+7: W F15, type NEIGHBOR, offset: 1, prior: -1.397131
+8: W E15, type NEIGHBOR, offset: 4, prior: -2.184929
+9: W E17, type NEIGHBOR, offset: 5, prior: -2.171645
+10: W G15, type NEIGHBOR, offset: 6, prior: -1.993446
+11: W G17, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[fe]C[move: F15(W), topn: 1, prob: 0.854063, counter: 0, type: heap, heap_size: 230, total_prob: 11987.076235
+--- HeapDump:
+heap_size: 229, last_move: W F15, last_move_2: B F16
+ Move B E15 at 1/229: logprob: 3.023028, prior: 1.631328, raw-prob: 11033.719580, total_prob: 23451.552609, prob: 0.470490
+ Move B G15 at 2/229: logprob: 1.778316, prior: 1.693414, raw-prob: 1036.350142, total_prob: 23451.552609, prob: 0.044191
+ Move B H15 at 3/229: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 23451.552609, prob: 0.081164
+ Move B F5 at 4/229: logprob: 3.440331, prior: 0.000000, raw-prob: 973.269548, total_prob: 23451.552609, prob: 0.041501
+ Move B E3 at 5/229: logprob: 2.629939, prior: 0.000000, raw-prob: 192.457823, total_prob: 23451.552609, prob: 0.008207
+ Move B C8 at 6/229: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 23451.552609, prob: 0.056825
+ Move B D3 at 7/229: logprob: 3.517601, prior: 0.000000, raw-prob: 1135.924644, total_prob: 23451.552609, prob: 0.048437
+ Move B E5 at 8/229: logprob: 2.476127, prior: 0.000000, raw-prob: 141.493496, total_prob: 23451.552609, prob: 0.006033
+ Move B E16 at 9/229: logprob: 2.363883, prior: 0.869969, raw-prob: 644.002699, total_prob: 23451.552609, prob: 0.027461
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: B F14, type RESP, w_offset: 420522, prior: 3.041614
+1: B G15, type RESP, w_offset: 420522, prior: 3.041614
+2: B E15, type RESP, w_offset: 420522, prior: 3.041614
+3: B E16, type RESP, w_offset: 420522, prior: 3.041614
+4: B E14, type RESP, w_offset: 420522, prior: 3.041614
+5: B E15, type NEIGHBOR, offset: 0, prior: -1.410286
+6: B F14, type NEIGHBOR, offset: 1, prior: -1.397131
+7: B G15, type NEIGHBOR, offset: 2, prior: -1.348200
+8: B E14, type NEIGHBOR, offset: 4, prior: -2.184929
+9: B E16, type NEIGHBOR, offset: 5, prior: -2.171645
+----- End Prior moves --------
+]
+;B[eq]C[move: E3(B), topn: 5, prob: 0.008207, counter: 0, type: heap, heap_size: 229, total_prob: 11245.865657
+--- HeapDump:
+heap_size: 227, last_move: B E3, last_move_2: W F15
+ Move W D3 at 1/227: logprob: 4.270970, prior: 1.417770, raw-prob: 87332.723441, total_prob: 98448.623982, prob: 0.887089
+ Move W H15 at 2/227: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 98448.623982, prob: 0.019334
+ Move W E5 at 3/227: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 98448.623982, prob: 0.022032
+ Move W J8 at 4/227: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 98448.623982, prob: 0.005495
+ Move W P3 at 5/227: logprob: 2.531707, prior: 0.000000, raw-prob: 158.129419, total_prob: 98448.623982, prob: 0.001606
+ Move W G17 at 6/227: logprob: 3.333786, prior: 0.000000, raw-prob: 786.483189, total_prob: 98448.623982, prob: 0.007989
+ Move W C8 at 7/227: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 98448.623982, prob: 0.013536
+ Move W F5 at 8/227: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 98448.623982, prob: 0.001470
+ Move W E15 at 9/227: logprob: 3.023028, prior: 0.000000, raw-prob: 422.443683, total_prob: 98448.623982, prob: 0.004291
+--- End HeapDump
+----- Prior moves: #moves = 6--------
+0: W E2, type RESP, w_offset: 427460, prior: 2.828056
+1: W D3, type RESP, w_offset: 427460, prior: 2.828056
+2: W D2, type RESP, w_offset: 427460, prior: 2.828056
+3: W D3, type NEIGHBOR, offset: 0, prior: -1.410286
+4: W E2, type NEIGHBOR, offset: 1, prior: -1.397131
+5: W D2, type NEIGHBOR, offset: 4, prior: -2.184929
+----- End Prior moves --------
+]
+;W[dq]C[move: D3(W), topn: 1, prob: 0.887089, counter: 0, type: heap, heap_size: 227, total_prob: 16230.045548
+--- HeapDump:
+heap_size: 227, last_move: W D3, last_move_2: B E3
+ Move B D2 at 1/227: logprob: 3.242816, prior: 3.395321, raw-prob: 583192.628139, total_prob: 594641.109692, prob: 0.980747
+ Move B H15 at 2/227: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 594641.109692, prob: 0.003201
+ Move B E5 at 3/227: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 594641.109692, prob: 0.003648
+ Move B J8 at 4/227: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 594641.109692, prob: 0.000910
+ Move B P3 at 5/227: logprob: 2.531707, prior: 0.000000, raw-prob: 158.129419, total_prob: 594641.109692, prob: 0.000266
+ Move B C8 at 6/227: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 594641.109692, prob: 0.002241
+ Move B J3 at 7/227: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 594641.109692, prob: 0.000830
+ Move B F5 at 8/227: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 594641.109692, prob: 0.000243
+ Move B E15 at 9/227: logprob: 3.023028, prior: 0.000000, raw-prob: 422.443683, total_prob: 594641.109692, prob: 0.000710
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: B D2, type RESP, w_offset: 135632, prior: 4.792452
+1: B C3, type RESP, w_offset: 135632, prior: 4.792452
+2: B E2, type RESP, w_offset: 135632, prior: 4.792452
+3: B C4, type RESP, w_offset: 135632, prior: 4.792452
+4: B C2, type RESP, w_offset: 135632, prior: 4.792452
+5: B C3, type NEIGHBOR, offset: 0, prior: -1.410286
+6: B D2, type NEIGHBOR, offset: 1, prior: -1.397131
+7: B C2, type NEIGHBOR, offset: 4, prior: -2.184929
+8: B C4, type NEIGHBOR, offset: 5, prior: -2.171645
+9: B E2, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;B[dr]C[move: D2(B), topn: 1, prob: 0.980747, counter: 0, type: heap, heap_size: 227, total_prob: 11756.600106
+--- HeapDump:
+heap_size: 226, last_move: B D2, last_move_2: W D3
+ Move W C2 at 1/226: logprob: 3.205692, prior: 3.942547, raw-prob: 1617638.082837, total_prob: 1669948.460823, prob: 0.968675
+ Move W C3 at 2/226: logprob: 2.120760, prior: 3.181188, raw-prob: 40291.495442, total_prob: 1669948.460823, prob: 0.024127
+ Move W C8 at 3/226: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 1669948.460823, prob: 0.000798
+ Move W E5 at 4/226: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 1669948.460823, prob: 0.001299
+ Move W P3 at 5/226: logprob: 2.531707, prior: 0.000000, raw-prob: 158.129419, total_prob: 1669948.460823, prob: 0.000095
+ Move W G17 at 6/226: logprob: 3.333786, prior: 0.000000, raw-prob: 786.483189, total_prob: 1669948.460823, prob: 0.000471
+ Move W E1 at 7/226: logprob: 0.007536, prior: 3.359387, raw-prob: 840.373526, total_prob: 1669948.460823, prob: 0.000503
+ Move W F5 at 8/226: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 1669948.460823, prob: 0.000087
+ Move W H15 at 9/226: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 1669948.460823, prob: 0.001140
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: W D1, type RESP, w_offset: 216070, prior: 5.352833
+1: W E2, type RESP, w_offset: 216070, prior: 5.352833
+2: W C2, type RESP, w_offset: 216070, prior: 5.352833
+3: W E1, type RESP, w_offset: 216070, prior: 5.352833
+4: W C3, type RESP, w_offset: 216070, prior: 5.352833
+5: W C1, type RESP, w_offset: 216070, prior: 5.352833
+6: W C2, type NEIGHBOR, offset: 0, prior: -1.410286
+7: W D1, type NEIGHBOR, offset: 1, prior: -1.397131
+8: W E2, type NEIGHBOR, offset: 2, prior: -1.348200
+9: W C1, type NEIGHBOR, offset: 4, prior: -2.184929
+10: W C3, type NEIGHBOR, offset: 5, prior: -2.171645
+11: W E1, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;W[cr]C[move: C2(W), topn: 1, prob: 0.968675, counter: 0, type: heap, heap_size: 226, total_prob: 11778.615538
+--- HeapDump:
+heap_size: 225, last_move: W C2, last_move_2: B D2
+ Move B C3 at 1/225: logprob: 1.471447, prior: 2.557244, raw-prob: 3157.015593, total_prob: 20435.694845, prob: 0.154485
+ Move B E5 at 2/225: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 20435.694845, prob: 0.106139
+ Move B D1 at 3/225: logprob: 1.788483, prior: 2.196300, raw-prob: 2891.606530, total_prob: 20435.694845, prob: 0.141498
+ Move B H15 at 4/225: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 20435.694845, prob: 0.093142
+ Move B C1 at 5/225: logprob: 0.918189, prior: 2.792615, raw-prob: 1671.717798, total_prob: 20435.694845, prob: 0.081804
+ Move B C8 at 6/225: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 20435.694845, prob: 0.065211
+ Move B J3 at 7/225: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 20435.694845, prob: 0.024160
+ Move B B3 at 8/225: logprob: 1.242508, prior: 2.018101, raw-prob: 679.405878, total_prob: 20435.694845, prob: 0.033246
+ Move B J8 at 9/225: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 20435.694845, prob: 0.026474
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B C3, type RESP, w_offset: 145101, prior: 4.189746
+1: B C1, type RESP, w_offset: 145101, prior: 4.189746
+2: B B2, type RESP, w_offset: 145101, prior: 4.189746
+3: B D1, type RESP, w_offset: 145101, prior: 4.189746
+4: B B3, type RESP, w_offset: 145101, prior: 4.189746
+5: B B1, type RESP, w_offset: 145101, prior: 4.189746
+6: B B2, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B C1, type NEIGHBOR, offset: 1, prior: -1.397131
+8: B C3, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B B1, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B B3, type NEIGHBOR, offset: 5, prior: -2.171645
+11: B D1, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;B[br]C[move: B2(B), topn: 11, prob: 0.045149, counter: 0, type: heap, heap_size: 225, total_prob: 11180.206093
+--- HeapDump:
+heap_size: 224, last_move: B B2, last_move_2: W C2
+ Move W C3 at 1/224: logprob: 4.331722, prior: 2.232103, raw-prob: 502649.957907, total_prob: 877951.130124, prob: 0.572526
+ Move W C1 at 2/224: logprob: 3.506294, prior: 2.572443, raw-prob: 190512.638651, total_prob: 877951.130124, prob: 0.216997
+ Move W C8 at 3/224: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 877951.130124, prob: 0.001518
+ Move W B1 at 4/224: logprob: 2.030613, prior: 3.168758, raw-prob: 32818.330088, total_prob: 877951.130124, prob: 0.037381
+ Move W B3 at 5/224: logprob: 2.994052, prior: 2.933387, raw-prob: 140769.534153, total_prob: 877951.130124, prob: 0.160339
+ Move W G17 at 6/224: logprob: 3.333786, prior: 0.000000, raw-prob: 786.483189, total_prob: 877951.130124, prob: 0.000896
+ Move W J3 at 7/224: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 877951.130124, prob: 0.000562
+ Move W J8 at 8/224: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 877951.130124, prob: 0.000616
+ Move W H15 at 9/224: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 877951.130124, prob: 0.002168
+--- End HeapDump
+----- Prior moves: #moves = 14--------
+0: W B3, type RESP, w_offset: 212297, prior: 4.565889
+1: W B1, type RESP, w_offset: 212297, prior: 4.565889
+2: W A2, type RESP, w_offset: 212297, prior: 4.565889
+3: W C1, type RESP, w_offset: 212297, prior: 4.565889
+4: W C3, type RESP, w_offset: 212297, prior: 4.565889
+5: W A3, type RESP, w_offset: 212297, prior: 4.565889
+6: W A1, type RESP, w_offset: 212297, prior: 4.565889
+7: W A2, type NEIGHBOR, offset: 0, prior: -1.410286
+8: W B1, type NEIGHBOR, offset: 1, prior: -1.397131
+9: W B3, type NEIGHBOR, offset: 3, prior: -1.632502
+10: W A1, type NEIGHBOR, offset: 4, prior: -2.184929
+11: W A3, type NEIGHBOR, offset: 5, prior: -2.171645
+12: W C1, type NEIGHBOR, offset: 6, prior: -1.993446
+13: W C3, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[cq]C[move: C3(W), topn: 1, prob: 0.572526, counter: 0, type: heap, heap_size: 224, total_prob: 18516.222606
+--- HeapDump:
+heap_size: 223, last_move: W C3, last_move_2: B B2
+ Move B C1 at 1/223: logprob: 4.682523, prior: 0.000000, raw-prob: 11673.145282, total_prob: 23548.573285, prob: 0.495705
+ Move B E5 at 2/223: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 23548.573285, prob: 0.092109
+ Move B C8 at 3/223: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 23548.573285, prob: 0.056591
+ Move B H15 at 4/223: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 23548.573285, prob: 0.080829
+ Move B B3 at 5/223: logprob: 2.547522, prior: 0.714070, raw-prob: 680.743008, total_prob: 23548.573285, prob: 0.028908
+ Move B G17 at 6/223: logprob: 3.333786, prior: 0.000000, raw-prob: 786.483189, total_prob: 23548.573285, prob: 0.033398
+ Move B J3 at 7/223: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 23548.573285, prob: 0.020967
+ Move B J8 at 8/223: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 23548.573285, prob: 0.022974
+ Move B E15 at 9/223: logprob: 3.023028, prior: 0.000000, raw-prob: 422.443683, total_prob: 23548.573285, prob: 0.017939
+--- End HeapDump
+----- Prior moves: #moves = 6--------
+0: B C4, type RESP, w_offset: 1025452, prior: 2.124357
+1: B B3, type RESP, w_offset: 1025452, prior: 2.124357
+2: B B4, type RESP, w_offset: 1025452, prior: 2.124357
+3: B B3, type NEIGHBOR, offset: 0, prior: -1.410286
+4: B C4, type NEIGHBOR, offset: 3, prior: -1.632502
+5: B B4, type NEIGHBOR, offset: 5, prior: -2.171645
+----- End Prior moves --------
+]
+;B[cs]C[move: C1(B), topn: 1, prob: 0.495705, counter: 0, type: heap, heap_size: 223, total_prob: 23031.045256
+--- HeapDump:
+heap_size: 222, last_move: B C1, last_move_2: W C3
+ Move W E5 at 1/222: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 12377.902652, prob: 0.175234
+ Move W H15 at 2/222: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 12377.902652, prob: 0.153775
+ Move W C8 at 3/222: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 12377.902652, prob: 0.107663
+ Move W J8 at 4/222: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 12377.902652, prob: 0.043708
+ Move W D1 at 5/222: logprob: 0.529625, prior: 2.247055, raw-prob: 258.102923, total_prob: 12377.902652, prob: 0.020852
+ Move W B1 at 6/222: logprob: 1.189405, prior: 2.184968, raw-prob: 852.987691, total_prob: 12377.902652, prob: 0.068912
+ Move W J3 at 7/222: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 12377.902652, prob: 0.039888
+ Move W F5 at 8/222: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 12377.902652, prob: 0.011689
+ Move W E15 at 9/222: logprob: 3.023028, prior: 0.000000, raw-prob: 422.443683, total_prob: 12377.902652, prob: 0.034129
+--- End HeapDump
+----- Prior moves: #moves = 8--------
+0: W D1, type RESP, w_offset: 684987, prior: 4.353789
+1: W B1, type RESP, w_offset: 684987, prior: 4.353789
+2: W B1, type NEIGHBOR, offset: 0, prior: -1.410286
+3: W D1, type NEIGHBOR, offset: 2, prior: -1.348200
+4: W B1, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+5: W B1, type SELF_ATARI, offset: 0, prior: -1.741746
+6: W D1, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+7: W D1, type SELF_ATARI, offset: 0, prior: -1.741746
+----- End Prior moves --------
+]
+;W[bq]C[move: B3(W), topn: 10, prob: 0.013186, counter: 0, type: heap, heap_size: 222, total_prob: 11280.488288
+--- HeapDump:
+heap_size: 221, last_move: W B3, last_move_2: B C1
+ Move B A2 at 1/221: logprob: 2.344108, prior: 2.438565, raw-prob: 14261.891926, total_prob: 39438.481128, prob: 0.361624
+ Move B A3 at 2/221: logprob: 1.556264, prior: 3.213208, raw-prob: 13890.262449, total_prob: 39438.481128, prob: 0.352201
+ Move B E5 at 3/221: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 39438.481128, prob: 0.054998
+ Move B H15 at 4/221: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 39438.481128, prob: 0.048263
+ Move B P3 at 5/221: logprob: 2.531707, prior: 0.000000, raw-prob: 158.129419, total_prob: 39438.481128, prob: 0.004010
+ Move B C8 at 6/221: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 39438.481128, prob: 0.033790
+ Move B J3 at 7/221: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 39438.481128, prob: 0.012519
+ Move B F5 at 8/221: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 39438.481128, prob: 0.003669
+ Move B J8 at 9/221: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 39438.481128, prob: 0.013718
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: B B4, type RESP, w_offset: 1011791, prior: 4.623494
+1: B A3, type RESP, w_offset: 1011791, prior: 4.623494
+2: B C4, type RESP, w_offset: 1011791, prior: 4.623494
+3: B A4, type RESP, w_offset: 1011791, prior: 4.623494
+4: B A2, type RESP, w_offset: 1011791, prior: 4.623494
+5: B A3, type NEIGHBOR, offset: 0, prior: -1.410286
+6: B B4, type NEIGHBOR, offset: 3, prior: -1.632502
+7: B A2, type NEIGHBOR, offset: 4, prior: -2.184929
+8: B A4, type NEIGHBOR, offset: 5, prior: -2.171645
+9: B C4, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[aq]C[move: A3(B), topn: 2, prob: 0.352201, counter: 0, type: heap, heap_size: 221, total_prob: 11321.767864
+--- HeapDump:
+heap_size: 220, last_move: B A3, last_move_2: W B3
+ Move W A4 at 1/220: logprob: 3.314995, prior: 4.473002, raw-prob: 5815252.029923, total_prob: 5836115.945920, prob: 0.996425
+ Move W A2 at 2/220: logprob: 1.620414, prior: 2.966627, raw-prob: 9643.917183, total_prob: 5836115.945920, prob: 0.001652
+ Move W C8 at 3/220: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 5836115.945920, prob: 0.000228
+ Move W H15 at 4/220: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 5836115.945920, prob: 0.000326
+ Move W E5 at 5/220: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 5836115.945920, prob: 0.000372
+ Move W G17 at 6/220: logprob: 3.333786, prior: 0.000000, raw-prob: 786.483189, total_prob: 5836115.945920, prob: 0.000135
+ Move W J3 at 7/220: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 5836115.945920, prob: 0.000085
+ Move W F5 at 8/220: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 5836115.945920, prob: 0.000025
+ Move W J8 at 9/220: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 5836115.945920, prob: 0.000093
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W A4, type RESP, w_offset: 702295, prior: 5.122293
+1: W A2, type RESP, w_offset: 702295, prior: 5.122293
+2: W B4, type RESP, w_offset: 702295, prior: 5.122293
+3: W A2, type NEIGHBOR, offset: 1, prior: -1.397131
+4: W A4, type NEIGHBOR, offset: 3, prior: -1.632502
+5: W B4, type NEIGHBOR, offset: 7, prior: -2.333786
+6: W A1, type NAKADE, offset: 3, prior: 1.319912
+7: W A2, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+8: W A2, type SELF_ATARI, offset: 0, prior: -1.741746
+9: W A4, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[as]C[move: A1(W), topn: 0, prob: 0.000000, counter: 0, type: must_move, heap_size: 220, total_prob: 11973.060514
+--- HeapDump:
+heap_size: 219, last_move: W A1, last_move_2: B A3
+ Move B B1 at 1/219: logprob: 4.278440, prior: 2.899445, raw-prob: 1716449.920251, total_prob: 2740415.398849, prob: 0.626347
+ Move B A2 at 2/219: logprob: 4.298627, prior: 2.615143, raw-prob: 1012101.620939, total_prob: 2740415.398849, prob: 0.369324
+ Move B C8 at 3/219: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 2740415.398849, prob: 0.000486
+ Move B A4 at 4/219: logprob: 3.314995, prior: 0.000000, raw-prob: 757.474465, total_prob: 2740415.398849, prob: 0.000276
+ Move B E5 at 5/219: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 2740415.398849, prob: 0.000791
+ Move B G17 at 6/219: logprob: 3.333786, prior: 0.000000, raw-prob: 786.483189, total_prob: 2740415.398849, prob: 0.000287
+ Move B J3 at 7/219: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 2740415.398849, prob: 0.000180
+ Move B F5 at 8/219: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 2740415.398849, prob: 0.000053
+ Move B J8 at 9/219: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 2740415.398849, prob: 0.000197
+--- End HeapDump
+----- Prior moves: #moves = 6--------
+0: B A2, type RESP, w_offset: 364286, prior: 3.264433
+1: B B1, type RESP, w_offset: 364286, prior: 3.264433
+2: B B1, type NEIGHBOR, offset: 2, prior: -1.348200
+3: B A2, type NEIGHBOR, offset: 3, prior: -1.632502
+4: B B1, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+5: B A2, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;B[ee]C[move: E15(B), topn: 18, prob: 0.000154, counter: 2, type: heap, heap_size: 219, total_prob: 22483.044433
+--- HeapDump:
+heap_size: 218, last_move: B E15, last_move_2: W A1
+ Move W E16 at 1/218: logprob: 3.316957, prior: 1.958787, raw-prob: 38234.316267, total_prob: 100512.756941, prob: 0.380393
+ Move W E14 at 2/218: logprob: 2.964926, prior: 2.194158, raw-prob: 30277.716900, total_prob: 100512.756941, prob: 0.301233
+ Move W D15 at 3/218: logprob: 2.215662, prior: 2.181002, raw-prob: 6590.136995, total_prob: 100512.756941, prob: 0.065565
+ Move W A2 at 4/218: logprob: 4.298627, prior: 0.000000, raw-prob: 5416.766582, total_prob: 100512.756941, prob: 0.053891
+ Move W E5 at 5/218: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 100512.756941, prob: 0.021580
+ Move W C8 at 6/218: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 100512.756941, prob: 0.013258
+ Move W F14 at 7/218: logprob: 2.041345, prior: 1.597843, raw-prob: 1448.634930, total_prob: 100512.756941, prob: 0.014412
+ Move W F5 at 8/218: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 100512.756941, prob: 0.001439
+ Move W B1 at 9/218: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 100512.756941, prob: 0.051759
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W E16, type RESP, w_offset: 345136, prior: 3.591289
+1: W E14, type RESP, w_offset: 345136, prior: 3.591289
+2: W D15, type RESP, w_offset: 345136, prior: 3.591289
+3: W F14, type RESP, w_offset: 345136, prior: 3.591289
+4: W D14, type RESP, w_offset: 345136, prior: 3.591289
+5: W D15, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W E14, type NEIGHBOR, offset: 1, prior: -1.397131
+7: W E16, type NEIGHBOR, offset: 3, prior: -1.632502
+8: W D14, type NEIGHBOR, offset: 4, prior: -2.184929
+9: W F14, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;W[ed]C[move: E16(W), topn: 1, prob: 0.380393, counter: 0, type: heap, heap_size: 218, total_prob: 23310.056194
+--- HeapDump:
+heap_size: 217, last_move: W E16, last_move_2: B E15
+ Move B G17 at 1/217: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 37690.402703, prob: 0.211053
+ Move B B1 at 2/217: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 37690.402703, prob: 0.138030
+ Move B A2 at 3/217: logprob: 4.298627, prior: 0.000000, raw-prob: 5416.766582, total_prob: 37690.402703, prob: 0.143717
+ Move B E14 at 4/217: logprob: 4.233212, prior: 0.000000, raw-prob: 4752.492950, total_prob: 37690.402703, prob: 0.126093
+ Move B E5 at 5/217: logprob: 3.841018, prior: 0.000000, raw-prob: 2169.029894, total_prob: 37690.402703, prob: 0.057549
+ Move B E17 at 6/217: logprob: 2.769751, prior: 1.292556, raw-prob: 3376.568945, total_prob: 37690.402703, prob: 0.089587
+ Move B J3 at 7/217: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 37690.402703, prob: 0.013100
+ Move B F5 at 8/217: logprob: 2.487277, prior: 0.000000, raw-prob: 144.684329, total_prob: 37690.402703, prob: 0.003839
+ Move B A4 at 9/217: logprob: 3.314995, prior: 0.000000, raw-prob: 757.474465, total_prob: 37690.402703, prob: 0.020097
+--- End HeapDump
+----- Prior moves: #moves = 6--------
+0: B E17, type RESP, w_offset: 82833, prior: 2.925058
+1: B D17, type RESP, w_offset: 82833, prior: 2.925058
+2: B D15, type RESP, w_offset: 82833, prior: 2.925058
+3: B E17, type NEIGHBOR, offset: 3, prior: -1.632502
+4: B D15, type NEIGHBOR, offset: 4, prior: -2.184929
+5: B D17, type NEIGHBOR, offset: 5, prior: -2.171645
+----- End Prior moves --------
+]
+;B[eo]C[move: E5(B), topn: 5, prob: 0.057549, counter: 1, type: heap, heap_size: 217, total_prob: 34289.459706
+--- HeapDump:
+heap_size: 215, last_move: B E5, last_move_2: W E16
+ Move W G17 at 1/215: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 27063.180842, prob: 0.293930
+ Move W B1 at 2/215: logprob: 4.333070, prior: 0.000000, raw-prob: 5803.053160, total_prob: 27063.180842, prob: 0.214426
+ Move W C8 at 3/215: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 27063.180842, prob: 0.049242
+ Move W E14 at 4/215: logprob: 4.233212, prior: 0.000000, raw-prob: 4752.492950, total_prob: 27063.180842, prob: 0.175607
+ Move W H15 at 5/215: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 27063.180842, prob: 0.070332
+ Move W S13 at 6/215: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 27063.180842, prob: 0.019692
+ Move W J3 at 7/215: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 27063.180842, prob: 0.018244
+ Move W K3 at 8/215: logprob: 2.229782, prior: 0.000000, raw-prob: 86.449850, total_prob: 27063.180842, prob: 0.003194
+ Move W A4 at 9/215: logprob: 3.243053, prior: 0.000000, raw-prob: 655.963856, total_prob: 27063.180842, prob: 0.024238
+--- End HeapDump
+----- Prior moves: #moves = 4--------
+0: W F5, type RESP, w_offset: 974744, prior: 1.791578
+1: W F6, type RESP, w_offset: 974744, prior: 1.791578
+2: W F5, type NEIGHBOR, offset: 2, prior: -1.348200
+3: W F6, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[ef]C[move: E14(W), topn: 4, prob: 0.175607, counter: 0, type: heap, heap_size: 215, total_prob: 27048.202340
+--- HeapDump:
+heap_size: 214, last_move: W E14, last_move_2: B E5
+ Move B D15 at 1/214: logprob: -0.088714, prior: 4.747168, raw-prob: 11124.516800, total_prob: 33899.733849, prob: 0.328159
+ Move B B1 at 2/214: logprob: 4.333070, prior: 0.000000, raw-prob: 5803.053160, total_prob: 33899.733849, prob: 0.171183
+ Move B G17 at 3/214: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 33899.733849, prob: 0.234653
+ Move B A4 at 4/214: logprob: 3.243053, prior: 0.000000, raw-prob: 655.963856, total_prob: 33899.733849, prob: 0.019350
+ Move B H15 at 5/214: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 33899.733849, prob: 0.056148
+ Move B C8 at 6/214: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 33899.733849, prob: 0.039311
+ Move B J3 at 7/214: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 33899.733849, prob: 0.014565
+ Move B K3 at 8/214: logprob: 2.229782, prior: 0.000000, raw-prob: 86.449850, total_prob: 33899.733849, prob: 0.002550
+ Move B J8 at 9/214: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 33899.733849, prob: 0.015959
+--- End HeapDump
+----- Prior moves: #moves = 13--------
+0: B E13, type RESP, w_offset: 363378, prior: 3.235798
+1: B F14, type RESP, w_offset: 363378, prior: 3.235798
+2: B D14, type RESP, w_offset: 363378, prior: 3.235798
+3: B F13, type RESP, w_offset: 363378, prior: 3.235798
+4: B D15, type RESP, w_offset: 363378, prior: 3.235798
+5: B D13, type RESP, w_offset: 363378, prior: 3.235798
+6: B D14, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B E13, type NEIGHBOR, offset: 1, prior: -1.397131
+8: B F14, type NEIGHBOR, offset: 2, prior: -1.348200
+9: B D13, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B D15, type NEIGHBOR, offset: 5, prior: -2.171645
+11: B F13, type NEIGHBOR, offset: 6, prior: -1.993446
+12: B D15, type SAVE_ATARI, offset: 0, prior: 3.683015
+----- End Prior moves --------
+]
+;B[ol]C[move: P8(B), topn: 11, prob: 0.002670, counter: 1, type: heap, heap_size: 214, total_prob: 22147.895047
+--- HeapDump:
+heap_size: 213, last_move: B P8, last_move_2: W E14
+ Move W G17 at 1/213: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 22232.087356, prob: 0.357802
+ Move W B1 at 2/213: logprob: 4.333070, prior: 0.000000, raw-prob: 5803.053160, total_prob: 22232.087356, prob: 0.261022
+ Move W C8 at 3/213: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 22232.087356, prob: 0.059942
+ Move W A4 at 4/213: logprob: 3.243053, prior: 0.000000, raw-prob: 655.963856, total_prob: 22232.087356, prob: 0.029505
+ Move W H15 at 5/213: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 22232.087356, prob: 0.085616
+ Move W S13 at 6/213: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 22232.087356, prob: 0.023971
+ Move W J3 at 7/213: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 22232.087356, prob: 0.022208
+ Move W K3 at 8/213: logprob: 2.229782, prior: 0.000000, raw-prob: 86.449850, total_prob: 22232.087356, prob: 0.003889
+ Move W J8 at 9/213: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 22232.087356, prob: 0.024335
+--- End HeapDump
+----- Prior moves: #moves = 11--------
+0: W P7, type RESP, w_offset: 693002, prior: 3.733620
+1: W O8, type RESP, w_offset: 693002, prior: 3.733620
+2: W Q7, type RESP, w_offset: 693002, prior: 3.733620
+3: W O9, type RESP, w_offset: 693002, prior: 3.733620
+4: W O7, type RESP, w_offset: 693002, prior: 3.733620
+5: W O8, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W P7, type NEIGHBOR, offset: 1, prior: -1.397131
+7: W O7, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W O9, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W Q7, type NEIGHBOR, offset: 6, prior: -1.993446
+10: W D15, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;W[ap]C[move: A4(W), topn: 4, prob: 0.029505, counter: 3, type: heap, heap_size: 213, total_prob: 21950.653775
+--- HeapDump:
+heap_size: 212, last_move: W A4, last_move_2: B P8
+ Move B G17 at 1/212: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 21528.229695, prob: 0.369500
+ Move B B1 at 2/212: logprob: 4.333070, prior: 0.000000, raw-prob: 5803.053160, total_prob: 21528.229695, prob: 0.269556
+ Move B C8 at 3/212: logprob: 3.597457, prior: 0.000000, raw-prob: 1332.636458, total_prob: 21528.229695, prob: 0.061902
+ Move B J8 at 4/212: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 21528.229695, prob: 0.025130
+ Move B H15 at 5/212: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 21528.229695, prob: 0.088415
+ Move B S13 at 6/212: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 21528.229695, prob: 0.024754
+ Move B J3 at 7/212: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 21528.229695, prob: 0.022934
+ Move B K3 at 8/212: logprob: 2.229782, prior: 0.000000, raw-prob: 86.449850, total_prob: 21528.229695, prob: 0.004016
+ Move B E17 at 9/212: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 21528.229695, prob: 0.011824
+--- End HeapDump
+----- Prior moves: #moves = 8--------
+0: B A5, type RESP, w_offset: 629865, prior: 3.027605
+1: B B4, type RESP, w_offset: 629865, prior: 3.027605
+2: B B4, type NEIGHBOR, offset: 2, prior: -1.348200
+3: B A5, type NEIGHBOR, offset: 3, prior: -1.632502
+4: B B4, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+5: B B4, type SELF_ATARI, offset: 0, prior: -1.741746
+6: B A5, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+7: B A5, type SELF_ATARI, offset: 0, prior: -1.741746
+----- End Prior moves --------
+]
+;B[cl]C[move: C8(B), topn: 3, prob: 0.061902, counter: 0, type: heap, heap_size: 212, total_prob: 21344.179707
+--- HeapDump:
+heap_size: 211, last_move: B C8, last_move_2: W A4
+ Move W A7 at 1/211: logprob: 2.850522, prior: 3.683015, raw-prob: 473105.597086, total_prob: 927522.567801, prob: 0.510074
+ Move W A6 at 2/211: logprob: 2.802730, prior: 3.683015, raw-prob: 429978.331941, total_prob: 927522.567801, prob: 0.463577
+ Move W G17 at 3/211: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 927522.567801, prob: 0.008576
+ Move W B1 at 4/211: logprob: 4.333070, prior: 0.000000, raw-prob: 5803.053160, total_prob: 927522.567801, prob: 0.006257
+ Move W H15 at 5/211: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 927522.567801, prob: 0.002052
+ Move W A2 at 6/211: logprob: 1.559484, prior: 2.654665, raw-prob: 4574.707694, total_prob: 927522.567801, prob: 0.004932
+ Move W J3 at 7/211: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 927522.567801, prob: 0.000532
+ Move W J8 at 8/211: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 927522.567801, prob: 0.000583
+ Move W E17 at 9/211: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 927522.567801, prob: 0.000274
+--- End HeapDump
+----- Prior moves: #moves = 9--------
+0: W C9, type RESP, w_offset: 565848, prior: 2.159279
+1: W D9, type RESP, w_offset: 565848, prior: 2.159279
+2: W B9, type RESP, w_offset: 565848, prior: 2.159279
+3: W C9, type NEIGHBOR, offset: 3, prior: -1.632502
+4: W B9, type NEIGHBOR, offset: 5, prior: -2.171645
+5: W D9, type NEIGHBOR, offset: 7, prior: -2.333786
+6: W A6, type SAVE_ATARI, offset: 0, prior: 3.683015
+7: W A7, type SAVE_ATARI, offset: 0, prior: 3.683015
+8: W A2, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;W[an]C[move: A6(W), topn: 2, prob: 0.463577, counter: 1, type: heap, heap_size: 211, total_prob: 20457.588021
+--- HeapDump:
+heap_size: 212, last_move: W A6, last_move_2: B C8
+ Move B G17 at 1/212: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 19399.619163, prob: 0.410043
+ Move B B1 at 2/212: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 19399.619163, prob: 0.268171
+ Move B S13 at 3/212: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 19399.619163, prob: 0.027471
+ Move B J8 at 4/212: logprob: 3.146719, prior: 0.000000, raw-prob: 541.009608, total_prob: 19399.619163, prob: 0.027888
+ Move B H15 at 5/212: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 19399.619163, prob: 0.098116
+ Move B G5 at 6/212: logprob: 3.105472, prior: 0.000000, raw-prob: 498.171756, total_prob: 19399.619163, prob: 0.025679
+ Move B J3 at 7/212: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 19399.619163, prob: 0.025451
+ Move B K3 at 8/212: logprob: 2.229782, prior: 0.000000, raw-prob: 86.449850, total_prob: 19399.619163, prob: 0.004456
+ Move B E17 at 9/212: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 19399.619163, prob: 0.013121
+--- End HeapDump
+----- Prior moves: #moves = 5--------
+0: B A7, type RESP, w_offset: 109655, prior: 2.075126
+1: B B6, type RESP, w_offset: 109655, prior: 2.075126
+2: B A5, type NEIGHBOR, offset: 1, prior: -1.397131
+3: B B6, type NEIGHBOR, offset: 2, prior: -1.348200
+4: B A7, type NEIGHBOR, offset: 3, prior: -1.632502
+----- End Prior moves --------
+]
+;B[il]C[move: J8(B), topn: 4, prob: 0.027888, counter: 3, type: heap, heap_size: 211, total_prob: 19398.879280
+--- HeapDump:
+heap_size: 210, last_move: B J8, last_move_2: W A6
+ Move W K9 at 1/210: logprob: 2.455933, prior: 2.270852, raw-prob: 12753.609749, total_prob: 41348.041155, prob: 0.308445
+ Move W K7 at 2/210: logprob: 1.976539, prior: 2.611192, raw-prob: 9657.229544, total_prob: 41348.041155, prob: 0.233560
+ Move W S13 at 3/210: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 41348.041155, prob: 0.012889
+ Move W G17 at 4/210: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 41348.041155, prob: 0.192384
+ Move W H15 at 5/210: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 41348.041155, prob: 0.046034
+ Move W G5 at 6/210: logprob: 3.105472, prior: 0.000000, raw-prob: 498.171756, total_prob: 41348.041155, prob: 0.012048
+ Move W J3 at 7/210: logprob: 3.100997, prior: 0.000000, raw-prob: 493.732940, total_prob: 41348.041155, prob: 0.011941
+ Move W B1 at 8/210: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 41348.041155, prob: 0.125820
+ Move W M10 at 9/210: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 41348.041155, prob: 0.001479
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: W J9, type RESP, w_offset: 351135, prior: 4.604638
+1: W H8, type RESP, w_offset: 351135, prior: 4.604638
+2: W K7, type RESP, w_offset: 351135, prior: 4.604638
+3: W K9, type RESP, w_offset: 351135, prior: 4.604638
+4: W H9, type RESP, w_offset: 351135, prior: 4.604638
+5: W H7, type RESP, w_offset: 351135, prior: 4.604638
+6: W H8, type NEIGHBOR, offset: 0, prior: -1.410286
+7: W J9, type NEIGHBOR, offset: 3, prior: -1.632502
+8: W H7, type NEIGHBOR, offset: 4, prior: -2.184929
+9: W H9, type NEIGHBOR, offset: 5, prior: -2.171645
+10: W K7, type NEIGHBOR, offset: 6, prior: -1.993446
+11: W K9, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[iq]C[move: J3(W), topn: 7, prob: 0.011941, counter: 4, type: heap, heap_size: 210, total_prob: 19007.945716
+--- HeapDump:
+heap_size: 209, last_move: W J3, last_move_2: B J8
+ Move B H2 at 1/209: logprob: 2.864667, prior: 2.417610, raw-prob: 38737.150165, total_prob: 78926.822045, prob: 0.490798
+ Move B J2 at 2/209: logprob: 1.730863, prior: 3.205408, raw-prob: 19390.583989, total_prob: 78926.822045, prob: 0.245678
+ Move B G17 at 3/209: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 78926.822045, prob: 0.100786
+ Move B B1 at 4/209: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 78926.822045, prob: 0.065914
+ Move B H15 at 5/209: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 78926.822045, prob: 0.024116
+ Move B G5 at 6/209: logprob: 3.105472, prior: 0.000000, raw-prob: 498.171756, total_prob: 78926.822045, prob: 0.006312
+ Move B S13 at 7/209: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 78926.822045, prob: 0.006752
+ Move B K3 at 8/209: logprob: 0.387586, prior: 3.254339, raw-prob: 1456.586568, total_prob: 78926.822045, prob: 0.018455
+ Move B M10 at 9/209: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 78926.822045, prob: 0.000775
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: B J2, type RESP, w_offset: 510391, prior: 4.602539
+1: B K3, type RESP, w_offset: 510391, prior: 4.602539
+2: B K2, type RESP, w_offset: 510391, prior: 4.602539
+3: B K4, type RESP, w_offset: 510391, prior: 4.602539
+4: B H2, type RESP, w_offset: 510391, prior: 4.602539
+5: B J2, type NEIGHBOR, offset: 1, prior: -1.397131
+6: B K3, type NEIGHBOR, offset: 2, prior: -1.348200
+7: B H2, type NEIGHBOR, offset: 4, prior: -2.184929
+8: B K2, type NEIGHBOR, offset: 6, prior: -1.993446
+9: B K4, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[ir]C[move: J2(B), topn: 2, prob: 0.245678, counter: 0, type: heap, heap_size: 209, total_prob: 18755.954049
+--- HeapDump:
+heap_size: 208, last_move: B J2, last_move_2: W J3
+ Move W K2 at 1/208: logprob: 1.845912, prior: 3.503355, raw-prob: 44290.842839, total_prob: 74779.472791, prob: 0.592286
+ Move W K3 at 2/208: logprob: 2.141293, prior: 2.517768, raw-prob: 11138.047539, total_prob: 74779.472791, prob: 0.148945
+ Move W S13 at 3/208: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 74779.472791, prob: 0.007127
+ Move W G17 at 4/208: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 74779.472791, prob: 0.106375
+ Move W H15 at 5/208: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 74779.472791, prob: 0.025454
+ Move W G5 at 6/208: logprob: 3.105472, prior: 0.000000, raw-prob: 498.171756, total_prob: 74779.472791, prob: 0.006662
+ Move W T15 at 7/208: logprob: 2.398042, prior: 0.000000, raw-prob: 121.035477, total_prob: 74779.472791, prob: 0.001619
+ Move W B1 at 8/208: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 74779.472791, prob: 0.069570
+ Move W H1 at 9/208: logprob: 0.190438, prior: 2.666625, raw-prob: 303.119552, total_prob: 74779.472791, prob: 0.004054
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: W J1, type RESP, w_offset: 691530, prior: 4.851554
+1: W K2, type RESP, w_offset: 691530, prior: 4.851554
+2: W H2, type RESP, w_offset: 691530, prior: 4.851554
+3: W K1, type RESP, w_offset: 691530, prior: 4.851554
+4: W K3, type RESP, w_offset: 691530, prior: 4.851554
+5: W H1, type RESP, w_offset: 691530, prior: 4.851554
+6: W H2, type NEIGHBOR, offset: 0, prior: -1.410286
+7: W J1, type NEIGHBOR, offset: 1, prior: -1.397131
+8: W K2, type NEIGHBOR, offset: 2, prior: -1.348200
+9: W H1, type NEIGHBOR, offset: 4, prior: -2.184929
+10: W K1, type NEIGHBOR, offset: 6, prior: -1.993446
+11: W K3, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[jr]C[move: K2(W), topn: 1, prob: 0.592286, counter: 0, type: heap, heap_size: 208, total_prob: 18524.928543
+--- HeapDump:
+heap_size: 208, last_move: W K2, last_move_2: B J2
+ Move B K3 at 1/208: logprob: 3.580545, prior: 3.243995, raw-prob: 846681.989113, total_prob: 1176374.410030, prob: 0.719739
+ Move B K1 at 2/208: logprob: 2.836977, prior: 3.479366, raw-prob: 306411.946007, total_prob: 1176374.410030, prob: 0.260471
+ Move B J1 at 3/208: logprob: 2.524541, prior: 1.708357, raw-prob: 4749.504576, total_prob: 1176374.410030, prob: 0.004037
+ Move B G17 at 4/208: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 1176374.410030, prob: 0.006762
+ Move B H15 at 5/208: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 1176374.410030, prob: 0.001618
+ Move B G5 at 6/208: logprob: 3.105472, prior: 0.000000, raw-prob: 498.171756, total_prob: 1176374.410030, prob: 0.000423
+ Move B S13 at 7/208: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 1176374.410030, prob: 0.000453
+ Move B B1 at 8/208: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 1176374.410030, prob: 0.004422
+ Move B M10 at 9/208: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 1176374.410030, prob: 0.000052
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B K3, type RESP, w_offset: 758156, prior: 3.893286
+1: B K1, type RESP, w_offset: 758156, prior: 3.893286
+2: B L1, type RESP, w_offset: 758156, prior: 3.893286
+3: B L3, type RESP, w_offset: 758156, prior: 3.893286
+4: B J1, type RESP, w_offset: 758156, prior: 3.893286
+5: B K1, type NEIGHBOR, offset: 1, prior: -1.397131
+6: B K3, type NEIGHBOR, offset: 3, prior: -1.632502
+7: B J1, type NEIGHBOR, offset: 4, prior: -2.184929
+8: B L1, type NEIGHBOR, offset: 6, prior: -1.993446
+9: B L3, type NEIGHBOR, offset: 7, prior: -2.333786
+10: B K1, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+11: B K3, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;B[jq]C[move: K3(B), topn: 1, prob: 0.719739, counter: 0, type: heap, heap_size: 208, total_prob: 20162.573556
+--- HeapDump:
+heap_size: 206, last_move: B K3, last_move_2: W K2
+ Move W K4 at 1/206: logprob: 4.141318, prior: 2.440111, raw-prob: 520662.868032, total_prob: 546076.130259, prob: 0.953462
+ Move W G17 at 2/206: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 546076.130259, prob: 0.014567
+ Move W G5 at 3/206: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 546076.130259, prob: 0.001465
+ Move W K1 at 4/206: logprob: 0.713970, prior: 3.683015, raw-prob: 6594.364524, total_prob: 546076.130259, prob: 0.012076
+ Move W H15 at 5/206: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 546076.130259, prob: 0.003486
+ Move W S13 at 6/206: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 546076.130259, prob: 0.000976
+ Move W T15 at 7/206: logprob: 2.398042, prior: 0.000000, raw-prob: 121.035477, total_prob: 546076.130259, prob: 0.000222
+ Move W B1 at 8/206: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 546076.130259, prob: 0.009527
+ Move W M10 at 9/206: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 546076.130259, prob: 0.000112
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W K4, type RESP, w_offset: 862690, prior: 3.089402
+1: W L3, type RESP, w_offset: 862690, prior: 3.089402
+2: W L4, type RESP, w_offset: 862690, prior: 3.089402
+3: W L3, type NEIGHBOR, offset: 2, prior: -1.348200
+4: W K4, type NEIGHBOR, offset: 3, prior: -1.632502
+5: W L4, type NEIGHBOR, offset: 7, prior: -2.333786
+6: W K1, type SAVE_ATARI, offset: 0, prior: 3.683015
+7: W L3, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+8: W L3, type SELF_ATARI, offset: 0, prior: -1.741746
+9: W K4, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[is]C[move: J1(W), topn: 0, prob: 0.000000, counter: 0, type: must_move, heap_size: 206, total_prob: 22769.928991
+--- HeapDump:
+heap_size: 205, last_move: W J1, last_move_2: B K3
+ Move B K1 at 1/205: logprob: 2.363827, prior: 11.955897, raw-prob: 2741284031299.462891, total_prob: 2746384435718.350098, prob: 0.998143
+ Move B H2 at 2/205: logprob: 3.663954, prior: 7.494575, raw-prob: 4922383876.860919, total_prob: 2746384435718.350098, prob: 0.001792
+ Move B G5 at 3/205: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 2746384435718.350098, prob: 0.000000
+ Move B H1 at 4/205: logprob: 3.942511, prior: 5.556130, raw-prob: 177997792.535551, total_prob: 2746384435718.350098, prob: 0.000065
+ Move B H15 at 5/205: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 2746384435718.350098, prob: 0.000000
+ Move B S13 at 6/205: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 2746384435718.350098, prob: 0.000000
+ Move B T15 at 7/205: logprob: 2.398042, prior: 0.000000, raw-prob: 121.035477, total_prob: 2746384435718.350098, prob: 0.000000
+ Move B G17 at 8/205: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 2746384435718.350098, prob: 0.000000
+ Move B B1 at 9/205: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 2746384435718.350098, prob: 0.000000
+--- End HeapDump
+----- Prior moves: #moves = 11--------
+0: B K1, type RESP, w_offset: 512223, prior: 5.983205
+1: B H1, type RESP, w_offset: 512223, prior: 5.983205
+2: B H2, type RESP, w_offset: 512223, prior: 5.983205
+3: B H1, type NEIGHBOR, offset: 0, prior: -1.410286
+4: B K1, type NEIGHBOR, offset: 2, prior: -1.348200
+5: B H2, type NEIGHBOR, offset: 5, prior: -2.171645
+6: B K1, type SAVE_ATARI, offset: 0, prior: 3.683015
+7: B H2, type SAVE_ATARI, offset: 0, prior: 3.683015
+8: B K1, type KILL_GROUP2, offset: 0, prior: 2.654665
+9: B H1, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+10: B K1, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;B[js]C[move: K1(B), topn: 1, prob: 0.998143, counter: 0, type: heap, heap_size: 205, total_prob: 27041.901776
+--- HeapDump:
+heap_size: 205, last_move: B K1, last_move_2: W J1
+ Move W K4 at 1/205: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 43413.253726, prob: 0.292481
+ Move W H1 at 2/205: logprob: 1.010047, prior: 3.683015, raw-prob: 11921.810115, total_prob: 43413.253726, prob: 0.274612
+ Move W G5 at 3/205: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 43413.253726, prob: 0.018426
+ Move W G17 at 4/205: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 43413.253726, prob: 0.183232
+ Move W H15 at 5/205: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 43413.253726, prob: 0.043844
+ Move W S13 at 6/205: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 43413.253726, prob: 0.012275
+ Move W T15 at 7/205: logprob: 2.398042, prior: 0.000000, raw-prob: 121.035477, total_prob: 43413.253726, prob: 0.002788
+ Move W E17 at 8/205: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 43413.253726, prob: 0.005863
+ Move W B1 at 9/205: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 43413.253726, prob: 0.119835
+--- End HeapDump
+----- Prior moves: #moves = 3--------
+0: W L1, type NEIGHBOR, offset: 2, prior: -1.348200
+1: W K2, type NEIGHBOR, offset: 3, prior: -1.632502
+2: W H1, type SAVE_ATARI, offset: 0, prior: 3.683015
+----- End Prior moves --------
+]
+;W[mc]C[move: N17(W), topn: 20, prob: 0.002754, counter: 2, type: heap, heap_size: 203, total_prob: 31498.891586
+--- HeapDump:
+heap_size: 202, last_move: W N17, last_move_2: B K1
+ Move B M18 at 1/202: logprob: 3.240134, prior: 3.273521, raw-prob: 454661.750342, total_prob: 877733.036165, prob: 0.517995
+ Move B N16 at 2/202: logprob: 2.389146, prior: 4.048035, raw-prob: 390179.127795, total_prob: 877733.036165, prob: 0.444531
+ Move B G5 at 3/202: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 877733.036165, prob: 0.000911
+ Move B K4 at 4/202: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 877733.036165, prob: 0.014466
+ Move B G17 at 5/202: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 877733.036165, prob: 0.009063
+ Move B S13 at 6/202: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 877733.036165, prob: 0.000607
+ Move B T15 at 7/202: logprob: 2.398042, prior: 0.000000, raw-prob: 121.035477, total_prob: 877733.036165, prob: 0.000138
+ Move B E17 at 8/202: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 877733.036165, prob: 0.000290
+ Move B B1 at 9/202: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 877733.036165, prob: 0.005927
+--- End HeapDump
+----- Prior moves: #moves = 5--------
+0: B N16, type RESP, w_offset: 346857, prior: 5.445166
+1: B M18, type RESP, w_offset: 346857, prior: 5.445166
+2: B N16, type NEIGHBOR, offset: 1, prior: -1.397131
+3: B M18, type NEIGHBOR, offset: 5, prior: -2.171645
+4: B H1, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;B[md]C[move: N16(B), topn: 2, prob: 0.444531, counter: 0, type: heap, heap_size: 202, total_prob: 32146.239422
+--- HeapDump:
+heap_size: 201, last_move: B N16, last_move_2: W N17
+ Move W K4 at 1/201: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 32027.150920, prob: 0.396462
+ Move W G17 at 2/201: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 32027.150920, prob: 0.248373
+ Move W G5 at 3/201: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 32027.150920, prob: 0.024977
+ Move W B1 at 4/201: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 32027.150920, prob: 0.162438
+ Move W H15 at 5/201: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 32027.150920, prob: 0.059431
+ Move W S13 at 6/201: logprob: 3.139183, prior: 0.000000, raw-prob: 532.917643, total_prob: 32027.150920, prob: 0.016640
+ Move W T15 at 7/201: logprob: 2.398042, prior: 0.000000, raw-prob: 121.035477, total_prob: 32027.150920, prob: 0.003779
+ Move W E17 at 8/201: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 32027.150920, prob: 0.007948
+ Move W M18 at 9/201: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 32027.150920, prob: 0.020362
+--- End HeapDump
+----- Prior moves: #moves = 1--------
+0: W N15, type NEIGHBOR, offset: 1, prior: -1.397131
+----- End Prior moves --------
+]
+;W[si]C[move: T11(W), topn: 24, prob: 0.000399, counter: 3, type: heap, heap_size: 200, total_prob: 32027.093671
+--- HeapDump:
+heap_size: 199, last_move: W T11, last_move_2: B N16
+ Move B T10 at 1/199: logprob: 2.458249, prior: 3.992744, raw-prob: 401107.677974, total_prob: 461646.508626, prob: 0.868863
+ Move B G17 at 2/199: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 461646.508626, prob: 0.017231
+ Move B S10 at 3/199: logprob: 2.874837, prior: 2.221735, raw-prob: 26719.361773, total_prob: 461646.508626, prob: 0.057878
+ Move B B1 at 4/199: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 461646.508626, prob: 0.011269
+ Move B H15 at 5/199: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 461646.508626, prob: 0.004123
+ Move B K4 at 6/199: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 461646.508626, prob: 0.027505
+ Move B R11 at 7/199: logprob: 3.671798, prior: 0.000000, raw-prob: 1546.261534, total_prob: 461646.508626, prob: 0.003349
+ Move B E17 at 8/199: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 461646.508626, prob: 0.000551
+ Move B M18 at 9/199: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 461646.508626, prob: 0.001413
+--- End HeapDump
+----- Prior moves: #moves = 9--------
+0: B T12, type RESP, w_offset: 280802, prior: 4.406663
+1: B T10, type RESP, w_offset: 280802, prior: 4.406663
+2: B S10, type RESP, w_offset: 280802, prior: 4.406663
+3: B T10, type NEIGHBOR, offset: 1, prior: -1.397131
+4: B T12, type NEIGHBOR, offset: 3, prior: -1.632502
+5: B S10, type NEIGHBOR, offset: 4, prior: -2.184929
+6: B T10, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+7: B T12, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+8: B T12, type SELF_ATARI, offset: 0, prior: -1.741746
+----- End Prior moves --------
+]
+;B[sj]C[move: T10(B), topn: 1, prob: 0.868863, counter: 0, type: heap, heap_size: 199, total_prob: 33887.737414
+--- HeapDump:
+heap_size: 198, last_move: B T10, last_move_2: W T11
+ Move W T12 at 1/198: logprob: 2.910569, prior: 3.683015, raw-prob: 533476.058359, total_prob: 627791.713808, prob: 0.849766
+ Move W G17 at 2/198: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 627791.713808, prob: 0.012671
+ Move W S10 at 3/198: logprob: 3.007773, prior: 2.400698, raw-prob: 49858.310737, total_prob: 627791.713808, prob: 0.079419
+ Move W B1 at 4/198: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 627791.713808, prob: 0.008287
+ Move W H15 at 5/198: logprob: 3.775702, prior: 0.000000, raw-prob: 1903.414616, total_prob: 627791.713808, prob: 0.003032
+ Move W T9 at 6/198: logprob: 2.234127, prior: 2.413853, raw-prob: 10893.909031, total_prob: 627791.713808, prob: 0.017353
+ Move W K4 at 7/198: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 627791.713808, prob: 0.020226
+ Move W E17 at 8/198: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 627791.713808, prob: 0.000405
+ Move W M18 at 9/198: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 627791.713808, prob: 0.001039
+--- End HeapDump
+----- Prior moves: #moves = 9--------
+0: W T9, type RESP, w_offset: 579948, prior: 2.827773
+1: W S10, type RESP, w_offset: 579948, prior: 2.827773
+2: W S9, type RESP, w_offset: 579948, prior: 2.827773
+3: W S10, type NEIGHBOR, offset: 0, prior: -1.410286
+4: W T9, type NEIGHBOR, offset: 1, prior: -1.397131
+5: W S9, type NEIGHBOR, offset: 4, prior: -2.184929
+6: W T12, type SAVE_ATARI, offset: 0, prior: 3.683015
+7: W S10, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+8: W T9, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[he]C[move: H15(W), topn: 5, prob: 0.003032, counter: 4, type: heap, heap_size: 198, total_prob: 34290.900652
+--- HeapDump:
+heap_size: 197, last_move: W H15, last_move_2: B T10
+ Move B T12 at 1/197: logprob: 2.910569, prior: 2.654665, raw-prob: 68218.367802, total_prob: 100268.763789, prob: 0.680355
+ Move B G17 at 2/197: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 100268.763789, prob: 0.079334
+ Move B K4 at 3/197: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 100268.763789, prob: 0.126635
+ Move B B1 at 4/197: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 100268.763789, prob: 0.051885
+ Move B P3 at 5/197: logprob: 2.531707, prior: 0.000000, raw-prob: 158.129419, total_prob: 100268.763789, prob: 0.001577
+ Move B G5 at 6/197: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 100268.763789, prob: 0.007978
+ Move B R11 at 7/197: logprob: 3.671798, prior: 0.000000, raw-prob: 1546.261534, total_prob: 100268.763789, prob: 0.015421
+ Move B E17 at 8/197: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 100268.763789, prob: 0.002539
+ Move B M18 at 9/197: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 100268.763789, prob: 0.006504
+--- End HeapDump
+----- Prior moves: #moves = 4--------
+0: B H16, type RESP, w_offset: 647944, prior: 3.305020
+1: B G15, type NEIGHBOR, offset: 0, prior: -1.410286
+2: B H16, type NEIGHBOR, offset: 3, prior: -1.632502
+3: B T12, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;B[sh]C[move: T12(B), topn: 1, prob: 0.680355, counter: 0, type: heap, heap_size: 196, total_prob: 32387.678716
+--- HeapDump:
+heap_size: 195, last_move: B T12, last_move_2: W H15
+ Move W S13 at 1/195: logprob: 3.309687, prior: 4.656800, raw-prob: 8310031.334087, total_prob: 8454613.893542, prob: 0.982899
+ Move W G17 at 2/195: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 8454613.893542, prob: 0.000941
+ Move W T13 at 3/195: logprob: 3.330632, prior: 2.496139, raw-prob: 115098.263648, total_prob: 8454613.893542, prob: 0.013614
+ Move W B1 at 4/195: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 8454613.893542, prob: 0.000615
+ Move W P3 at 5/195: logprob: 2.531707, prior: 0.000000, raw-prob: 158.129419, total_prob: 8454613.893542, prob: 0.000019
+ Move W K4 at 6/195: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 8454613.893542, prob: 0.001502
+ Move W G5 at 7/195: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 8454613.893542, prob: 0.000095
+ Move W E17 at 8/195: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 8454613.893542, prob: 0.000030
+ Move W M18 at 9/195: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 8454613.893542, prob: 0.000077
+--- End HeapDump
+----- Prior moves: #moves = 7--------
+0: W T13, type RESP, w_offset: 485195, prior: 3.145429
+1: W S13, type RESP, w_offset: 485195, prior: 3.145429
+2: W T11, type NEIGHBOR, offset: 1, prior: -1.397131
+3: W T13, type NEIGHBOR, offset: 3, prior: -1.632502
+4: W S13, type NEIGHBOR, offset: 5, prior: -2.171645
+5: W S13, type SAVE_ATARI, offset: 0, prior: 3.683015
+6: W T13, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[rg]C[move: S13(W), topn: 1, prob: 0.982899, counter: 0, type: heap, heap_size: 194, total_prob: 31013.777839
+--- HeapDump:
+heap_size: 195, last_move: W S13, last_move_2: B T12
+ Move B T13 at 1/195: logprob: 2.871486, prior: 3.088651, raw-prob: 150283.015116, total_prob: 184664.974463, prob: 0.813814
+ Move B G17 at 2/195: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 184664.974463, prob: 0.043076
+ Move B K4 at 3/195: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 184664.974463, prob: 0.068760
+ Move B B1 at 4/195: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 184664.974463, prob: 0.028172
+ Move B T14 at 5/195: logprob: 1.595629, prior: 2.103065, raw-prob: 1631.716812, total_prob: 184664.974463, prob: 0.008836
+ Move B R13 at 6/195: logprob: 1.007538, prior: 3.026565, raw-prob: 3191.367924, total_prob: 184664.974463, prob: 0.017282
+ Move B G5 at 7/195: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 184664.974463, prob: 0.004332
+ Move B E17 at 8/195: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 184664.974463, prob: 0.001378
+ Move B M18 at 9/195: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 184664.974463, prob: 0.003532
+--- End HeapDump
+----- Prior moves: #moves = 6--------
+0: B T13, type RESP, w_offset: 617020, prior: 4.436851
+1: B R13, type RESP, w_offset: 617020, prior: 4.436851
+2: B T14, type RESP, w_offset: 617020, prior: 4.436851
+3: B R13, type NEIGHBOR, offset: 0, prior: -1.410286
+4: B T13, type NEIGHBOR, offset: 2, prior: -1.348200
+5: B T14, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[qg]C[move: R13(B), topn: 0, prob: 0.000000, counter: 0, type: must_move, heap_size: 195, total_prob: 29902.685452
+--- HeapDump:
+heap_size: 193, last_move: B R13, last_move_2: W S13
+ Move W K4 at 1/193: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 30259.080806, prob: 0.419628
+ Move W G17 at 2/193: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 30259.080806, prob: 0.262886
+ Move W G5 at 3/193: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 30259.080806, prob: 0.026437
+ Move W B1 at 4/193: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 30259.080806, prob: 0.171929
+ Move W T14 at 5/193: logprob: 2.561770, prior: 0.000000, raw-prob: 167.928884, total_prob: 30259.080806, prob: 0.005550
+ Move W R11 at 6/193: logprob: 2.872843, prior: 0.000000, raw-prob: 312.837897, total_prob: 30259.080806, prob: 0.010339
+ Move W T15 at 7/193: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 30259.080806, prob: 0.009033
+ Move W E17 at 8/193: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 30259.080806, prob: 0.008412
+ Move W M18 at 9/193: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 30259.080806, prob: 0.021552
+--- End HeapDump
+----- Prior moves: #moves = 0--------
+----- End Prior moves --------
+]
+;W[oq]C[move: P3(W), topn: 11, prob: 0.005226, counter: 2, type: heap, heap_size: 193, total_prob: 30259.080806
+--- HeapDump:
+heap_size: 192, last_move: W P3, last_move_2: B R13
+ Move B Q4 at 1/192: logprob: 5.395394, prior: 1.617063, raw-prob: 1232940.697597, total_prob: 1932094.212925, prob: 0.638137
+ Move B Q2 at 2/192: logprob: 4.280936, prior: 1.957403, raw-prob: 262151.347585, total_prob: 1932094.212925, prob: 0.135682
+ Move B P4 at 3/192: logprob: 4.115303, prior: 2.318347, raw-prob: 387433.546614, total_prob: 1932094.212925, prob: 0.200525
+ Move B B1 at 4/192: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 1932094.212925, prob: 0.002693
+ Move B O3 at 5/192: logprob: 2.103236, prior: 2.540563, raw-prob: 10803.192007, total_prob: 1932094.212925, prob: 0.005591
+ Move B K4 at 6/192: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 1932094.212925, prob: 0.006572
+ Move B T15 at 7/192: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 1932094.212925, prob: 0.000141
+ Move B E17 at 8/192: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 1932094.212925, prob: 0.000132
+ Move B M18 at 9/192: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 1932094.212925, prob: 0.000338
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B P4, type RESP, w_offset: 515977, prior: 3.950849
+1: B P2, type RESP, w_offset: 515977, prior: 3.950849
+2: B O3, type RESP, w_offset: 515977, prior: 3.950849
+3: B Q2, type RESP, w_offset: 515977, prior: 3.950849
+4: B Q4, type RESP, w_offset: 515977, prior: 3.950849
+5: B O4, type RESP, w_offset: 515977, prior: 3.950849
+6: B O3, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B P2, type NEIGHBOR, offset: 1, prior: -1.397131
+8: B P4, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B O4, type NEIGHBOR, offset: 5, prior: -2.171645
+10: B Q2, type NEIGHBOR, offset: 6, prior: -1.993446
+11: B Q4, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[pp]C[move: Q4(B), topn: 1, prob: 0.638137, counter: 0, type: heap, heap_size: 192, total_prob: 87970.788900
+--- HeapDump:
+heap_size: 191, last_move: B Q4, last_move_2: W P3
+ Move W Q5 at 1/191: logprob: 3.383074, prior: 2.234182, raw-prob: 75698.501299, total_prob: 192377.045219, prob: 0.393490
+ Move W P4 at 2/191: logprob: 2.911611, prior: 2.456398, raw-prob: 45982.604176, total_prob: 192377.045219, prob: 0.239023
+ Move W R4 at 3/191: logprob: 2.787191, prior: 2.518485, raw-prob: 40592.987027, total_prob: 192377.045219, prob: 0.211007
+ Move W B1 at 4/191: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 192377.045219, prob: 0.027043
+ Move W G17 at 5/191: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 192377.045219, prob: 0.041349
+ Move W K4 at 6/191: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 192377.045219, prob: 0.066004
+ Move W T15 at 7/191: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 192377.045219, prob: 0.001421
+ Move W E17 at 8/191: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 192377.045219, prob: 0.001323
+ Move W M18 at 9/191: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 192377.045219, prob: 0.003390
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W Q5, type RESP, w_offset: 37266, prior: 3.866684
+1: W R4, type RESP, w_offset: 37266, prior: 3.866684
+2: W P4, type RESP, w_offset: 37266, prior: 3.866684
+3: W R3, type RESP, w_offset: 37266, prior: 3.866684
+4: W P5, type RESP, w_offset: 37266, prior: 3.866684
+5: W P4, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W R4, type NEIGHBOR, offset: 2, prior: -1.348200
+7: W Q5, type NEIGHBOR, offset: 3, prior: -1.632502
+8: W P5, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W R3, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;W[po]C[move: Q5(W), topn: 1, prob: 0.393490, counter: 0, type: heap, heap_size: 191, total_prob: 31507.390248
+--- HeapDump:
+heap_size: 190, last_move: W Q5, last_move_2: B Q4
+ Move B P4 at 1/190: logprob: 5.004744, prior: 1.162505, raw-prob: 227407.612869, total_prob: 275714.063775, prob: 0.824795
+ Move B P5 at 2/190: logprob: 2.908533, prior: 1.937148, raw-prob: 16177.273040, total_prob: 275714.063775, prob: 0.058674
+ Move B R4 at 3/190: logprob: 2.464437, prior: 1.353989, raw-prob: 2073.204456, total_prob: 275714.063775, prob: 0.007519
+ Move B B1 at 4/190: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 275714.063775, prob: 0.018869
+ Move B K4 at 5/190: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 275714.063775, prob: 0.046053
+ Move B G5 at 6/190: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 275714.063775, prob: 0.002901
+ Move B T15 at 7/190: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 275714.063775, prob: 0.000991
+ Move B E17 at 8/190: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 275714.063775, prob: 0.000923
+ Move B M18 at 9/190: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 275714.063775, prob: 0.002365
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B Q6, type RESP, w_offset: 980523, prior: 3.347434
+1: B P5, type RESP, w_offset: 980523, prior: 3.347434
+2: B R4, type RESP, w_offset: 980523, prior: 3.347434
+3: B R6, type RESP, w_offset: 980523, prior: 3.347434
+4: B P6, type RESP, w_offset: 980523, prior: 3.347434
+5: B P4, type RESP, w_offset: 980523, prior: 3.347434
+6: B P5, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B Q6, type NEIGHBOR, offset: 3, prior: -1.632502
+8: B P4, type NEIGHBOR, offset: 4, prior: -2.184929
+9: B P6, type NEIGHBOR, offset: 5, prior: -2.171645
+10: B R4, type NEIGHBOR, offset: 6, prior: -1.993446
+11: B R6, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[op]C[move: P4(B), topn: 1, prob: 0.824795, counter: 0, type: heap, heap_size: 190, total_prob: 52738.106218
+--- HeapDump:
+heap_size: 189, last_move: B P4, last_move_2: W Q5
+ Move W P5 at 1/189: logprob: 2.892438, prior: 2.248219, raw-prob: 29182.192221, total_prob: 71790.523070, prob: 0.406491
+ Move W K4 at 2/189: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 71790.523070, prob: 0.176870
+ Move W G5 at 3/189: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 71790.523070, prob: 0.011143
+ Move W B1 at 4/189: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 71790.523070, prob: 0.072467
+ Move W O4 at 5/189: logprob: 2.235398, prior: 2.470434, raw-prob: 12230.211007, total_prob: 71790.523070, prob: 0.170360
+ Move W R11 at 6/189: logprob: 2.872843, prior: 0.000000, raw-prob: 312.837897, total_prob: 71790.523070, prob: 0.004358
+ Move W T15 at 7/189: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 71790.523070, prob: 0.003807
+ Move W E17 at 8/189: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 71790.523070, prob: 0.003546
+ Move W M18 at 9/189: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 71790.523070, prob: 0.009084
+--- End HeapDump
+----- Prior moves: #moves = 8--------
+0: W P5, type RESP, w_offset: 887885, prior: 3.880721
+1: W O4, type RESP, w_offset: 887885, prior: 3.880721
+2: W O5, type RESP, w_offset: 887885, prior: 3.880721
+3: W O3, type RESP, w_offset: 887885, prior: 3.880721
+4: W O4, type NEIGHBOR, offset: 0, prior: -1.410286
+5: W P5, type NEIGHBOR, offset: 3, prior: -1.632502
+6: W O3, type NEIGHBOR, offset: 4, prior: -2.184929
+7: W O5, type NEIGHBOR, offset: 5, prior: -2.171645
+----- End Prior moves --------
+]
+;W[np]C[move: O4(W), topn: 5, prob: 0.170360, counter: 0, type: heap, heap_size: 189, total_prob: 30661.024490
+--- HeapDump:
+heap_size: 189, last_move: W O4, last_move_2: B P4
+ Move B P5 at 1/189: logprob: 4.380213, prior: 1.477758, raw-prob: 122509.228904, total_prob: 152753.672172, prob: 0.802005
+ Move B K4 at 2/189: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 152753.672172, prob: 0.083124
+ Move B G5 at 3/189: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 152753.672172, prob: 0.005237
+ Move B B1 at 4/189: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 152753.672172, prob: 0.034058
+ Move B G17 at 5/189: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 152753.672172, prob: 0.052075
+ Move B R11 at 6/189: logprob: 2.872843, prior: 0.000000, raw-prob: 312.837897, total_prob: 152753.672172, prob: 0.002048
+ Move B T15 at 7/189: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 152753.672172, prob: 0.001789
+ Move B E17 at 8/189: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 152753.672172, prob: 0.001666
+ Move B M18 at 9/189: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 152753.672172, prob: 0.004269
+--- End HeapDump
+----- Prior moves: #moves = 5--------
+0: B O5, type RESP, w_offset: 850452, prior: 3.811544
+1: B P5, type RESP, w_offset: 850452, prior: 3.811544
+2: B O3, type NEIGHBOR, offset: 1, prior: -1.397131
+3: B O5, type NEIGHBOR, offset: 3, prior: -1.632502
+4: B P5, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[oo]C[move: P5(B), topn: 1, prob: 0.802005, counter: 1, type: heap, heap_size: 188, total_prob: 36620.570464
+--- HeapDump:
+heap_size: 188, last_move: B P5, last_move_2: W O4
+ Move W P6 at 1/188: logprob: 3.497921, prior: 3.307826, raw-prob: 815447.896820, total_prob: 853152.549085, prob: 0.955805
+ Move W K4 at 2/188: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 853152.549085, prob: 0.014883
+ Move W Q6 at 3/188: logprob: 1.847642, prior: 2.606541, raw-prob: 7393.580865, total_prob: 853152.549085, prob: 0.008666
+ Move W B1 at 4/188: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 853152.549085, prob: 0.006098
+ Move W G17 at 5/188: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 853152.549085, prob: 0.009324
+ Move W G5 at 6/188: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 853152.549085, prob: 0.000938
+ Move W T15 at 7/188: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 853152.549085, prob: 0.000320
+ Move W E17 at 8/188: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 853152.549085, prob: 0.000298
+ Move W M18 at 9/188: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 853152.549085, prob: 0.000764
+--- End HeapDump
+----- Prior moves: #moves = 8--------
+0: W P6, type RESP, w_offset: 744334, prior: 4.940327
+1: W O5, type RESP, w_offset: 744334, prior: 4.940327
+2: W Q6, type RESP, w_offset: 744334, prior: 4.940327
+3: W O6, type RESP, w_offset: 744334, prior: 4.940327
+4: W O5, type NEIGHBOR, offset: 0, prior: -1.410286
+5: W P6, type NEIGHBOR, offset: 3, prior: -1.632502
+6: W O6, type NEIGHBOR, offset: 5, prior: -2.171645
+7: W Q6, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[on]C[move: P6(W), topn: 1, prob: 0.955805, counter: 0, type: heap, heap_size: 188, total_prob: 31373.884347
+--- HeapDump:
+heap_size: 186, last_move: W P6, last_move_2: B P5
+ Move B Q6 at 1/186: logprob: 1.019697, prior: 4.275789, raw-prob: 39774.120162, total_prob: 117613.458421, prob: 0.338177
+ Move B O5 at 2/186: logprob: 1.484344, prior: 3.439059, raw-prob: 18897.910042, total_prob: 117613.458421, prob: 0.160678
+ Move B P7 at 3/186: logprob: 0.787018, prior: 3.991487, raw-prob: 14143.484847, total_prob: 117613.458421, prob: 0.120254
+ Move B B1 at 4/186: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 117613.458421, prob: 0.044233
+ Move B O6 at 5/186: logprob: 0.538918, prior: 4.213702, raw-prob: 13429.915665, total_prob: 117613.458421, prob: 0.114187
+ Move B G5 at 6/186: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 117613.458421, prob: 0.006801
+ Move B T15 at 7/186: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 117613.458421, prob: 0.002324
+ Move B E17 at 8/186: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 117613.458421, prob: 0.002164
+ Move B M18 at 9/186: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 117613.458421, prob: 0.005545
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B P7, type RESP, w_offset: 527199, prior: 5.623988
+1: B Q6, type RESP, w_offset: 527199, prior: 5.623988
+2: B O6, type RESP, w_offset: 527199, prior: 5.623988
+3: B Q7, type RESP, w_offset: 527199, prior: 5.623988
+4: B O7, type RESP, w_offset: 527199, prior: 5.623988
+5: B O5, type RESP, w_offset: 527199, prior: 5.623988
+6: B O6, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B Q6, type NEIGHBOR, offset: 2, prior: -1.348200
+8: B P7, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B O5, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B O7, type NEIGHBOR, offset: 5, prior: -2.171645
+11: B Q7, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[om]C[move: P7(B), topn: 3, prob: 0.120254, counter: 0, type: heap, heap_size: 186, total_prob: 30276.829301
+--- HeapDump:
+heap_size: 185, last_move: B P7, last_move_2: W P6
+ Move W O6 at 1/185: logprob: 3.399446, prior: 2.097741, raw-prob: 59538.323999, total_prob: 136303.872325, prob: 0.436806
+ Move W Q6 at 2/185: logprob: 3.051812, prior: 2.289225, raw-prob: 43567.790809, total_prob: 136303.872325, prob: 0.319637
+ Move W O7 at 3/185: logprob: 1.118892, prior: 2.872384, raw-prob: 2929.399034, total_prob: 136303.872325, prob: 0.021492
+ Move W B1 at 4/185: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 136303.872325, prob: 0.038168
+ Move W K4 at 5/185: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 136303.872325, prob: 0.093156
+ Move W G5 at 6/185: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 136303.872325, prob: 0.005869
+ Move W T15 at 7/185: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 136303.872325, prob: 0.002005
+ Move W E17 at 8/185: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 136303.872325, prob: 0.001868
+ Move W M18 at 9/185: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 136303.872325, prob: 0.004784
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W Q7, type RESP, w_offset: 793333, prior: 4.282670
+1: W O7, type RESP, w_offset: 793333, prior: 4.282670
+2: W Q6, type RESP, w_offset: 793333, prior: 4.282670
+3: W O8, type RESP, w_offset: 793333, prior: 4.282670
+4: W O6, type RESP, w_offset: 793333, prior: 4.282670
+5: W O7, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W Q7, type NEIGHBOR, offset: 2, prior: -1.348200
+7: W O6, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W O8, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W Q6, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;W[nn]C[move: O6(W), topn: 1, prob: 0.436806, counter: 0, type: heap, heap_size: 185, total_prob: 31620.952933
+--- HeapDump:
+heap_size: 184, last_move: W O6, last_move_2: B P7
+ Move B K4 at 1/184: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 37026.831988, prob: 0.342929
+ Move B G17 at 2/184: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 37026.831988, prob: 0.214836
+ Move B Q6 at 3/184: logprob: 4.411098, prior: 0.000000, raw-prob: 6783.147049, total_prob: 37026.831988, prob: 0.183195
+ Move B B1 at 4/184: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 37026.831988, prob: 0.140504
+ Move B P2 at 5/184: logprob: 2.944953, prior: 0.000000, raw-prob: 361.371631, total_prob: 37026.831988, prob: 0.009760
+ Move B G5 at 6/184: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 37026.831988, prob: 0.021604
+ Move B T15 at 7/184: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 37026.831988, prob: 0.007382
+ Move B E17 at 8/184: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 37026.831988, prob: 0.006875
+ Move B M18 at 9/184: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 37026.831988, prob: 0.017613
+--- End HeapDump
+----- Prior moves: #moves = 4--------
+0: B O7, type RESP, w_offset: 701104, prior: 2.246234
+1: B O5, type RESP, w_offset: 701104, prior: 2.246234
+2: B O5, type NEIGHBOR, offset: 1, prior: -1.397131
+3: B O7, type NEIGHBOR, offset: 3, prior: -1.632502
+----- End Prior moves --------
+]
+;B[pn]C[move: Q6(B), topn: 3, prob: 0.183195, counter: 3, type: heap, heap_size: 184, total_prob: 37023.951053
+--- HeapDump:
+heap_size: 183, last_move: B Q6, last_move_2: W O6
+ Move W R6 at 1/183: logprob: 4.541714, prior: 2.725981, raw-prob: 2054187.061976, total_prob: 2085025.933936, prob: 0.985209
+ Move W G17 at 2/183: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 2085025.933936, prob: 0.003815
+ Move W K4 at 3/183: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 2085025.933936, prob: 0.006090
+ Move W B1 at 4/183: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 2085025.933936, prob: 0.002495
+ Move W P2 at 5/183: logprob: 2.944953, prior: 0.000000, raw-prob: 361.371631, total_prob: 2085025.933936, prob: 0.000173
+ Move W G5 at 6/183: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 2085025.933936, prob: 0.000384
+ Move W T15 at 7/183: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 2085025.933936, prob: 0.000131
+ Move W E17 at 8/183: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 2085025.933936, prob: 0.000122
+ Move W M18 at 9/183: logprob: 3.240134, prior: 0.000000, raw-prob: 652.145387, total_prob: 2085025.933936, prob: 0.000313
+--- End HeapDump
+----- Prior moves: #moves = 9--------
+0: W Q7, type RESP, w_offset: 278014, prior: 3.090970
+1: W R6, type RESP, w_offset: 278014, prior: 3.090970
+2: W R7, type RESP, w_offset: 278014, prior: 3.090970
+3: W R6, type NEIGHBOR, offset: 2, prior: -1.348200
+4: W Q7, type NEIGHBOR, offset: 3, prior: -1.632502
+5: W R7, type NEIGHBOR, offset: 7, prior: -2.333786
+6: W R6, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+7: W Q7, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+8: W Q7, type SELF_ATARI, offset: 0, prior: -1.741746
+----- End Prior moves --------
+]
+;W[kd]C[move: L16(W), topn: 38, prob: 0.000018, counter: 6, type: heap, heap_size: 183, total_prob: 39636.728144
+--- HeapDump:
+heap_size: 183, last_move: W L16, last_move_2: B Q6
+ Move B L17 at 1/183: logprob: 4.058616, prior: 5.378156, raw-prob: 157280826.654149, total_prob: 157320361.397906, prob: 0.999749
+ Move B K4 at 2/183: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 157320361.397906, prob: 0.000081
+ Move B R6 at 3/183: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 157320361.397906, prob: 0.000056
+ Move B G17 at 4/183: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 157320361.397906, prob: 0.000051
+ Move B P2 at 5/183: logprob: 2.944953, prior: 0.000000, raw-prob: 361.371631, total_prob: 157320361.397906, prob: 0.000002
+ Move B G5 at 6/183: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 157320361.397906, prob: 0.000005
+ Move B T15 at 7/183: logprob: 2.805337, prior: 0.000000, raw-prob: 273.328226, total_prob: 157320361.397906, prob: 0.000002
+ Move B E17 at 8/183: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 157320361.397906, prob: 0.000002
+ Move B B1 at 9/183: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 157320361.397906, prob: 0.000033
+--- End HeapDump
+----- Prior moves: #moves = 3--------
+0: B L17, type RESP, w_offset: 324564, prior: 3.327643
+1: B L17, type NEIGHBOR, offset: 3, prior: -1.632502
+2: B L17, type SAVE_ATARI, offset: 0, prior: 3.683015
+----- End Prior moves --------
+]
+;B[kc]C[move: L17(B), topn: 1, prob: 0.999749, counter: 0, type: heap, heap_size: 183, total_prob: 42886.471268
+--- HeapDump:
+heap_size: 181, last_move: B L17, last_move_2: W L16
+ Move W K4 at 1/181: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 39343.906014, prob: 0.322733
+ Move W G17 at 2/181: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 39343.906014, prob: 0.202183
+ Move W R6 at 3/181: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 39343.906014, prob: 0.223875
+ Move W B1 at 4/181: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 39343.906014, prob: 0.132229
+ Move W P2 at 5/181: logprob: 2.944953, prior: 0.000000, raw-prob: 361.371631, total_prob: 39343.906014, prob: 0.009185
+ Move W G5 at 6/181: logprob: 3.342271, prior: 0.000000, raw-prob: 799.944938, total_prob: 39343.906014, prob: 0.020332
+ Move W H12 at 7/181: logprob: 2.938089, prior: 0.000000, raw-prob: 356.444577, total_prob: 39343.906014, prob: 0.009060
+ Move W E17 at 8/181: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 39343.906014, prob: 0.006470
+ Move W M18 at 9/181: logprob: 1.272329, prior: 0.958245, raw-prob: 86.586782, total_prob: 39343.906014, prob: 0.002201
+--- End HeapDump
+----- Prior moves: #moves = 2--------
+0: W M18, type RESP, w_offset: 98004, prior: 3.292031
+1: W M18, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[oj]C[move: P10(W), topn: 46, prob: 0.000664, counter: 5, type: heap, heap_size: 181, total_prob: 39270.058090
+--- HeapDump:
+heap_size: 180, last_move: W P10, last_move_2: B L17
+ Move B P11 at 1/180: logprob: 5.535300, prior: 3.175308, raw-prob: 36807613.506721, total_prob: 37020529.253367, prob: 0.994249
+ Move B O10 at 2/180: logprob: 2.613725, prior: 3.397523, raw-prob: 166457.784627, total_prob: 37020529.253367, prob: 0.004496
+ Move B R6 at 3/180: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 37020529.253367, prob: 0.000238
+ Move B B1 at 4/180: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 37020529.253367, prob: 0.000141
+ Move B K4 at 5/180: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 37020529.253367, prob: 0.000343
+ Move B R11 at 6/180: logprob: 4.405846, prior: 0.000000, raw-prob: 6712.271749, total_prob: 37020529.253367, prob: 0.000181
+ Move B H12 at 7/180: logprob: 2.938089, prior: 0.000000, raw-prob: 356.444577, total_prob: 37020529.253367, prob: 0.000010
+ Move B E17 at 8/180: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 37020529.253367, prob: 0.000007
+ Move B M10 at 9/180: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 37020529.253367, prob: 0.000002
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: B P11, type RESP, w_offset: 611791, prior: 3.824598
+1: B O10, type RESP, w_offset: 611791, prior: 3.824598
+2: B O11, type RESP, w_offset: 611791, prior: 3.824598
+3: B O9, type RESP, w_offset: 611791, prior: 3.824598
+4: B O10, type NEIGHBOR, offset: 0, prior: -1.410286
+5: B P11, type NEIGHBOR, offset: 3, prior: -1.632502
+6: B O9, type NEIGHBOR, offset: 4, prior: -2.184929
+7: B O11, type NEIGHBOR, offset: 5, prior: -2.171645
+8: B O10, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+9: B P11, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;B[nj]C[move: O10(B), topn: 0, prob: 0.000000, counter: 0, type: must_move, heap_size: 180, total_prob: 109977.421338
+--- HeapDump:
+heap_size: 179, last_move: B O10, last_move_2: W P10
+ Move W P11 at 1/179: logprob: 2.509489, prior: 5.046902, raw-prob: 3659295.848884, total_prob: 3926209.638908, prob: 0.932017
+ Move W O11 at 2/179: logprob: 2.815540, prior: 3.048382, raw-prob: 123976.093495, total_prob: 3926209.638908, prob: 0.031577
+ Move W R6 at 3/179: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 3926209.638908, prob: 0.002243
+ Move W B1 at 4/179: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 3926209.638908, prob: 0.001325
+ Move W O9 at 5/179: logprob: 2.459457, prior: 3.283753, raw-prob: 97384.324401, total_prob: 3926209.638908, prob: 0.024804
+ Move W R11 at 6/179: logprob: 4.405846, prior: 0.000000, raw-prob: 6712.271749, total_prob: 3926209.638908, prob: 0.001710
+ Move W H12 at 7/179: logprob: 2.938089, prior: 0.000000, raw-prob: 356.444577, total_prob: 3926209.638908, prob: 0.000091
+ Move W E17 at 8/179: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 3926209.638908, prob: 0.000065
+ Move W M10 at 9/179: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 3926209.638908, prob: 0.000016
+--- End HeapDump
+----- Prior moves: #moves = 11--------
+0: W O11, type RESP, w_offset: 877174, prior: 3.697673
+1: W O9, type RESP, w_offset: 877174, prior: 3.697673
+2: W P11, type RESP, w_offset: 877174, prior: 3.697673
+3: W N9, type RESP, w_offset: 877174, prior: 3.697673
+4: W O9, type NEIGHBOR, offset: 1, prior: -1.397131
+5: W O11, type NEIGHBOR, offset: 3, prior: -1.632502
+6: W N9, type NEIGHBOR, offset: 4, prior: -2.184929
+7: W P11, type NEIGHBOR, offset: 7, prior: -2.333786
+8: W P11, type SAVE_ATARI, offset: 0, prior: 3.683015
+9: W O9, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+10: W O11, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[oi]C[move: P11(W), topn: 1, prob: 0.932017, counter: 0, type: heap, heap_size: 179, total_prob: 46070.440130
+--- HeapDump:
+heap_size: 178, last_move: W P11, last_move_2: B O10
+ Move B R11 at 1/178: logprob: 4.656348, prior: 3.683015, raw-prob: 17517773.099737, total_prob: 17558555.316943, prob: 0.997677
+ Move B G17 at 2/178: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 17558555.316943, prob: 0.000453
+ Move B K4 at 3/178: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 17558555.316943, prob: 0.000723
+ Move B B1 at 4/178: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 17558555.316943, prob: 0.000296
+ Move B O9 at 5/178: logprob: 3.452730, prior: 0.000000, raw-prob: 997.708074, total_prob: 17558555.316943, prob: 0.000057
+ Move B R6 at 6/178: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 17558555.316943, prob: 0.000502
+ Move B H12 at 7/178: logprob: 2.938089, prior: 0.000000, raw-prob: 356.444577, total_prob: 17558555.316943, prob: 0.000020
+ Move B E17 at 8/178: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 17558555.316943, prob: 0.000014
+ Move B M10 at 9/178: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 17558555.316943, prob: 0.000003
+--- End HeapDump
+----- Prior moves: #moves = 5--------
+0: B O11, type RESP, w_offset: 381864, prior: 3.187178
+1: B O12, type RESP, w_offset: 381864, prior: 3.187178
+2: B O11, type NEIGHBOR, offset: 0, prior: -1.410286
+3: B O12, type NEIGHBOR, offset: 5, prior: -2.171645
+4: B R11, type SAVE_ATARI, offset: 0, prior: 3.683015
+----- End Prior moves --------
+]
+;B[hh]C[move: H12(B), topn: 7, prob: 0.000020, counter: 5, type: heap, heap_size: 178, total_prob: 50894.994220
+--- HeapDump:
+heap_size: 177, last_move: B H12, last_move_2: W P11
+ Move W H13 at 1/177: logprob: 4.335394, prior: 3.031995, raw-prob: 2507451.384798, total_prob: 6905561.944486, prob: 0.363106
+ Move W G17 at 2/177: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 6905561.944486, prob: 0.001152
+ Move W R11 at 3/177: logprob: 4.656348, prior: 2.654665, raw-prob: 2240089.071799, total_prob: 6905561.944486, prob: 0.324389
+ Move W B1 at 4/177: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 6905561.944486, prob: 0.000753
+ Move W O9 at 5/177: logprob: 3.452730, prior: 0.000000, raw-prob: 997.708074, total_prob: 6905561.944486, prob: 0.000144
+ Move W G12 at 6/177: logprob: 2.864030, prior: 3.254211, raw-prob: 206175.217591, total_prob: 6905561.944486, prob: 0.029856
+ Move W G11 at 7/177: logprob: 2.052261, prior: 5.179372, raw-prob: 1911246.139934, total_prob: 6905561.944486, prob: 0.276769
+ Move W J13 at 8/177: logprob: 2.235758, prior: 1.347499, raw-prob: 1295.321830, total_prob: 6905561.944486, prob: 0.000188
+ Move W M10 at 9/177: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 6905561.944486, prob: 0.000009
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: W H13, type RESP, w_offset: 61034, prior: 3.681286
+1: W G12, type RESP, w_offset: 61034, prior: 3.681286
+2: W J13, type RESP, w_offset: 61034, prior: 3.681286
+3: W G11, type RESP, w_offset: 61034, prior: 3.681286
+4: W G12, type NEIGHBOR, offset: 0, prior: -1.410286
+5: W H13, type NEIGHBOR, offset: 3, prior: -1.632502
+6: W G11, type NEIGHBOR, offset: 4, prior: -2.184929
+7: W J13, type NEIGHBOR, offset: 7, prior: -2.333786
+8: W G11, type SAVE_ATARI, offset: 0, prior: 3.683015
+9: W R11, type KILL_GROUP2, offset: 0, prior: 2.654665
+10: W G12, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+11: W H13, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[gh]C[move: G12(W), topn: 0, prob: 0.000000, counter: 0, type: must_move, heap_size: 177, total_prob: 56668.142963
+--- HeapDump:
+heap_size: 175, last_move: W G12, last_move_2: B H12
+ Move B G11 at 1/175: logprob: 2.428270, prior: 7.566899, raw-prob: 480499529.228057, total_prob: 480550149.567030, prob: 0.999895
+ Move B G17 at 2/175: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 480550149.567030, prob: 0.000017
+ Move B K4 at 3/175: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 480550149.567030, prob: 0.000026
+ Move B B1 at 4/175: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 480550149.567030, prob: 0.000011
+ Move B O9 at 5/175: logprob: 3.452730, prior: 0.000000, raw-prob: 997.708074, total_prob: 480550149.567030, prob: 0.000002
+ Move B R6 at 6/175: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 480550149.567030, prob: 0.000018
+ Move B R11 at 7/175: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 480550149.567030, prob: 0.000023
+ Move B E17 at 8/175: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 480550149.567030, prob: 0.000001
+ Move B M10 at 9/175: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 480550149.567030, prob: 0.000000
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B G11, type RESP, w_offset: 672301, prior: 2.626349
+1: B F12, type RESP, w_offset: 672301, prior: 2.626349
+2: B H13, type RESP, w_offset: 672301, prior: 2.626349
+3: B F13, type RESP, w_offset: 672301, prior: 2.626349
+4: B F11, type RESP, w_offset: 672301, prior: 2.626349
+5: B F12, type NEIGHBOR, offset: 0, prior: -1.410286
+6: B G11, type NEIGHBOR, offset: 1, prior: -1.397131
+7: B F11, type NEIGHBOR, offset: 4, prior: -2.184929
+8: B F13, type NEIGHBOR, offset: 5, prior: -2.171645
+9: B H13, type NEIGHBOR, offset: 7, prior: -2.333786
+10: B G11, type SAVE_ATARI, offset: 0, prior: 3.683015
+11: B G11, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;B[gi]C[move: G11(B), topn: 1, prob: 0.999895, counter: 0, type: heap, heap_size: 175, total_prob: 50623.490477
+--- HeapDump:
+heap_size: 176, last_move: B G11, last_move_2: W G12
+ Move W K4 at 1/176: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 52759.004537, prob: 0.240671
+ Move W G17 at 2/176: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 52759.004537, prob: 0.150774
+ Move W R11 at 3/176: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 52759.004537, prob: 0.209969
+ Move W B1 at 4/176: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 52759.004537, prob: 0.098607
+ Move W F11 at 5/176: logprob: 1.965725, prior: 1.741455, raw-prob: 1659.647450, total_prob: 52759.004537, prob: 0.031457
+ Move W R6 at 6/176: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 52759.004537, prob: 0.166950
+ Move W H13 at 7/176: logprob: 3.094597, prior: 0.000000, raw-prob: 487.452792, total_prob: 52759.004537, prob: 0.009239
+ Move W E17 at 8/176: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 52759.004537, prob: 0.004825
+ Move W M10 at 9/176: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 52759.004537, prob: 0.001159
+--- End HeapDump
+----- Prior moves: #moves = 7--------
+0: W F11, type RESP, w_offset: 52647, prior: 3.151741
+1: W F12, type RESP, w_offset: 52647, prior: 3.151741
+2: W F10, type RESP, w_offset: 52647, prior: 3.151741
+3: W F11, type NEIGHBOR, offset: 0, prior: -1.410286
+4: W H11, type NEIGHBOR, offset: 2, prior: -1.348200
+5: W F10, type NEIGHBOR, offset: 4, prior: -2.184929
+6: W F12, type NEIGHBOR, offset: 5, prior: -2.171645
+----- End Prior moves --------
+]
+;W[fi]C[move: F11(W), topn: 5, prob: 0.031457, counter: 6, type: heap, heap_size: 175, total_prob: 51021.728638
+--- HeapDump:
+heap_size: 175, last_move: W F11, last_move_2: B G11
+ Move B F10 at 1/175: logprob: 2.928593, prior: 4.298942, raw-prob: 1895643.415451, total_prob: 2054822.428098, prob: 0.922534
+ Move B E12 at 2/175: logprob: 1.767033, prior: 3.524428, raw-prob: 39455.234711, total_prob: 2054822.428098, prob: 0.019201
+ Move B K4 at 3/175: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 2054822.428098, prob: 0.006179
+ Move B E11 at 4/175: logprob: 0.874416, prior: 4.285787, raw-prob: 30345.573258, total_prob: 2054822.428098, prob: 0.014768
+ Move B G17 at 5/175: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 2054822.428098, prob: 0.003871
+ Move B R11 at 6/175: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 2054822.428098, prob: 0.005391
+ Move B H13 at 7/175: logprob: 3.094597, prior: 0.000000, raw-prob: 487.452792, total_prob: 2054822.428098, prob: 0.000237
+ Move B F12 at 8/175: logprob: 0.882333, prior: 4.063571, raw-prob: 19767.758242, total_prob: 2054822.428098, prob: 0.009620
+ Move B M10 at 9/175: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 2054822.428098, prob: 0.000030
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: B F12, type RESP, w_offset: 19678, prior: 5.696073
+1: B F10, type RESP, w_offset: 19678, prior: 5.696073
+2: B E11, type RESP, w_offset: 19678, prior: 5.696073
+3: B E12, type RESP, w_offset: 19678, prior: 5.696073
+4: B E10, type RESP, w_offset: 19678, prior: 5.696073
+5: B E11, type NEIGHBOR, offset: 0, prior: -1.410286
+6: B F10, type NEIGHBOR, offset: 1, prior: -1.397131
+7: B F12, type NEIGHBOR, offset: 3, prior: -1.632502
+8: B E10, type NEIGHBOR, offset: 4, prior: -2.184929
+9: B E12, type NEIGHBOR, offset: 5, prior: -2.171645
+----- End Prior moves --------
+]
+;B[fj]C[move: F10(B), topn: 1, prob: 0.922534, counter: 0, type: heap, heap_size: 175, total_prob: 51367.201484
+--- HeapDump:
+heap_size: 173, last_move: B F10, last_move_2: W F11
+ Move W E11 at 1/173: logprob: 3.428006, prior: 2.511493, raw-prob: 144206.000755, total_prob: 229443.774519, prob: 0.628503
+ Move W E10 at 2/173: logprob: 1.843133, prior: 3.272852, raw-prob: 27777.159264, total_prob: 229443.774519, prob: 0.121063
+ Move W R11 at 3/173: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 229443.774519, prob: 0.048281
+ Move W K4 at 4/173: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 229443.774519, prob: 0.055341
+ Move W O9 at 5/173: logprob: 3.452730, prior: 0.000000, raw-prob: 997.708074, total_prob: 229443.774519, prob: 0.004348
+ Move W R6 at 6/173: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 229443.774519, prob: 0.038389
+ Move W H13 at 7/173: logprob: 3.094597, prior: 0.000000, raw-prob: 487.452792, total_prob: 229443.774519, prob: 0.002124
+ Move W G17 at 8/173: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 229443.774519, prob: 0.034669
+ Move W M10 at 9/173: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 229443.774519, prob: 0.000266
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W F9, type RESP, w_offset: 922502, prior: 4.683138
+1: W E10, type RESP, w_offset: 922502, prior: 4.683138
+2: W G9, type RESP, w_offset: 922502, prior: 4.683138
+3: W E11, type RESP, w_offset: 922502, prior: 4.683138
+4: W E9, type RESP, w_offset: 922502, prior: 4.683138
+5: W E10, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W F9, type NEIGHBOR, offset: 1, prior: -1.397131
+7: W E9, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W E11, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W G9, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;W[ei]C[move: E11(W), topn: 1, prob: 0.628503, counter: 0, type: heap, heap_size: 173, total_prob: 52603.784931
+--- HeapDump:
+heap_size: 172, last_move: W E11, last_move_2: B F10
+ Move B E10 at 1/172: logprob: 3.211177, prior: 2.504766, raw-prob: 92215.757207, total_prob: 144008.986593, prob: 0.640347
+ Move B K4 at 2/172: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 144008.986593, prob: 0.088172
+ Move B R11 at 3/172: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 144008.986593, prob: 0.076924
+ Move B G17 at 4/172: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 144008.986593, prob: 0.055237
+ Move B O9 at 5/172: logprob: 3.452730, prior: 0.000000, raw-prob: 997.708074, total_prob: 144008.986593, prob: 0.006928
+ Move B R6 at 6/172: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 144008.986593, prob: 0.061164
+ Move B H13 at 7/172: logprob: 3.094597, prior: 0.000000, raw-prob: 487.452792, total_prob: 144008.986593, prob: 0.003385
+ Move B B1 at 8/172: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 144008.986593, prob: 0.036126
+ Move B D12 at 9/172: logprob: 0.872877, prior: 1.730252, raw-prob: 182.410326, total_prob: 144008.986593, prob: 0.001267
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B E12, type RESP, w_offset: 751318, prior: 3.901897
+1: B E10, type RESP, w_offset: 751318, prior: 3.901897
+2: B D11, type RESP, w_offset: 751318, prior: 3.901897
+3: B F12, type RESP, w_offset: 751318, prior: 3.901897
+4: B D12, type RESP, w_offset: 751318, prior: 3.901897
+5: B D10, type RESP, w_offset: 751318, prior: 3.901897
+6: B D11, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B E10, type NEIGHBOR, offset: 1, prior: -1.397131
+8: B E12, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B D10, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B D12, type NEIGHBOR, offset: 5, prior: -2.171645
+11: B F12, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[ej]C[move: E10(B), topn: 1, prob: 0.640347, counter: 0, type: heap, heap_size: 172, total_prob: 51607.190129
+--- HeapDump:
+heap_size: 171, last_move: B E10, last_move_2: W E11
+ Move W D10 at 1/171: logprob: 3.239728, prior: 3.771238, raw-prob: 1229272.711020, total_prob: 2132473.264335, prob: 0.576454
+ Move W G17 at 2/171: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 2132473.264335, prob: 0.003730
+ Move W D11 at 3/171: logprob: 3.817121, prior: 3.009879, raw-prob: 850859.033451, total_prob: 2132473.264335, prob: 0.399001
+ Move W B1 at 4/171: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 2132473.264335, prob: 0.002440
+ Move W O9 at 5/171: logprob: 3.452730, prior: 0.000000, raw-prob: 997.708074, total_prob: 2132473.264335, prob: 0.000468
+ Move W K4 at 6/171: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 2132473.264335, prob: 0.005954
+ Move W R11 at 7/171: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 2132473.264335, prob: 0.005195
+ Move W E17 at 8/171: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 2132473.264335, prob: 0.000119
+ Move W M10 at 9/171: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 2132473.264335, prob: 0.000029
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W E9, type RESP, w_offset: 103641, prior: 5.181524
+1: W D10, type RESP, w_offset: 103641, prior: 5.181524
+2: W F9, type RESP, w_offset: 103641, prior: 5.181524
+3: W D11, type RESP, w_offset: 103641, prior: 5.181524
+4: W D9, type RESP, w_offset: 103641, prior: 5.181524
+5: W D10, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W E9, type NEIGHBOR, offset: 1, prior: -1.397131
+7: W D9, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W D11, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W F9, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;W[dj]C[move: D10(W), topn: 1, prob: 0.576454, counter: 0, type: heap, heap_size: 171, total_prob: 53722.149266
+--- HeapDump:
+heap_size: 171, last_move: W D10, last_move_2: B E10
+ Move B D11 at 1/171: logprob: 3.951354, prior: 3.124444, raw-prob: 1399460.021003, total_prob: 1528245.117171, prob: 0.915730
+ Move B C10 at 2/171: logprob: 1.480149, prior: 3.346660, raw-prob: 15578.034068, total_prob: 1528245.117171, prob: 0.010193
+ Move B D9 at 3/171: logprob: 1.978210, prior: 3.359815, raw-prob: 43306.149056, total_prob: 1528245.117171, prob: 0.028337
+ Move B C11 at 4/171: logprob: 2.181250, prior: 2.585301, raw-prob: 13809.358045, total_prob: 1528245.117171, prob: 0.009036
+ Move B G17 at 5/171: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 1528245.117171, prob: 0.005205
+ Move B R11 at 6/171: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 1528245.117171, prob: 0.007249
+ Move B K4 at 7/171: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 1528245.117171, prob: 0.008309
+ Move B B1 at 8/171: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 1528245.117171, prob: 0.003404
+ Move B M10 at 9/171: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 1528245.117171, prob: 0.000040
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B D11, type RESP, w_offset: 77381, prior: 4.756946
+1: B D9, type RESP, w_offset: 77381, prior: 4.756946
+2: B C10, type RESP, w_offset: 77381, prior: 4.756946
+3: B E9, type RESP, w_offset: 77381, prior: 4.756946
+4: B C11, type RESP, w_offset: 77381, prior: 4.756946
+5: B C9, type RESP, w_offset: 77381, prior: 4.756946
+6: B C10, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B D9, type NEIGHBOR, offset: 1, prior: -1.397131
+8: B D11, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B C9, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B C11, type NEIGHBOR, offset: 5, prior: -2.171645
+11: B E9, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;B[di]C[move: D11(B), topn: 1, prob: 0.915730, counter: 0, type: heap, heap_size: 171, total_prob: 53885.758965
+--- HeapDump:
+heap_size: 170, last_move: B D11, last_move_2: W D10
+ Move W C11 at 1/170: logprob: 5.070296, prior: 2.701636, raw-prob: 5631376.628012, total_prob: 7573709.006091, prob: 0.743543
+ Move W D12 at 2/170: logprob: 4.680250, prior: 2.479421, raw-prob: 1655049.341229, total_prob: 7573709.006091, prob: 0.218526
+ Move W R11 at 3/170: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 7573709.006091, prob: 0.001463
+ Move W C10 at 4/170: logprob: 5.235633, prior: 0.943782, raw-prob: 233008.777101, total_prob: 7573709.006091, prob: 0.030765
+ Move W K4 at 5/170: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 7573709.006091, prob: 0.001677
+ Move W R6 at 6/170: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 7573709.006091, prob: 0.001163
+ Move W H13 at 7/170: logprob: 3.094597, prior: 0.000000, raw-prob: 487.452792, total_prob: 7573709.006091, prob: 0.000064
+ Move W E12 at 8/170: logprob: 2.606399, prior: 0.794925, raw-prob: 900.228593, total_prob: 7573709.006091, prob: 0.000119
+ Move W B1 at 9/170: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 7573709.006091, prob: 0.000687
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: W D12, type RESP, w_offset: 7421, prior: 3.128711
+1: W C11, type RESP, w_offset: 7421, prior: 3.128711
+2: W E12, type RESP, w_offset: 7421, prior: 3.128711
+3: W C12, type RESP, w_offset: 7421, prior: 3.128711
+4: W C10, type RESP, w_offset: 7421, prior: 3.128711
+5: W C11, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W D12, type NEIGHBOR, offset: 3, prior: -1.632502
+7: W C10, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W C12, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W E12, type NEIGHBOR, offset: 7, prior: -2.333786
+10: W C11, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+11: W D12, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[ci]C[move: C11(W), topn: 1, prob: 0.743543, counter: 0, type: heap, heap_size: 170, total_prob: 123801.516590
+--- HeapDump:
+heap_size: 169, last_move: W C11, last_move_2: B D11
+ Move B D12 at 1/169: logprob: 3.653869, prior: 4.295399, raw-prob: 8028726.786350, total_prob: 8083135.712705, prob: 0.993269
+ Move B K4 at 2/169: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 8083135.712705, prob: 0.001571
+ Move B R11 at 3/169: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 8083135.712705, prob: 0.001370
+ Move B B1 at 4/169: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 8083135.712705, prob: 0.000644
+ Move B G17 at 5/169: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 8083135.712705, prob: 0.000984
+ Move B R6 at 6/169: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 8083135.712705, prob: 0.001090
+ Move B H13 at 7/169: logprob: 3.094597, prior: 0.000000, raw-prob: 487.452792, total_prob: 8083135.712705, prob: 0.000060
+ Move B C10 at 8/169: logprob: 2.437361, prior: 1.549039, raw-prob: 2900.971093, total_prob: 8083135.712705, prob: 0.000359
+ Move B B10 at 9/169: logprob: 1.447809, prior: 0.761241, raw-prob: 82.938589, total_prob: 8083135.712705, prob: 0.000010
+--- End HeapDump
+----- Prior moves: #moves = 13--------
+0: B C12, type RESP, w_offset: 546482, prior: 2.946170
+1: B C10, type RESP, w_offset: 546482, prior: 2.946170
+2: B B11, type RESP, w_offset: 546482, prior: 2.946170
+3: B D12, type RESP, w_offset: 546482, prior: 2.946170
+4: B B12, type RESP, w_offset: 546482, prior: 2.946170
+5: B B10, type RESP, w_offset: 546482, prior: 2.946170
+6: B B11, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B C10, type NEIGHBOR, offset: 1, prior: -1.397131
+8: B C12, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B B10, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B B12, type NEIGHBOR, offset: 5, prior: -2.171645
+11: B D12, type NEIGHBOR, offset: 7, prior: -2.333786
+12: B D12, type SAVE_ATARI, offset: 0, prior: 3.683015
+----- End Prior moves --------
+]
+;B[dh]C[move: D12(B), topn: 1, prob: 0.993269, counter: 0, type: heap, heap_size: 169, total_prob: 52717.625723
+--- HeapDump:
+heap_size: 168, last_move: B D12, last_move_2: W C11
+ Move W C12 at 1/168: logprob: 4.510564, prior: 2.287136, raw-prob: 802429.817838, total_prob: 898239.579052, prob: 0.893336
+ Move W K4 at 2/168: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 898239.579052, prob: 0.014136
+ Move W C10 at 3/168: logprob: 5.114985, prior: 0.000000, raw-prob: 27721.687123, total_prob: 898239.579052, prob: 0.030862
+ Move W C13 at 4/168: logprob: 2.772188, prior: 1.525777, raw-prob: 5409.591279, total_prob: 898239.579052, prob: 0.006022
+ Move W G17 at 5/168: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 898239.579052, prob: 0.008856
+ Move W R6 at 6/168: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 898239.579052, prob: 0.009806
+ Move W R11 at 7/168: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 898239.579052, prob: 0.012333
+ Move W B1 at 8/168: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 898239.579052, prob: 0.005792
+ Move W E13 at 9/168: logprob: 1.701591, prior: 1.363636, raw-prob: 459.644896, total_prob: 898239.579052, prob: 0.000512
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W D13, type RESP, w_offset: 673952, prior: 3.697422
+1: W E12, type RESP, w_offset: 673952, prior: 3.697422
+2: W C12, type RESP, w_offset: 673952, prior: 3.697422
+3: W E13, type RESP, w_offset: 673952, prior: 3.697422
+4: W C13, type RESP, w_offset: 673952, prior: 3.697422
+5: W C12, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W E12, type NEIGHBOR, offset: 2, prior: -1.348200
+7: W D13, type NEIGHBOR, offset: 3, prior: -1.632502
+8: W C13, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W E13, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[dg]C[move: D13(W), topn: 10, prob: 0.005369, counter: 1, type: heap, heap_size: 168, total_prob: 87429.542076
+--- HeapDump:
+heap_size: 167, last_move: W D13, last_move_2: B D12
+ Move B E12 at 1/167: logprob: 5.090250, prior: 1.850037, raw-prob: 1067225.008018, total_prob: 1662924.147474, prob: 0.641776
+ Move B C12 at 2/167: logprob: 4.906968, prior: 1.658553, raw-prob: 504358.701194, total_prob: 1662924.147474, prob: 0.303296
+ Move B R11 at 3/167: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 1662924.147474, prob: 0.006662
+ Move B C10 at 4/167: logprob: 5.240712, prior: 0.000000, raw-prob: 35647.135007, total_prob: 1662924.147474, prob: 0.021436
+ Move B K4 at 5/167: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 1662924.147474, prob: 0.007636
+ Move B R6 at 6/167: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 1662924.147474, prob: 0.005297
+ Move B H13 at 7/167: logprob: 3.094597, prior: 0.000000, raw-prob: 487.452792, total_prob: 1662924.147474, prob: 0.000293
+ Move B B1 at 8/167: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 1662924.147474, prob: 0.003128
+ Move B E13 at 9/167: logprob: 1.520845, prior: 2.495283, raw-prob: 3078.677584, total_prob: 1662924.147474, prob: 0.001851
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: B D14, type RESP, w_offset: 320137, prior: 3.843482
+1: B E13, type RESP, w_offset: 320137, prior: 3.843482
+2: B C13, type RESP, w_offset: 320137, prior: 3.843482
+3: B E12, type RESP, w_offset: 320137, prior: 3.843482
+4: B C12, type RESP, w_offset: 320137, prior: 3.843482
+5: B C13, type NEIGHBOR, offset: 0, prior: -1.410286
+6: B E13, type NEIGHBOR, offset: 2, prior: -1.348200
+7: B D14, type NEIGHBOR, offset: 3, prior: -1.632502
+8: B C12, type NEIGHBOR, offset: 4, prior: -2.184929
+9: B E12, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;B[cj]C[move: C10(B), topn: 4, prob: 0.021436, counter: 3, type: heap, heap_size: 167, total_prob: 131361.402225
+--- HeapDump:
+heap_size: 166, last_move: B C10, last_move_2: W D13
+ Move W B10 at 1/166: logprob: 4.491931, prior: 2.565939, raw-prob: 1350170.122666, total_prob: 1732198.787138, prob: 0.779454
+ Move W B11 at 2/166: logprob: 4.882400, prior: 0.821369, raw-prob: 89997.709293, total_prob: 1732198.787138, prob: 0.051956
+ Move W C12 at 3/166: logprob: 6.090133, prior: 0.000000, raw-prob: 194904.598843, total_prob: 1732198.787138, prob: 0.112519
+ Move W E12 at 4/166: logprob: 5.090250, prior: 0.000000, raw-prob: 26383.633083, total_prob: 1732198.787138, prob: 0.015231
+ Move W K4 at 5/166: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 1732198.787138, prob: 0.007330
+ Move W R6 at 6/166: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 1732198.787138, prob: 0.005085
+ Move W D9 at 7/166: logprob: 0.155251, prior: 4.682584, raw-prob: 15925.388734, total_prob: 1732198.787138, prob: 0.009194
+ Move W B1 at 8/166: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 1732198.787138, prob: 0.003003
+ Move W M10 at 9/166: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 1732198.787138, prob: 0.000035
+--- End HeapDump
+----- Prior moves: #moves = 13--------
+0: W C9, type RESP, w_offset: 664464, prior: 2.993014
+1: W B10, type RESP, w_offset: 664464, prior: 2.993014
+2: W D9, type RESP, w_offset: 664464, prior: 2.993014
+3: W B11, type RESP, w_offset: 664464, prior: 2.993014
+4: W B9, type RESP, w_offset: 664464, prior: 2.993014
+5: W B10, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W C9, type NEIGHBOR, offset: 1, prior: -1.397131
+7: W B9, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W B11, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W D9, type NEIGHBOR, offset: 6, prior: -1.993446
+10: W D9, type SAVE_ATARI, offset: 0, prior: 3.683015
+11: W B10, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+12: W C9, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[bj]C[move: B10(W), topn: 1, prob: 0.779454, counter: 0, type: heap, heap_size: 166, total_prob: 297765.406844
+--- HeapDump:
+heap_size: 165, last_move: W B10, last_move_2: B C10
+ Move B D9 at 1/165: logprob: 2.680632, prior: 6.337681, raw-prob: 68109372.888340, total_prob: 99132571.983630, prob: 0.687053
+ Move B C9 at 2/165: logprob: 3.876194, prior: 4.744472, raw-prob: 30747896.915132, total_prob: 99132571.983630, prob: 0.310169
+ Move B C12 at 3/165: logprob: 6.090133, prior: 0.000000, raw-prob: 194904.598843, total_prob: 99132571.983630, prob: 0.001966
+ Move B E12 at 4/165: logprob: 5.090250, prior: 0.000000, raw-prob: 26383.633083, total_prob: 99132571.983630, prob: 0.000266
+ Move B K4 at 5/165: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 99132571.983630, prob: 0.000128
+ Move B R6 at 6/165: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 99132571.983630, prob: 0.000089
+ Move B R11 at 7/165: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 99132571.983630, prob: 0.000112
+ Move B B1 at 8/165: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 99132571.983630, prob: 0.000052
+ Move B M10 at 9/165: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 99132571.983630, prob: 0.000001
+--- End HeapDump
+----- Prior moves: #moves = 15--------
+0: B B11, type RESP, w_offset: 12572, prior: 3.054903
+1: B B9, type RESP, w_offset: 12572, prior: 3.054903
+2: B A10, type RESP, w_offset: 12572, prior: 3.054903
+3: B C9, type RESP, w_offset: 12572, prior: 3.054903
+4: B A11, type RESP, w_offset: 12572, prior: 3.054903
+5: B A9, type RESP, w_offset: 12572, prior: 3.054903
+6: B A10, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B B9, type NEIGHBOR, offset: 1, prior: -1.397131
+8: B B11, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B A9, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B A11, type NEIGHBOR, offset: 5, prior: -2.171645
+11: B C9, type NEIGHBOR, offset: 6, prior: -1.993446
+12: B D9, type SAVE_ATARI, offset: 0, prior: 3.683015
+13: B C9, type SAVE_ATARI, offset: 0, prior: 3.683015
+14: B D9, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;B[dk]C[move: D9(B), topn: 1, prob: 0.687053, counter: 0, type: heap, heap_size: 165, total_prob: 275034.325742
+--- HeapDump:
+heap_size: 164, last_move: B D9, last_move_2: W B10
+ Move W K4 at 1/164: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 62228.222640, prob: 0.204048
+ Move W C12 at 2/164: logprob: 4.529345, prior: 0.000000, raw-prob: 8592.878412, total_prob: 62228.222640, prob: 0.138087
+ Move W R11 at 3/164: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 62228.222640, prob: 0.178018
+ Move W B1 at 4/164: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 62228.222640, prob: 0.083602
+ Move W G17 at 5/164: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 62228.222640, prob: 0.127831
+ Move W R6 at 6/164: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 62228.222640, prob: 0.141545
+ Move W B11 at 7/164: logprob: 3.798283, prior: 0.000000, raw-prob: 1991.344189, total_prob: 62228.222640, prob: 0.032001
+ Move W E17 at 8/164: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 62228.222640, prob: 0.004091
+ Move W M10 at 9/164: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 62228.222640, prob: 0.000982
+--- End HeapDump
+----- Prior moves: #moves = 7--------
+0: W E9, type RESP, w_offset: 123595, prior: 2.965573
+1: W C9, type RESP, w_offset: 123595, prior: 2.965573
+2: W E8, type RESP, w_offset: 123595, prior: 2.965573
+3: W C9, type NEIGHBOR, offset: 0, prior: -1.410286
+4: W E9, type NEIGHBOR, offset: 2, prior: -1.348200
+5: W D10, type NEIGHBOR, offset: 3, prior: -1.632502
+6: W E8, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;W[bh]C[move: B12(W), topn: 42, prob: 0.001045, counter: 0, type: heap, heap_size: 163, total_prob: 62225.152002
+--- HeapDump:
+heap_size: 162, last_move: W B12, last_move_2: B D9
+ Move B C12 at 1/162: logprob: 4.170174, prior: 3.116665, raw-prob: 2134358.609729, total_prob: 2189254.305943, prob: 0.974925
+ Move B K4 at 2/162: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 2189254.305943, prob: 0.005800
+ Move B R11 at 3/162: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 2189254.305943, prob: 0.005060
+ Move B B1 at 4/162: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 2189254.305943, prob: 0.002376
+ Move B G17 at 5/162: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 2189254.305943, prob: 0.003634
+ Move B R6 at 6/162: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 2189254.305943, prob: 0.004023
+ Move B H13 at 7/162: logprob: 3.094597, prior: 0.000000, raw-prob: 487.452792, total_prob: 2189254.305943, prob: 0.000223
+ Move B E17 at 8/162: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 2189254.305943, prob: 0.000116
+ Move B M10 at 9/162: logprob: 2.056566, prior: 0.000000, raw-prob: 61.137851, total_prob: 2189254.305943, prob: 0.000028
+--- End HeapDump
+----- Prior moves: #moves = 14--------
+0: B B13, type RESP, w_offset: 610576, prior: 4.464864
+1: B B11, type RESP, w_offset: 610576, prior: 4.464864
+2: B C12, type RESP, w_offset: 610576, prior: 4.464864
+3: B A12, type RESP, w_offset: 610576, prior: 4.464864
+4: B C13, type RESP, w_offset: 610576, prior: 4.464864
+5: B A13, type RESP, w_offset: 610576, prior: 4.464864
+6: B A11, type RESP, w_offset: 610576, prior: 4.464864
+7: B A12, type NEIGHBOR, offset: 0, prior: -1.410286
+8: B B11, type NEIGHBOR, offset: 1, prior: -1.397131
+9: B C12, type NEIGHBOR, offset: 2, prior: -1.348200
+10: B B13, type NEIGHBOR, offset: 3, prior: -1.632502
+11: B A11, type NEIGHBOR, offset: 4, prior: -2.184929
+12: B A13, type NEIGHBOR, offset: 5, prior: -2.171645
+13: B C13, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[cg]C[move: C13(B), topn: 11, prob: 0.001397, counter: 3, type: heap, heap_size: 162, total_prob: 55805.154572
+--- HeapDump:
+heap_size: 161, last_move: B C13, last_move_2: W B12
+ Move W C12 at 1/161: logprob: 4.566553, prior: 2.885721, raw-prob: 2971413.793773, total_prob: 3145845.651375, prob: 0.944552
+ Move W K4 at 2/161: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 3145845.651375, prob: 0.004036
+ Move W B13 at 3/161: logprob: 2.968113, prior: 2.872566, raw-prob: 118344.945272, total_prob: 3145845.651375, prob: 0.037619
+ Move W B1 at 4/161: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 3145845.651375, prob: 0.001654
+ Move W G17 at 5/161: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 3145845.651375, prob: 0.002529
+ Move W R6 at 6/161: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 3145845.651375, prob: 0.002800
+ Move W R11 at 7/161: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 3145845.651375, prob: 0.003521
+ Move W E17 at 8/161: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 3145845.651375, prob: 0.000081
+ Move W E13 at 9/161: logprob: 2.793323, prior: 0.000000, raw-prob: 266.839144, total_prob: 3145845.651375, prob: 0.000085
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W C12, type RESP, w_offset: 155584, prior: 3.299641
+1: W B13, type RESP, w_offset: 155584, prior: 3.299641
+2: W D14, type RESP, w_offset: 155584, prior: 3.299641
+3: W B14, type RESP, w_offset: 155584, prior: 3.299641
+4: W B13, type NEIGHBOR, offset: 0, prior: -1.410286
+5: W C12, type NEIGHBOR, offset: 1, prior: -1.397131
+6: W B14, type NEIGHBOR, offset: 5, prior: -2.171645
+7: W D14, type NEIGHBOR, offset: 7, prior: -2.333786
+8: W B13, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+9: W C12, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[ch]C[move: C12(W), topn: 1, prob: 0.944552, counter: 0, type: heap, heap_size: 161, total_prob: 61741.353220
+--- HeapDump:
+heap_size: 161, last_move: W C12, last_move_2: B C13
+ Move B E12 at 1/161: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 84968.729575, prob: 0.270323
+ Move B K4 at 2/161: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 84968.729575, prob: 0.149438
+ Move B R11 at 3/161: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 84968.729575, prob: 0.130375
+ Move B B1 at 4/161: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 84968.729575, prob: 0.061227
+ Move B G17 at 5/161: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 84968.729575, prob: 0.093619
+ Move B R6 at 6/161: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 84968.729575, prob: 0.103663
+ Move B B13 at 7/161: logprob: 1.219670, prior: 3.329463, raw-prob: 8939.779653, total_prob: 84968.729575, prob: 0.105213
+ Move B E17 at 8/161: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 84968.729575, prob: 0.002996
+ Move B E13 at 9/161: logprob: 3.528037, prior: 0.000000, raw-prob: 1159.883547, total_prob: 84968.729575, prob: 0.013651
+--- End HeapDump
+----- Prior moves: #moves = 5--------
+0: B B13, type RESP, w_offset: 925203, prior: 1.818092
+1: B B11, type RESP, w_offset: 925203, prior: 1.818092
+2: B B11, type NEIGHBOR, offset: 4, prior: -2.184929
+3: B B13, type NEIGHBOR, offset: 5, prior: -2.171645
+4: B B13, type SAVE_ATARI, offset: 0, prior: 3.683015
+----- End Prior moves --------
+]
+;B[or]C[move: P2(B), topn: 21, prob: 0.004253, counter: 3, type: heap, heap_size: 161, total_prob: 76040.416991
+--- HeapDump:
+heap_size: 160, last_move: B P2, last_move_2: W C12
+ Move W O3 at 1/160: logprob: 3.208884, prior: 4.014768, raw-prob: 1880981.826830, total_prob: 1975033.577806, prob: 0.952380
+ Move W E12 at 2/160: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 1975033.577806, prob: 0.011630
+ Move W R11 at 3/160: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 1975033.577806, prob: 0.005609
+ Move W K4 at 4/160: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 1975033.577806, prob: 0.006429
+ Move W G17 at 5/160: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 1975033.577806, prob: 0.004028
+ Move W R6 at 6/160: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 1975033.577806, prob: 0.004460
+ Move W B13 at 7/160: logprob: 1.219670, prior: 2.654665, raw-prob: 2318.489819, total_prob: 1975033.577806, prob: 0.001174
+ Move W E17 at 8/160: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 1975033.577806, prob: 0.000129
+ Move W B1 at 9/160: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 1975033.577806, prob: 0.002634
+--- End HeapDump
+----- Prior moves: #moves = 14--------
+0: W P1, type RESP, w_offset: 425692, prior: 2.503398
+1: W Q2, type RESP, w_offset: 425692, prior: 2.503398
+2: W Q1, type RESP, w_offset: 425692, prior: 2.503398
+3: W O3, type RESP, w_offset: 425692, prior: 2.503398
+4: W O1, type RESP, w_offset: 425692, prior: 2.503398
+5: W P1, type NEIGHBOR, offset: 1, prior: -1.397131
+6: W Q2, type NEIGHBOR, offset: 2, prior: -1.348200
+7: W O1, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W O3, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W Q1, type NEIGHBOR, offset: 6, prior: -1.993446
+10: W O3, type SAVE_ATARI, offset: 0, prior: 3.683015
+11: W B13, type KILL_GROUP2, offset: 0, prior: 2.654665
+12: W P1, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+13: W Q2, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[nq]C[move: O3(W), topn: 1, prob: 0.952380, counter: 0, type: heap, heap_size: 160, total_prob: 78045.990890
+--- HeapDump:
+heap_size: 160, last_move: W O3, last_move_2: B P2
+ Move B E12 at 1/160: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 76828.675196, prob: 0.298964
+ Move B K4 at 2/160: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 76828.675196, prob: 0.165271
+ Move B R11 at 3/160: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 76828.675196, prob: 0.144188
+ Move B B1 at 4/160: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 76828.675196, prob: 0.067715
+ Move B G17 at 5/160: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 76828.675196, prob: 0.103538
+ Move B R6 at 6/160: logprob: 4.541714, prior: 0.000000, raw-prob: 8808.108778, total_prob: 76828.675196, prob: 0.114646
+ Move B D14 at 7/160: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 76828.675196, prob: 0.009330
+ Move B E17 at 8/160: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 76828.675196, prob: 0.003313
+ Move B E13 at 9/160: logprob: 3.528037, prior: 0.000000, raw-prob: 1159.883547, total_prob: 76828.675196, prob: 0.015097
+--- End HeapDump
+----- Prior moves: #moves = 0--------
+----- End Prior moves --------
+]
+;B[qp]C[move: R4(B), topn: 25, prob: 0.009043, counter: 0, type: heap, heap_size: 160, total_prob: 76828.675196
+--- HeapDump:
+heap_size: 159, last_move: B R4, last_move_2: W O3
+ Move W S5 at 1/159: logprob: 3.197876, prior: 2.371609, raw-prob: 68800.846573, total_prob: 199577.397504, prob: 0.344733
+ Move W K4 at 2/159: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 199577.397504, prob: 0.063622
+ Move W S4 at 3/159: logprob: 1.843625, prior: 3.357196, raw-prob: 32913.602403, total_prob: 199577.397504, prob: 0.164916
+ Move W B1 at 4/159: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 199577.397504, prob: 0.026067
+ Move W G17 at 5/159: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 199577.397504, prob: 0.039858
+ Move W R6 at 6/159: logprob: 5.156322, prior: 0.000000, raw-prob: 30110.932990, total_prob: 199577.397504, prob: 0.150873
+ Move W D14 at 7/159: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 199577.397504, prob: 0.003592
+ Move W E17 at 8/159: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 199577.397504, prob: 0.001275
+ Move W E13 at 9/159: logprob: 3.528037, prior: 0.000000, raw-prob: 1159.883547, total_prob: 199577.397504, prob: 0.005812
+--- End HeapDump
+----- Prior moves: #moves = 8--------
+0: W R3, type RESP, w_offset: 470108, prior: 4.705395
+1: W S4, type RESP, w_offset: 470108, prior: 4.705395
+2: W S3, type RESP, w_offset: 470108, prior: 4.705395
+3: W S5, type RESP, w_offset: 470108, prior: 4.705395
+4: W R3, type NEIGHBOR, offset: 1, prior: -1.397131
+5: W S4, type NEIGHBOR, offset: 2, prior: -1.348200
+6: W S3, type NEIGHBOR, offset: 6, prior: -1.993446
+7: W S5, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[rp]C[move: S4(W), topn: 3, prob: 0.164916, counter: 0, type: heap, heap_size: 159, total_prob: 98077.257744
+--- HeapDump:
+heap_size: 158, last_move: W S4, last_move_2: B R4
+ Move B S5 at 1/158: logprob: 5.021758, prior: 2.817257, raw-prob: 6439948.708230, total_prob: 7361646.225610, prob: 0.874797
+ Move B K4 at 2/158: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 7361646.225610, prob: 0.001725
+ Move B S3 at 3/158: logprob: 3.757263, prior: 3.052628, raw-prob: 822234.978307, total_prob: 7361646.225610, prob: 0.111692
+ Move B B1 at 4/158: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 7361646.225610, prob: 0.000707
+ Move B G17 at 5/158: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 7361646.225610, prob: 0.001081
+ Move B R6 at 6/158: logprob: 5.156322, prior: 0.000000, raw-prob: 30110.932990, total_prob: 7361646.225610, prob: 0.004090
+ Move B D14 at 7/158: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 7361646.225610, prob: 0.000097
+ Move B E17 at 8/158: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 7361646.225610, prob: 0.000035
+ Move B E13 at 9/158: logprob: 3.528037, prior: 0.000000, raw-prob: 1159.883547, total_prob: 7361646.225610, prob: 0.000158
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B S5, type RESP, w_offset: 520617, prior: 4.449759
+1: B S3, type RESP, w_offset: 520617, prior: 4.449759
+2: B T4, type RESP, w_offset: 520617, prior: 4.449759
+3: B T3, type RESP, w_offset: 520617, prior: 4.449759
+4: B T5, type RESP, w_offset: 520617, prior: 4.449759
+5: B R3, type RESP, w_offset: 520617, prior: 4.449759
+6: B S3, type NEIGHBOR, offset: 1, prior: -1.397131
+7: B T4, type NEIGHBOR, offset: 2, prior: -1.348200
+8: B S5, type NEIGHBOR, offset: 3, prior: -1.632502
+9: B R3, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B T3, type NEIGHBOR, offset: 6, prior: -1.993446
+11: B T5, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;B[ro]C[move: S5(B), topn: 0, prob: 0.000000, counter: 0, type: must_move, heap_size: 158, total_prob: 122657.784892
+--- HeapDump:
+heap_size: 157, last_move: B S5, last_move_2: W S4
+ Move W R6 at 1/157: logprob: 6.126401, prior: 4.008626, raw-prob: 635583690.751665, total_prob: 635667176.917926, prob: 0.999869
+ Move W K4 at 2/157: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 635667176.917926, prob: 0.000020
+ Move W E12 at 3/157: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 635667176.917926, prob: 0.000036
+ Move W T5 at 4/157: logprob: 2.567885, prior: 2.132267, raw-prob: 12092.056905, total_prob: 635667176.917926, prob: 0.000019
+ Move W G17 at 5/157: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 635667176.917926, prob: 0.000013
+ Move W R11 at 6/157: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 635667176.917926, prob: 0.000017
+ Move W D14 at 7/157: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 635667176.917926, prob: 0.000001
+ Move W E17 at 8/157: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 635667176.917926, prob: 0.000000
+ Move W B1 at 9/157: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 635667176.917926, prob: 0.000008
+--- End HeapDump
+----- Prior moves: #moves = 13--------
+0: W S6, type RESP, w_offset: 427777, prior: 2.497255
+1: W T5, type RESP, w_offset: 427777, prior: 2.497255
+2: W T4, type RESP, w_offset: 427777, prior: 2.497255
+3: W T6, type RESP, w_offset: 427777, prior: 2.497255
+4: W R6, type RESP, w_offset: 427777, prior: 2.497255
+5: W T5, type NEIGHBOR, offset: 2, prior: -1.348200
+6: W S6, type NEIGHBOR, offset: 3, prior: -1.632502
+7: W R6, type NEIGHBOR, offset: 5, prior: -2.171645
+8: W T4, type NEIGHBOR, offset: 6, prior: -1.993446
+9: W T6, type NEIGHBOR, offset: 7, prior: -2.333786
+10: W R6, type SAVE_ATARI, offset: 0, prior: 3.683015
+11: W T5, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+12: W S6, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;W[so]C[move: T5(W), topn: 4, prob: 0.000019, counter: 3, type: heap, heap_size: 157, total_prob: 280441.748484
+--- HeapDump:
+heap_size: 156, last_move: W T5, last_move_2: B S5
+ Move B R6 at 1/156: logprob: 1.842350, prior: 6.337681, raw-prob: 12737506.487250, total_prob: 18927170.657296, prob: 0.672975
+ Move B K4 at 2/156: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 18927170.657296, prob: 0.000671
+ Move B S6 at 3/156: logprob: 3.073841, prior: 4.739613, raw-prob: 6118994.849307, total_prob: 18927170.657296, prob: 0.323292
+ Move B B1 at 4/156: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 18927170.657296, prob: 0.000275
+ Move B G17 at 5/156: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 18927170.657296, prob: 0.000420
+ Move B E12 at 6/156: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 18927170.657296, prob: 0.001214
+ Move B D14 at 7/156: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 18927170.657296, prob: 0.000038
+ Move B E17 at 8/156: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 18927170.657296, prob: 0.000013
+ Move B E13 at 9/156: logprob: 3.528037, prior: 0.000000, raw-prob: 1159.883547, total_prob: 18927170.657296, prob: 0.000061
+--- End HeapDump
+----- Prior moves: #moves = 12--------
+0: B T6, type RESP, w_offset: 940123, prior: 3.228243
+1: B T4, type RESP, w_offset: 940123, prior: 3.228243
+2: B S6, type RESP, w_offset: 940123, prior: 3.228243
+3: B T4, type NEIGHBOR, offset: 1, prior: -1.397131
+4: B T6, type NEIGHBOR, offset: 3, prior: -1.632502
+5: B S6, type NEIGHBOR, offset: 5, prior: -2.171645
+6: B R6, type SAVE_ATARI, offset: 0, prior: 3.683015
+7: B S6, type SAVE_ATARI, offset: 0, prior: 3.683015
+8: B R6, type KILL_GROUP2, offset: 0, prior: 2.654665
+9: B T4, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+10: B T4, type SELF_ATARI, offset: 0, prior: -1.741746
+11: B T6, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;B[rn]C[move: S6(B), topn: 3, prob: 0.323292, counter: 1, type: heap, heap_size: 156, total_prob: 71139.927562
+--- HeapDump:
+heap_size: 155, last_move: B S6, last_move_2: W T5
+ Move W E12 at 1/155: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 80620.491464, prob: 0.284902
+ Move W K4 at 2/155: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 80620.491464, prob: 0.157498
+ Move W R11 at 3/155: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 80620.491464, prob: 0.137406
+ Move W B1 at 4/155: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 80620.491464, prob: 0.064530
+ Move W G17 at 5/155: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 80620.491464, prob: 0.098668
+ Move W S3 at 6/155: logprob: 3.998147, prior: 0.000000, raw-prob: 2969.928264, total_prob: 80620.491464, prob: 0.036838
+ Move W T6 at 7/155: logprob: 3.268008, prior: 1.200104, raw-prob: 7602.445863, total_prob: 80620.491464, prob: 0.094299
+ Move W E17 at 8/155: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 80620.491464, prob: 0.003157
+ Move W E13 at 9/155: logprob: 3.528037, prior: 0.000000, raw-prob: 1159.883547, total_prob: 80620.491464, prob: 0.014387
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W S7, type RESP, w_offset: 422264, prior: 2.548304
+1: W T6, type RESP, w_offset: 422264, prior: 2.548304
+2: W R6, type RESP, w_offset: 422264, prior: 2.548304
+3: W T7, type RESP, w_offset: 422264, prior: 2.548304
+4: W R7, type RESP, w_offset: 422264, prior: 2.548304
+5: W R6, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W T6, type NEIGHBOR, offset: 2, prior: -1.348200
+7: W S7, type NEIGHBOR, offset: 3, prior: -1.632502
+8: W R7, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W T7, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[se]C[move: T15(W), topn: 28, prob: 0.003390, counter: 0, type: heap, heap_size: 155, total_prob: 71568.683016
+--- HeapDump:
+heap_size: 154, last_move: W T15, last_move_2: B S6
+ Move B E12 at 1/154: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 71157.801433, prob: 0.322789
+ Move B K4 at 2/154: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 71157.801433, prob: 0.178442
+ Move B R11 at 3/154: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 71157.801433, prob: 0.155679
+ Move B B1 at 4/154: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 71157.801433, prob: 0.073111
+ Move B G17 at 5/154: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 71157.801433, prob: 0.111789
+ Move B S3 at 6/154: logprob: 3.998147, prior: 0.000000, raw-prob: 2969.928264, total_prob: 71157.801433, prob: 0.041737
+ Move B D14 at 7/154: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 71157.801433, prob: 0.010074
+ Move B E17 at 8/154: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 71157.801433, prob: 0.003577
+ Move B E13 at 9/154: logprob: 3.528037, prior: 0.000000, raw-prob: 1159.883547, total_prob: 71157.801433, prob: 0.016300
+--- End HeapDump
+----- Prior moves: #moves = 5--------
+0: B T14, type RESP, w_offset: 317308, prior: 2.013061
+1: B T14, type NEIGHBOR, offset: 1, prior: -1.397131
+2: B T16, type NEIGHBOR, offset: 3, prior: -1.632502
+3: B T14, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+4: B T14, type SELF_ATARI, offset: 0, prior: -1.741746
+----- End Prior moves --------
+]
+;B[go]C[move: G5(B), topn: 24, prob: 0.011242, counter: 1, type: heap, heap_size: 153, total_prob: 71027.190108
+--- HeapDump:
+heap_size: 153, last_move: B G5, last_move_2: W T15
+ Move W T16 at 1/153: logprob: 4.070625, prior: 2.654665, raw-prob: 694244.749262, total_prob: 764573.450853, prob: 0.908016
+ Move W E12 at 2/153: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 764573.450853, prob: 0.030042
+ Move W R11 at 3/153: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 764573.450853, prob: 0.014489
+ Move W K4 at 4/153: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 764573.450853, prob: 0.016607
+ Move W G17 at 5/153: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 764573.450853, prob: 0.010404
+ Move W S3 at 6/153: logprob: 3.998147, prior: 0.000000, raw-prob: 2969.928264, total_prob: 764573.450853, prob: 0.003884
+ Move W D14 at 7/153: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 764573.450853, prob: 0.000938
+ Move W E17 at 8/153: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 764573.450853, prob: 0.000333
+ Move W B1 at 9/153: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 764573.450853, prob: 0.006804
+--- End HeapDump
+----- Prior moves: #moves = 11--------
+0: W G6, type RESP, w_offset: 183465, prior: 2.310629
+1: W H5, type RESP, w_offset: 183465, prior: 2.310629
+2: W F5, type RESP, w_offset: 183465, prior: 2.310629
+3: W H6, type RESP, w_offset: 183465, prior: 2.310629
+4: W F6, type RESP, w_offset: 183465, prior: 2.310629
+5: W F5, type NEIGHBOR, offset: 0, prior: -1.410286
+6: W H5, type NEIGHBOR, offset: 2, prior: -1.348200
+7: W G6, type NEIGHBOR, offset: 3, prior: -1.632502
+8: W F6, type NEIGHBOR, offset: 5, prior: -2.171645
+9: W H6, type NEIGHBOR, offset: 7, prior: -2.333786
+10: W T16, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;W[lj]C[move: M10(W), topn: 18, prob: 0.000080, counter: 6, type: heap, heap_size: 152, total_prob: 70216.748974
+--- HeapDump:
+heap_size: 151, last_move: W M10, last_move_2: B G5
+ Move B L10 at 1/151: logprob: 3.379222, prior: 3.019918, raw-prob: 361595.043346, total_prob: 438305.958294, prob: 0.824983
+ Move B E12 at 2/151: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 438305.958294, prob: 0.052404
+ Move B R11 at 3/151: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 438305.958294, prob: 0.025274
+ Move B K4 at 4/151: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 438305.958294, prob: 0.028970
+ Move B G17 at 5/151: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 438305.958294, prob: 0.018149
+ Move B S3 at 6/151: logprob: 3.998147, prior: 0.000000, raw-prob: 2969.928264, total_prob: 438305.958294, prob: 0.006776
+ Move B D14 at 7/151: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 438305.958294, prob: 0.001635
+ Move B E17 at 8/151: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 438305.958294, prob: 0.000581
+ Move B N9 at 9/151: logprob: 1.958199, prior: 2.436759, raw-prob: 6567.678033, total_prob: 438305.958294, prob: 0.014984
+--- End HeapDump
+----- Prior moves: #moves = 4--------
+0: B L10, type RESP, w_offset: 839120, prior: 4.430204
+1: B N9, type RESP, w_offset: 839120, prior: 4.430204
+2: B L10, type NEIGHBOR, offset: 0, prior: -1.410286
+3: B N9, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;B[kj]C[move: L10(B), topn: 1, prob: 0.824983, counter: 0, type: heap, heap_size: 151, total_prob: 71054.757268
+--- HeapDump:
+heap_size: 149, last_move: B L10, last_move_2: W M10
+ Move W E12 at 1/149: logprob: 5.020950, prior: 0.000000, raw-prob: 22968.977969, total_prob: 70671.951789, prob: 0.325008
+ Move W K4 at 2/149: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 70671.951789, prob: 0.179669
+ Move W R11 at 3/149: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 70671.951789, prob: 0.156749
+ Move W B1 at 4/149: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 70671.951789, prob: 0.073614
+ Move W G17 at 5/149: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 70671.951789, prob: 0.112558
+ Move W S3 at 6/149: logprob: 3.998147, prior: 0.000000, raw-prob: 2969.928264, total_prob: 70671.951789, prob: 0.042024
+ Move W D14 at 7/149: logprob: 3.287413, prior: 0.000000, raw-prob: 716.821550, total_prob: 70671.951789, prob: 0.010143
+ Move W K11 at 8/149: logprob: 1.995681, prior: 1.074156, raw-prob: 463.902113, total_prob: 70671.951789, prob: 0.006564
+ Move W E13 at 9/149: logprob: 3.528037, prior: 0.000000, raw-prob: 1159.883547, total_prob: 70671.951789, prob: 0.016412
+--- End HeapDump
+----- Prior moves: #moves = 4--------
+0: W K11, type RESP, w_offset: 423969, prior: 3.245801
+1: W K9, type RESP, w_offset: 423969, prior: 3.245801
+2: W K9, type NEIGHBOR, offset: 4, prior: -2.184929
+3: W K11, type NEIGHBOR, offset: 5, prior: -2.171645
+----- End Prior moves --------
+]
+;W[df]C[move: D14(W), topn: 7, prob: 0.010143, counter: 4, type: heap, heap_size: 149, total_prob: 70074.760966
+--- HeapDump:
+heap_size: 148, last_move: W D14, last_move_2: B L10
+ Move B E12 at 1/148: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 73044.689948, prob: 0.382912
+ Move B K4 at 2/148: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 73044.689948, prob: 0.173833
+ Move B R11 at 3/148: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 73044.689948, prob: 0.151657
+ Move B B1 at 4/148: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 73044.689948, prob: 0.071222
+ Move B G17 at 5/148: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 73044.689948, prob: 0.108902
+ Move B S3 at 6/148: logprob: 3.998147, prior: 0.000000, raw-prob: 2969.928264, total_prob: 73044.689948, prob: 0.040659
+ Move B T6 at 7/148: logprob: 3.268008, prior: 0.000000, raw-prob: 689.534218, total_prob: 73044.689948, prob: 0.009440
+ Move B E17 at 8/148: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 73044.689948, prob: 0.003485
+ Move B N9 at 9/148: logprob: 1.958199, prior: 0.000000, raw-prob: 50.219249, total_prob: 73044.689948, prob: 0.000688
+--- End HeapDump
+----- Prior moves: #moves = 3--------
+0: B D15, type NEIGHBOR, offset: 3, prior: -1.632502
+1: B C15, type NEIGHBOR, offset: 5, prior: -2.171645
+2: B E13, type NEIGHBOR, offset: 6, prior: -1.993446
+----- End Prior moves --------
+]
+;B[pr]C[move: Q2(B), topn: 12, prob: 0.019664, counter: 5, type: heap, heap_size: 148, total_prob: 73045.133554
+--- HeapDump:
+heap_size: 147, last_move: B Q2, last_move_2: W D14
+ Move W E12 at 1/147: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 69628.725596, prob: 0.401698
+ Move W K4 at 2/147: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 69628.725596, prob: 0.182361
+ Move W R11 at 3/147: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 69628.725596, prob: 0.159098
+ Move W B1 at 4/147: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 69628.725596, prob: 0.074717
+ Move W G17 at 5/147: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 69628.725596, prob: 0.114244
+ Move W S3 at 6/147: logprob: 3.260193, prior: 0.000000, raw-prob: 678.840830, total_prob: 69628.725596, prob: 0.009749
+ Move W T6 at 7/147: logprob: 3.268008, prior: 0.000000, raw-prob: 689.534218, total_prob: 69628.725596, prob: 0.009903
+ Move W E17 at 8/147: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 69628.725596, prob: 0.003656
+ Move W N9 at 9/147: logprob: 1.958199, prior: 0.000000, raw-prob: 50.219249, total_prob: 69628.725596, prob: 0.000721
+--- End HeapDump
+----- Prior moves: #moves = 10--------
+0: W Q1, type RESP, w_offset: 739072, prior: 3.025932
+1: W R2, type RESP, w_offset: 739072, prior: 3.025932
+2: W R1, type RESP, w_offset: 739072, prior: 3.025932
+3: W R3, type RESP, w_offset: 739072, prior: 3.025932
+4: W P1, type RESP, w_offset: 739072, prior: 3.025932
+5: W Q1, type NEIGHBOR, offset: 1, prior: -1.397131
+6: W R2, type NEIGHBOR, offset: 2, prior: -1.348200
+7: W P1, type NEIGHBOR, offset: 4, prior: -2.184929
+8: W R1, type NEIGHBOR, offset: 6, prior: -1.993446
+9: W R3, type NEIGHBOR, offset: 7, prior: -2.333786
+----- End Prior moves --------
+]
+;W[ns]C[move: O1(W), topn: 20, prob: 0.004032, counter: 6, type: heap, heap_size: 147, total_prob: 69499.853267
+--- HeapDump:
+heap_size: 146, last_move: W O1, last_move_2: B Q2
+ Move B E12 at 1/146: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 86385.637680, prob: 0.323777
+ Move B N1 at 2/146: logprob: 3.425979, prior: 1.426744, raw-prob: 16406.723077, total_prob: 86385.637680, prob: 0.189924
+ Move B R11 at 3/146: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 86385.637680, prob: 0.128236
+ Move B K4 at 4/146: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 86385.637680, prob: 0.146987
+ Move B G17 at 5/146: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 86385.637680, prob: 0.092083
+ Move B S3 at 6/146: logprob: 3.260193, prior: 0.000000, raw-prob: 678.840830, total_prob: 86385.637680, prob: 0.007858
+ Move B T6 at 7/146: logprob: 3.268008, prior: 0.000000, raw-prob: 689.534218, total_prob: 86385.637680, prob: 0.007982
+ Move B E17 at 8/146: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 86385.637680, prob: 0.002947
+ Move B B1 at 9/146: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 86385.637680, prob: 0.060223
+--- End HeapDump
+----- Prior moves: #moves = 4--------
+0: B P1, type RESP, w_offset: 212154, prior: 2.837030
+1: B N1, type RESP, w_offset: 212154, prior: 2.837030
+2: B N1, type NEIGHBOR, offset: 0, prior: -1.410286
+3: B P1, type NEIGHBOR, offset: 2, prior: -1.348200
+----- End Prior moves --------
+]
+;B[os]C[move: P1(B), topn: 11, prob: 0.009153, counter: 4, type: heap, heap_size: 146, total_prob: 70174.227593
+--- HeapDump:
+heap_size: 144, last_move: B P1, last_move_2: W O1
+ Move W E12 at 1/144: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 70134.077894, prob: 0.398803
+ Move W K4 at 2/144: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 70134.077894, prob: 0.181047
+ Move W R11 at 3/144: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 70134.077894, prob: 0.157951
+ Move W B1 at 4/144: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 70134.077894, prob: 0.074178
+ Move W G17 at 5/144: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 70134.077894, prob: 0.113421
+ Move W S3 at 6/144: logprob: 3.260193, prior: 0.000000, raw-prob: 678.840830, total_prob: 70134.077894, prob: 0.009679
+ Move W T6 at 7/144: logprob: 3.268008, prior: 0.000000, raw-prob: 689.534218, total_prob: 70134.077894, prob: 0.009832
+ Move W E17 at 8/144: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 70134.077894, prob: 0.003629
+ Move W N1 at 9/144: logprob: 3.425979, prior: -0.000000, raw-prob: 945.731480, total_prob: 70134.077894, prob: 0.013485
+--- End HeapDump
+----- Prior moves: #moves = 2--------
+0: W Q1, type RESP, w_offset: 413638, prior: 4.186358
+1: W Q1, type NEIGHBOR, offset: 2, prior: -1.348200
+----- End Prior moves --------
+]
+;W[nk]C[move: O9(W), topn: 10, prob: 0.014226, counter: 3, type: heap, heap_size: 144, total_prob: 70133.967486
+--- HeapDump:
+heap_size: 143, last_move: W O9, last_move_2: B P1
+ Move B E12 at 1/143: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 75192.125520, prob: 0.371976
+ Move B K4 at 2/143: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 75192.125520, prob: 0.168868
+ Move B R11 at 3/143: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 75192.125520, prob: 0.147326
+ Move B O8 at 4/143: logprob: 1.582142, prior: 2.778627, raw-prob: 6133.604378, total_prob: 75192.125520, prob: 0.081572
+ Move B G17 at 5/143: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 75192.125520, prob: 0.105791
+ Move B S3 at 6/143: logprob: 3.260193, prior: 0.000000, raw-prob: 678.840830, total_prob: 75192.125520, prob: 0.009028
+ Move B T6 at 7/143: logprob: 3.268008, prior: 0.000000, raw-prob: 689.534218, total_prob: 75192.125520, prob: 0.009170
+ Move B B1 at 8/143: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 75192.125520, prob: 0.069188
+ Move B N1 at 9/143: logprob: 3.425979, prior: -0.000000, raw-prob: 945.731480, total_prob: 75192.125520, prob: 0.012578
+--- End HeapDump
+----- Prior moves: #moves = 4--------
+0: B O8, type RESP, w_offset: 300116, prior: 3.192547
+1: B N9, type NEIGHBOR, offset: 0, prior: -1.410286
+2: B O8, type NEIGHBOR, offset: 1, prior: -1.397131
+3: B O8, type PUT_GROUP_TO_ATARI, offset: 0, prior: 0.983211
+----- End Prior moves --------
+]
+;B[nl]C[move: O8(B), topn: 4, prob: 0.081572, counter: 4, type: heap, heap_size: 142, total_prob: 69082.043082
+--- HeapDump:
+heap_size: 142, last_move: B O8, last_move_2: W O9
+ Move W N9 at 1/142: logprob: 3.005134, prior: 4.534924, raw-prob: 3541691.098513, total_prob: 3855133.638764, prob: 0.918695
+ Move W O11 at 2/142: logprob: -0.134451, prior: 6.337681, raw-prob: 244374.762178, total_prob: 3855133.638764, prob: 0.063389
+ Move W R11 at 3/142: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 3855133.638764, prob: 0.002874
+ Move W K4 at 4/142: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 3855133.638764, prob: 0.003294
+ Move W E12 at 5/142: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 3855133.638764, prob: 0.007255
+ Move W S3 at 6/142: logprob: 3.260193, prior: 0.000000, raw-prob: 678.840830, total_prob: 3855133.638764, prob: 0.000176
+ Move W T6 at 7/142: logprob: 3.268008, prior: 0.000000, raw-prob: 689.534218, total_prob: 3855133.638764, prob: 0.000179
+ Move W B1 at 8/142: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 3855133.638764, prob: 0.001349
+ Move W N1 at 9/142: logprob: 3.425979, prior: -0.000000, raw-prob: 945.731480, total_prob: 3855133.638764, prob: 0.000245
+--- End HeapDump
+----- Prior moves: #moves = 7--------
+0: W O7, type RESP, w_offset: 68796, prior: 3.023554
+1: W N9, type RESP, w_offset: 68796, prior: 3.023554
+2: W O7, type NEIGHBOR, offset: 1, prior: -1.397131
+3: W N9, type NEIGHBOR, offset: 5, prior: -2.171645
+4: W O11, type SAVE_ATARI, offset: 0, prior: 3.683015
+5: W N9, type SAVE_ATARI, offset: 0, prior: 3.683015
+6: W O11, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+]
+;W[mk]C[move: N9(W), topn: 1, prob: 0.918695, counter: 0, type: heap, heap_size: 142, total_prob: 69466.291106
+--- HeapDump:
+heap_size: 142, last_move: W N9, last_move_2: B O8
+ Move B E12 at 1/142: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 69058.700889, prob: 0.405013
+ Move B K4 at 2/142: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 69058.700889, prob: 0.183866
+ Move B R11 at 3/142: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 69058.700889, prob: 0.160411
+ Move B B1 at 4/142: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 69058.700889, prob: 0.075333
+ Move B G17 at 5/142: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 69058.700889, prob: 0.115187
+ Move B S3 at 6/142: logprob: 3.260193, prior: 0.000000, raw-prob: 678.840830, total_prob: 69058.700889, prob: 0.009830
+ Move B T6 at 7/142: logprob: 3.268008, prior: 0.000000, raw-prob: 689.534218, total_prob: 69058.700889, prob: 0.009985
+ Move B E17 at 8/142: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 69058.700889, prob: 0.003686
+ Move B N1 at 9/142: logprob: 3.425979, prior: -0.000000, raw-prob: 945.731480, total_prob: 69058.700889, prob: 0.013695
+--- End HeapDump
+----- Prior moves: #moves = 0--------
+----- End Prior moves --------
+]
+;B[ji]C[move: K11(B), topn: 17, prob: 0.000784, counter: 6, type: heap, heap_size: 142, total_prob: 69058.700889
+--- HeapDump:
+heap_size: 141, last_move: B K11, last_move_2: W N9
+ Move W E12 at 1/141: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 68515.160909, prob: 0.408226
+ Move W K4 at 2/141: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 68515.160909, prob: 0.185325
+ Move W R11 at 3/141: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 68515.160909, prob: 0.161684
+ Move W B1 at 4/141: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 68515.160909, prob: 0.075931
+ Move W G17 at 5/141: logprob: 4.490758, prior: 0.000000, raw-prob: 7954.687247, total_prob: 68515.160909, prob: 0.116101
+ Move W S3 at 6/141: logprob: 3.260193, prior: 0.000000, raw-prob: 678.840830, total_prob: 68515.160909, prob: 0.009908
+ Move W T6 at 7/141: logprob: 3.268008, prior: 0.000000, raw-prob: 689.534218, total_prob: 68515.160909, prob: 0.010064
+ Move W E17 at 8/141: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 68515.160909, prob: 0.003715
+ Move W N1 at 9/141: logprob: 3.425979, prior: -0.000000, raw-prob: 945.731480, total_prob: 68515.160909, prob: 0.013803
+--- End HeapDump
+----- Prior moves: #moves = 0--------
+----- End Prior moves --------
+]
+;W[rq]C[move: S3(W), topn: 6, prob: 0.009908, counter: 5, type: heap, heap_size: 141, total_prob: 68515.160909
+--- HeapDump:
+heap_size: 140, last_move: W S3, last_move_2: B K11
+ Move B E12 at 1/140: logprob: 5.119439, prior: 0.000000, raw-prob: 27969.703662, total_prob: 83612.412163, prob: 0.334516
+ Move B J13 at 2/140: logprob: 2.107027, prior: 2.654665, raw-prob: 13675.830968, total_prob: 83612.412163, prob: 0.163562
+ Move B R11 at 3/140: logprob: 4.656348, prior: 0.000000, raw-prob: 11077.771096, total_prob: 83612.412163, prob: 0.132490
+ Move B B1 at 4/140: logprob: 4.278440, prior: 0.000000, raw-prob: 5202.420193, total_prob: 83612.412163, prob: 0.062221
+ Move B K4 at 5/140: logprob: 4.724583, prior: 0.000000, raw-prob: 12697.562970, total_prob: 83612.412163, prob: 0.151862
+ Move B R6 at 6/140: logprob: 2.750041, prior: -0.000000, raw-prob: 244.712074, total_prob: 83612.412163, prob: 0.002927
+ Move B T4 at 7/140: logprob: 1.590282, prior: 2.121753, raw-prob: 1675.838728, total_prob: 83612.412163, prob: 0.020043
+ Move B E17 at 8/140: logprob: 2.769751, prior: 0.000000, raw-prob: 254.551363, total_prob: 83612.412163, prob: 0.003044
+ Move B N1 at 9/140: logprob: 3.425979, prior: -0.000000, raw-prob: 945.731480, total_prob: 83612.412163, prob: 0.011311
+--- End HeapDump
+----- Prior moves: #moves = 13--------
+0: B S2, type RESP, w_offset: 840676, prior: 4.455539
+1: B T3, type RESP, w_offset: 840676, prior: 4.455539
+2: B R3, type RESP, w_offset: 840676, prior: 4.455539
+3: B T2, type RESP, w_offset: 840676, prior: 4.455539
+4: B T4, type RESP, w_offset: 840676, prior: 4.455539
+5: B R2, type RESP, w_offset: 840676, prior: 4.455539
+6: B R3, type NEIGHBOR, offset: 0, prior: -1.410286
+7: B S2, type NEIGHBOR, offset: 1, prior: -1.397131
+8: B T3, type NEIGHBOR, offset: 2, prior: -1.348200
+9: B R2, type NEIGHBOR, offset: 4, prior: -2.184929
+10: B T2, type NEIGHBOR, offset: 6, prior: -1.993446
+11: B T4, type NEIGHBOR, offset: 7, prior: -2.333786
+12: B J13, type KILL_GROUP2, offset: 0, prior: 2.654665
+----- End Prior moves --------
+])

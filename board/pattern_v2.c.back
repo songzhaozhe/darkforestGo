@@ -2084,39 +2084,11 @@ BOOL add_falsify_eye_prior(BoardExtra *board_extra, Coord last){
 }
 #endif
 
-static BOOL reduce_self_liberty(const Board *b, GroupId4 *ids) {
-  // Check if this move is not good.
-  BOOL has_enm = FALSE;
-  BOOL has_fnd = FALSE;
-  int min_enm_liberty = 4;
-  FOR4(ids->c,_,c4){
-      Stone s = b->_infos[c4].color;
-      if (s == S_OFF_BOARD || s == OPPONENT(ids->player)) has_enm = TRUE;
-      if (s==OPPONENT(ids->player)){
-          unsigned short id = b->_infos[c4].id;
-          if (b->_groups[id].liberties < min_enm_liberty) min_enm_liberty = b->_groups[id].liberties;
-      }
-      if (s == ids->player){
-          has_fnd = TRUE;
-          unsigned short id = b->_infos[c4].id;
-          if (b->_groups[id].liberties>=4) return FALSE;
-      }
-  } ENDFOR4
-  if (!has_enm || !has_fnd) return FALSE;
-  Board b2;
-  CopyBoard(&b2,b);
-  Play(&b2,ids);
-  short id = b2._infos[ids->c].id;
-  if (b2._groups[id].liberties <=min_enm_liberty-1) return TRUE;
-}
-
-
 void check_simple_semeai(BoardExtra *board_extra, Coord last) {
   // Check the simplest case. If the last move reduce any of our big (>= 5) group to <= 3 liberty, then we check if any of our neighboring opponent group has <= 3 liberty,
   // if so, play one (nonself-atari) move that reduce its liberty.
   const int our_liberty_thres = 3;
-  const int our_size_thres = 3;
-  const int opp_size_thres = 3;
+  const int our_size_thres = 10;
   const int opp_liberty_thres = 2;
 
   const Board *b = &board_extra->board;
@@ -2124,8 +2096,7 @@ void check_simple_semeai(BoardExtra *board_extra, Coord last) {
   if (last == M_PASS || last == M_RESIGN) return;
   GroupId4 ids;
 
-  Coord other_libs[5];
-  Coord our_libs[5];
+  Coord other_libs[3];
   Coord move = M_PASS;
   char buf[30];
 
@@ -2133,8 +2104,7 @@ void check_simple_semeai(BoardExtra *board_extra, Coord last) {
       // Check if any of the four neighbors has our group
       if (b->_infos[c].color != player) continue;
       unsigned short id = b->_infos[c].id;
-      if (b->_groups[id].stones < our_size_thres || b->_groups[id].liberties > our_liberty_thres || b->_groups[id].liberties > b->_groups[id].stones) continue;
-      int our_liberty = b->_groups[id].liberties;
+      if (b->_groups[id].stones < our_size_thres || b->_groups[id].liberties > our_liberty_thres) continue;
 
       // fprintf(stderr,"Find large group. id = %d, #stones = %d, #liberties = %d\n", id, b->_groups[id].stones, b->_groups[id].liberties);
 
@@ -2143,7 +2113,7 @@ void check_simple_semeai(BoardExtra *board_extra, Coord last) {
       FOR4(c, _, cc) {
           if (b->_infos[cc].color != OPPONENT(player)) continue;
           unsigned short other_id = b->_infos[cc].id;
-          if (b->_groups[other_id].liberties > our_liberty) continue;
+          if (b->_groups[other_id].liberties > opp_liberty_thres) continue;
 
           // fprintf(stderr,"Find opponent group. other_id = %d, #stones = %d, #liberties = %d\n", other_id, b->_groups[other_id].stones, b->_groups[other_id].liberties);
 
@@ -2161,7 +2131,6 @@ void check_simple_semeai(BoardExtra *board_extra, Coord last) {
           for (int i = 0; i < counter; ++i) {
             if (! TryPlay2(b, other_libs[i], &ids)) continue;
             if (IsSelfAtari(b, &ids, ids.c, ids.player, NULL)) continue;
-            if (reduce_self_liberty(b,&ids)) continue;
             move = other_libs[i];
             break;
           }
@@ -2169,47 +2138,8 @@ void check_simple_semeai(BoardExtra *board_extra, Coord last) {
       if (move != M_PASS) break;
   } ENDFOR4
 
-  if (move==M_PASS){
-      unsigned short other_id = b->_infos[last].id;
-      if (!(b->_groups[other_id].stones < opp_size_thres || b->_groups[other_id].liberties>our_liberty_thres ||b->_groups[other_id].liberties>b->_groups[other_id].stones)){
-          int opp_liberty = b->_groups[other_id].liberties;
-          BOOL danger = FALSE;
-          TRAVERSE(b,other_id,c_in_opp_group){
-              if (danger) break;
-              FOR4(c_in_opp_group,_,our_group){
-                  if (b->_infos[our_group].color==player){
-                      unsigned short our_id = b->_infos[our_group].id;
-                      if (b->_groups[our_id].liberties<opp_liberty) return;
-                      if (b->_groups[our_id].liberties>opp_liberty) continue;
-                      if (b->_groups[our_id].liberties==opp_liberty){
-                          danger = TRUE;
-                          break;
-                      }
-                  }
-              }ENDFOR4
-          }ENDTRAVERSE
-          int counter = 0;
-          TRAVERSE(b, other_id, c_in_opp_group) {
-              FOR4(c_in_opp_group, _, c_potential_liberty) {
-                  if (b->_infos[c_potential_liberty].color == S_EMPTY) {
-                      other_libs[counter ++] = c_potential_liberty;
-                  }
-              } ENDFOR4
-          } ENDTRAVERSE
-
-          // Select one if it is not self atari.
-          for (int i = 0; i < counter; ++i) {
-            if (! TryPlay2(b, other_libs[i], &ids)) continue;
-            if (IsSelfAtari(b, &ids, ids.c, ids.player, NULL)) continue;
-            if (reduce_self_liberty(b,&ids)) continue;
-            move = other_libs[i];
-            break;
-          }
-      }
-  }
-
   if (board_extra->prior_must_move == M_PASS && move != M_PASS) {
-    //ShowBoard(b, SHOW_ALL);
+    ShowBoard(b, SHOW_ALL);
     // fprintf(stderr,"simple_semeai: %s\n", get_move_str(move, player, buf));
     board_extra->prior_must_move = move;
   }
@@ -2269,7 +2199,7 @@ BOOL add_all_priors(BoardExtra *board_extra) {
   }
 
   // Semeai..Disabled for now.
-  check_simple_semeai(board_extra, last);
+  // check_simple_semeai(board_extra, last);
 
   // If we see negative probability. we need to recompute the normalization constant.
   if (board_extra->total_prob < 1e-6) {
@@ -2449,6 +2379,37 @@ void PatternV2Sample(void *be, GroupId4 *ids, MoveExt *move_ext) {
   PatternV2SampleInterface(be, &seed, fast_random_callback, ids, move_ext);
 }
 
+/*
+static BOOL reduce_self_liberty(const Board *b, GroupId4 *ids) {
+  // Check if this move is not good.
+  if (ids->liberty > 1) return FALSE;
+  Coord m = M_PASS;
+  int num_off_board = 0;
+  FOR4(ids->c, _, cc) {
+    if (b->_infos[cc].color == S_EMPTY) {
+      m = cc;
+    } else if (b->_infos[cc].color == S_OFF_BOARD) {
+      num_off_board ++;
+    }
+  } ENDFOR4
+  if (num_off_board != 1 || m == M_PASS) return FALSE;
+
+  for (int i = 0; i < 4; ++i) {
+    if (ids->ids[i] > 0 && ids->colors[i] == ids->player && ids->group_liberties[i] == 3) {
+      // Check if its own liberty is also a liberty of that group.
+      BOOL condition_met = FALSE;
+      FOR4(m, _, cc) {
+        if (b->_infos[cc].id == ids->ids[i]) {
+          condition_met = TRUE;
+          break;
+        }
+      } ENDFOR4
+      if (condition_met) return TRUE;
+    }
+  }
+  return FALSE;
+}
+*/
 
 static BOOL is_good_move(const Board *b, Coord m, GroupId4 *ids) {
   // If illegal then false.
@@ -2479,7 +2440,7 @@ static BOOL is_good_move(const Board *b, Coord m, GroupId4 *ids) {
     */
   }
 
-  if (reduce_self_liberty(b,ids)) return FALSE;
+  // if (reduce_self_liberty(b, ids)) return FALSE;
   //
   return TRUE;
 }
