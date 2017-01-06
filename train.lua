@@ -13,6 +13,7 @@ require 'nn'
 require 'cunn'
 require 'cudnn'
 require 'nngraph'
+require 'logroll'
 
 require 'xlua'
 
@@ -25,7 +26,7 @@ require 'train.rl_framework.infra.agent'
 
 local tnt = require 'torchnet'
 
-cutorch.setDevice(3)
+cutorch.setDevice(1)
 
 -- Build simple models.
 function build_policy_model(opt)
@@ -56,9 +57,17 @@ local opt = pl.lapp[[
     --datasource          (default 'kgs')
     --feature_type        (default 'extended')
 ]]
+if not paths.dirp('experiments') then
+    paths.mkdir('experiments')
+end
+paths.mkdir(paths.concat('experiments', opt.feature_type))
 
+
+local flog = logroll.file_logger(paths.concat('experiments', opt.feature_type,'_log.txt'))
+local plog = logroll.print_logger()
+log = logroll.combine(flog, plog)
 opt.userank = true
-opt.intermediate_step = opt.epoch_size / opt.batchsize / 10
+opt.intermediate_step = opt.epoch_size / opt.batchsize / 25600
 print(pl.pretty.write(opt))
 
 local model, crits = build_policy_model(opt)

@@ -15,6 +15,7 @@ local nnutils = require 'utils.nnutils'
 require 'train.rl_framework.infra.engine'
 require 'train.rl_framework.infra.bundle'
 require 'train.rl_framework.infra.dataset'
+local Plot = require 'itorch.Plot'
 
 local Threads = require 'threads'
 Threads.serialization('threads.sharedserialize')
@@ -74,9 +75,79 @@ local function compute_aver_loss(state)
         aver_train_errs[k] = e:sum(1) / state.errs_count / e:size(1)
         err_str = err_str .. string.format("[%s]: %5.6f ", k, aver_train_errs[k][1])
     end
+    --print(err_str)
+    --print(aver_train_errs)
+    return aver_train_errs, err_str
+end
+local function compute_aver_loss_onestep(state)
+    local aver_train_errs = { }
+    local err_str = ""
+    for k, e in pairs(state.errs) do
+        aver_train_errs[k] = e:sum(1) / state.errs_count / e:size(1)
+        err_str = err_str .. string.format("[%s]: %5.6f ", k, aver_train_errs[k][1])
+    end
     return aver_train_errs, err_str
 end
 
+local function plotImmediateLoss(state, train_aver_loss)
+    if not plot_step then
+        plot_step = {}
+    end
+    if not train_losses then
+        train_losses = {}
+    end
+
+    plot_step[#plot_step+1] = state.t
+    print(train_aver_loss['policy'])
+    train_losses[#train_losses+1] = train_aver_loss['policy']
+print(train_losses)
+print(train_losses[1])
+print(plot_step)
+  local idx = torch.Tensor(plot_step)
+  print(idx)
+
+  local scores = torch.Tensor(train_losses) 
+  print(scores)
+  plot = Plot():line(idx, scores, 'blue', 'loss'):draw()
+  plot:title('Learning Progress'):redraw()
+  plot:xaxis('Global Step'):yaxis('Loss'):redraw()
+  plot:legend(true)
+  plot:redraw()
+  plot:save(paths.concat('experiments', 'extended', 'loss.html'))
+end
+
+local function plotAcc(state,test_aver_loss)
+    if not plot_epoch then
+        plot_epoch = {}
+    end
+    if not test_losses then
+        test_losses = {}
+    end
+    if not test_acc then
+        test_acc = {}
+    end
+
+    plot_epoch[#plot_epoch+1] = state.epoch
+    test_losses[#test_losses+1] = test_aver_loss['policy']
+    test_acc[#test_acc+1] = test_acc['1pi@1']
+    
+    local idx = torch.Tensor(plot_epoch)
+    local scores = torch.Tensor(test_losses) 
+    local scores2 = torch.Tensor(test_acc)
+  plot = Plot():line(idx, scores, 'blue', 'loss'):draw()
+  plot:title('Test Loss'):redraw()
+  plot:xaxis('Epoch'):yaxis('Test Loss'):redraw()
+  plot:legend(true)
+  plot:redraw()
+  plot:save(paths.concat('experiments', 'extended', 'Test_loss.html'))
+
+  plot = Plot():line(idx, scores2, 'blue', 'loss'):draw()
+  plot:title('Learning Progress'):redraw()
+  plot:xaxis('Epoch'):yaxis('Top-1 Accuracy'):redraw()
+  plot:legend(true)
+  plot:redraw()
+  plot:save(paths.concat('experiments', 'extended', 'Accuracy.html'))  
+end      
 -- New framework for torchnet
 -- opt:
 --    nthread:   the number of thread used.
@@ -171,9 +242,10 @@ function framework.run_rl(agent, callbacks, opt)
     if not callbacks.print then
         callbacks.print = function(timer, state, train_err_str, test_err_str)
             local t_str = os.date("%c", os.time())
-            print(string.format('| %s | epoch %04d | ms/batch %3d | train %s | test %s | saved %s',
+            log.info(string.format('| %s | epoch %04d | ms/batch %3d | train %s | test %s | saved %s',
                       t_str, state.epoch, timer:value()*1000, train_err_str, test_err_str, state.model_saved and "*" or ""))
-            print("printing print#################")
+            --print("printing print#################")
+
             io.flush()
         end
     end
@@ -181,8 +253,8 @@ function framework.run_rl(agent, callbacks, opt)
     if not callbacks.print_intermediate then
         callbacks.print_intermediate = function(state, train_err_str)
             local t_str = os.date("%c", os.time())
-            print(string.format('| %s | %d | train %s', t_str, state.t, train_err_str))
-            print("printing immediate step$$$$$$$")
+            log.info(string.format('| %s | %d | train %s', t_str, state.t, train_err_str))
+            --print("printing immediate step$$$$$$$")
             io.flush()
         end
     end
@@ -240,6 +312,7 @@ function framework.run_rl(agent, callbacks, opt)
         if opt.intermediate_step and callbacks.print_intermediate and state.t % opt.intermediate_step == 0 then
             local train_aver_loss, train_err_str = compute_aver_loss(state)
             callbacks.print_intermediate(state, train_err_str)
+            plotImmediateLoss(state,train_aver_loss)
         end
     end
 
@@ -280,7 +353,7 @@ function framework.run_rl(agent, callbacks, opt)
         -- local test_aver_loss = { q = { 0.1 } }
         -- local test_err_str = "0.1"
         local train_aver_loss, train_err_str = compute_aver_loss(state)
-
+        plotAcc(state,test_aver_loss)
         state.saved_filename = nil
 
         local loss_name = opt.loss
@@ -298,6 +371,7 @@ function framework.run_rl(agent, callbacks, opt)
         end
 
         callbacks.tune_lr(state)
+        plotAcc(state,test_aver_loss)
         callbacks.print(timer, state, train_err_str, test_err_str)
         if callbacks.onAdditionalTest then callbacks.onAdditionalTest(state) end
         state.model_saved = false
