@@ -1167,7 +1167,7 @@ void tree_search_start(void *ctx) {
   s->all_stats_cleared = FALSE;
   int succ = sem_init(&s->sem_all_threads_blocked, 0, 0);
   assert(succ != -1);
-  printf("initialize semaphore %d\n",succ );
+  //printf("initialize semaphore %d\n",succ );
   succ = sem_init(&s->sem_all_threads_unblocked, 0, 0);
   assert(succ != -1);
   // Initialize search complete signal.

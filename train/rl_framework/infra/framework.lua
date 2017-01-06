@@ -173,6 +173,7 @@ function framework.run_rl(agent, callbacks, opt)
             local t_str = os.date("%c", os.time())
             print(string.format('| %s | epoch %04d | ms/batch %3d | train %s | test %s | saved %s',
                       t_str, state.epoch, timer:value()*1000, train_err_str, test_err_str, state.model_saved and "*" or ""))
+            print("printing print#################")
             io.flush()
         end
     end
@@ -181,6 +182,7 @@ function framework.run_rl(agent, callbacks, opt)
         callbacks.print_intermediate = function(state, train_err_str)
             local t_str = os.date("%c", os.time())
             print(string.format('| %s | %d | train %s', t_str, state.t, train_err_str))
+            print("printing immediate step$$$$$$$")
             io.flush()
         end
     end

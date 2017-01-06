@@ -1,0 +1,13 @@
+require 'cutorch'
+require 'cudnn'
+local tnt = require 'torchnet'
+
+local rl = require 'train.rl_framework.infra.env'
+require 'train.rl_framework.infra.engine'
+require 'train.rl_framework.infra.bundle'
+require 'train.rl_framework.examples.go.ParallelCriterion2'
+b = torch.load("models/dfn.bin")
+
+c = b.bundle.models
+c = c.policy
+

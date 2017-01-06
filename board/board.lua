@@ -11,10 +11,7 @@ local ffi = require 'ffi'
 local pl = require 'pl.import_into'()
 local utils = require 'utils.utils'
 local common = require 'common.common'
-require 'logroll'
-local flog = logroll.file_logger(paths.concat('experiments', '_3log.txt'))
-local plog = logroll.print_logger()
-log = logroll.combine(flog, plog)
+
 
 -- local image = require 'image'
 

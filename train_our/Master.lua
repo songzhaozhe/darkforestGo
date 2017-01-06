@@ -161,7 +161,7 @@ function Master:train()
       self.plotEpoch[#self.plotEpoch+1]=self.epoch
       --self.test_losses[#self.test_losses+1], self.accs[#self.accs+1] = self:test()
       --self:plotAcc()      
-	    self.optimParams.learningRate = self.optimParams.learningRate/5
+	    --self.optimParams.learningRate = self.optimParams.learningRate/5
 
 	end
 

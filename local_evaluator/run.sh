@@ -1,5 +1,5 @@
 #!/bin/bash
-sh cnn_evaluator.sh 1 /data/local/go
+sh cnn_evaluator.sh 1 /data/local/go 5d
 
 
 #!/bin/bash
