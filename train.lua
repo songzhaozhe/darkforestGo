@@ -26,7 +26,7 @@ require 'train.rl_framework.infra.agent'
 
 local tnt = require 'torchnet'
 
-cutorch.setDevice(1)
+cutorch.setDevice(3)
 
 -- Build simple models.
 function build_policy_model(opt)
@@ -67,7 +67,7 @@ local flog = logroll.file_logger(paths.concat('experiments', opt.feature_type,'_
 local plog = logroll.print_logger()
 log = logroll.combine(flog, plog)
 opt.userank = true
-opt.intermediate_step = opt.epoch_size / opt.batchsize / 25600
+opt.intermediate_step = opt.epoch_size / opt.batchsize / 10
 print(pl.pretty.write(opt))
 
 local model, crits = build_policy_model(opt)

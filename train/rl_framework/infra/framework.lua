@@ -98,16 +98,27 @@ local function plotImmediateLoss(state, train_aver_loss)
     end
 
     plot_step[#plot_step+1] = state.t
-    print(train_aver_loss['policy'])
-    train_losses[#train_losses+1] = train_aver_loss['policy']
-print(train_losses)
-print(train_losses[1])
-print(plot_step)
-  local idx = torch.Tensor(plot_step)
-  print(idx)
+ --   print(train_aver_loss['policy'])
+    train_losses[#train_losses+1] = train_aver_loss['policy'][1]
+    --train_losses[#train_losses+1] = train_aver_loss['1pi@1'][1]    
 
-  local scores = torch.Tensor(train_losses) 
-  print(scores)
+  local idx = torch.Tensor(plot_step)
+
+ local scores = torch.Tensor(train_losses) 
+    -- if not ILcount then
+    --     ILcount = 0
+    -- else
+    --     ILcount = ILcount + 1
+    -- end
+    -- if not plot_step then
+    --     plot_step = torch.Tensor(1000000)
+    -- end
+    -- if not train_losses then
+    --     train_losses = torch.Tensor(1000000)
+    -- end
+    -- plot_step[ILcount] = step.t
+    -- train_losses[ILcount] = train_aver_loss['policy']
+
   plot = Plot():line(idx, scores, 'blue', 'loss'):draw()
   plot:title('Learning Progress'):redraw()
   plot:xaxis('Global Step'):yaxis('Loss'):redraw()
@@ -128,8 +139,8 @@ local function plotAcc(state,test_aver_loss)
     end
 
     plot_epoch[#plot_epoch+1] = state.epoch
-    test_losses[#test_losses+1] = test_aver_loss['policy']
-    test_acc[#test_acc+1] = test_acc['1pi@1']
+    test_losses[#test_losses+1] = test_aver_loss['policy'][1]
+    test_acc[#test_acc+1] = test_acc['1pi@1'][1]
     
     local idx = torch.Tensor(plot_epoch)
     local scores = torch.Tensor(test_losses) 
