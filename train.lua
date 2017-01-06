@@ -25,13 +25,15 @@ require 'train.rl_framework.infra.agent'
 
 local tnt = require 'torchnet'
 
-cutorch.setDevice(3)
+cutorch.setDevice(4)
 
 -- Build simple models.
 function build_policy_model(opt)
     local network_maker = require('train.rl_framework.examples.go.models.' .. opt.model_name)
     local network, crit, outputdim, monitor_list = network_maker({1, 25, 19, 19}, opt)
-    return network:cuda(), crit:cuda()
+	network = torch.load("df2.bin")
+	print(network)    
+	return network:cuda(), crit:cuda()
 end
 
 local opt = pl.lapp[[

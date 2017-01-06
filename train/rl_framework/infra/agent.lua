@@ -45,8 +45,8 @@ Agent.optim_supervised = function(self, input, test_mode)
 
     bundle:forward(input.s, { policy=true } )
     local gradOutput, errs = bundle:backward_prepare(input.s, { policy=input.a })
-print(gradOutput)
-print(errs)
+--print(gradOutput)
+--print(errs)
     if not test_mode then
         -- require 'fb.debugger'.enter()
         bundle:backward(input.s, gradOutput)

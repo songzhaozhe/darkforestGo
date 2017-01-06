@@ -207,7 +207,7 @@ function Bundle:backward_prepare(input, attrs)
     local batchsize = input:size(1)
 
     for k, v in pairs(attrs) do
-        print(k)
+--        print(k)
         local e = self.key2model[k]
         -- require 'fb.debugger'.enter()
         local this_model = e.model
