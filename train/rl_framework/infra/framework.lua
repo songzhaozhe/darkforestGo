@@ -140,7 +140,7 @@ local function plotAcc(state,test_aver_loss)
 
     plot_epoch[#plot_epoch+1] = state.epoch
     test_losses[#test_losses+1] = test_aver_loss['policy'][1]
-    test_acc[#test_acc+1] = test_acc['1pi@1'][1]
+    test_acc[#test_acc+1] = test_aver_loss['1pi@1'][1]
     
     local idx = torch.Tensor(plot_epoch)
     local scores = torch.Tensor(test_losses) 
@@ -157,7 +157,7 @@ local function plotAcc(state,test_aver_loss)
   plot:xaxis('Epoch'):yaxis('Top-1 Accuracy'):redraw()
   plot:legend(true)
   plot:redraw()
-  plot:save(paths.concat('experiments', 'extended', 'Accuracy.html'))  
+  plot:save(paths.concat('experiments', 'extended', 'Test_Accuracy.html'))  
 end      
 -- New framework for torchnet
 -- opt:
