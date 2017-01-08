@@ -97,7 +97,7 @@ local function plotImmediateLoss(state, train_aver_loss)
         train_losses = {}
     end
 
-    plot_step[#plot_step+1] = state.t
+    plot_step[#plot_step+1] = state.epoch*500+state.t
  --   print(train_aver_loss['policy'])
     train_losses[#train_losses+1] = train_aver_loss['policy'][1]
     --train_losses[#train_losses+1] = train_aver_loss['1pi@1'][1]    

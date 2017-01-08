@@ -24,22 +24,3 @@
 [INFO - 2017_01_08_10:48:29] - "Epoch14finished"
 [INFO - 2017_01_08_11:39:55] - "Epoch15finished"
 [INFO - 2017_01_08_11:39:58] - Accuracy is 0.4492
-[INFO - 2017_01_08_12:31:20] - "Epoch16finished"
-[INFO - 2017_01_08_13:22:50] - "Epoch17finished"
-[INFO - 2017_01_08_13:22:53] - Accuracy is 0.4727
-[INFO - 2017_01_08_14:14:19] - "Epoch18finished"
-[INFO - 2017_01_08_15:05:47] - "Epoch19finished"
-[INFO - 2017_01_08_15:05:50] - Accuracy is 0.3945
-[INFO - 2017_01_08_15:57:16] - "Epoch20finished"
-[INFO - 2017_01_08_16:48:45] - "Epoch21finished"
-[INFO - 2017_01_08_16:48:48] - Accuracy is 0.4219
-[INFO - 2017_01_08_17:40:14] - "Epoch22finished"
-[INFO - 2017_01_08_18:31:42] - "Epoch23finished"
-[INFO - 2017_01_08_18:31:45] - Accuracy is 0.4570
-[INFO - 2017_01_08_19:23:08] - "Epoch24finished"
-[INFO - 2017_01_08_20:14:32] - "Epoch25finished"
-[INFO - 2017_01_08_20:14:35] - Accuracy is 0.4062
-[INFO - 2017_01_08_21:05:57] - "Epoch26finished"
-[INFO - 2017_01_08_21:57:21] - "Epoch27finished"
-[INFO - 2017_01_08_21:57:24] - Accuracy is 0.3945
-[INFO - 2017_01_08_22:48:43] - "Epoch28finished"
